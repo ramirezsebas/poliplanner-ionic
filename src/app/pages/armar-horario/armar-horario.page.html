@@ -1,0 +1,20 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+<ion-content [ngSwitch]="validarSeccion()">
+  <app-seleccionar-carrera *ngSwitchCase="1"></app-seleccionar-carrera>
+  <app-seleccionar-materias-aprobadas *ngSwitchCase="2"></app-seleccionar-materias-aprobadas>
+  <app-file-picker *ngSwitchCase="2"></app-file-picker>
+  <app-seleccionar-materia *ngSwitchCase="3"></app-seleccionar-materia>
+  <app-seleccionar-secciones *ngSwitchCase="4"></app-seleccionar-secciones>
+  <app-inicio *ngSwitchCase="5"></app-inicio >
+  <app-calendario *ngSwitchCase="6"></app-calendario>
+</ion-content>
+
+<!-- <ion-content *ngIf="currentSection <= currentCareer.length+1 && currentSection!=1">
+  <ng-container *ngFor="let career of currentCareer; let i=index;">
+    <app-seleccionar-materia *ngIf="currentSection==i+2" [selectedCareerId]="career._id"></app-seleccionar-materia>
+  </ng-container>
+</ion-content> -->
+
+<app-footer></app-footer>

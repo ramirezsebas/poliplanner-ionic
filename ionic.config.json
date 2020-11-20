@@ -1,0 +1,8 @@
+{
+  "name": "poliplanner",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

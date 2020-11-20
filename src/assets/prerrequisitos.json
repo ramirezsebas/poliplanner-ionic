@@ -1,0 +1,5230 @@
+[
+    {
+        "class1_id": 1,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 2,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 3,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 4,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 5,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 6,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 7,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 8,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 9,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 10,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 12,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 13,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 14,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 15,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 16,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 17,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 20,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 21,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 22,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 23,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 24,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 25,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 26,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 27,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 28,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 29,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 30,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 31,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 32,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 33,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 34,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 35,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 36,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 37,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 38,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 39,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 40,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 41,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 42,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 43,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 44,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 45,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 46,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 47,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 48,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 49,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 50,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 51,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 52,
+        "class2_id": 53
+    },
+    {
+        "class1_id": 27,
+        "class2_id": 1
+    },
+    {
+        "class1_id": 27,
+        "class2_id": 7
+    },
+    {
+        "class1_id": 27,
+        "class2_id": 23
+    },
+    {
+        "class1_id": 40,
+        "class2_id": 1
+    },
+    {
+        "class1_id": 40,
+        "class2_id": 38
+    },
+    {
+        "class1_id": 40,
+        "class2_id": 35
+    },
+    {
+        "class1_id": 45,
+        "class2_id": 46
+    },
+    {
+        "class1_id": 45,
+        "class2_id": 48
+    },
+    {
+        "class1_id": 2,
+        "class2_id": 3
+    },
+    {
+        "class1_id": 2,
+        "class2_id": 35
+    },
+    {
+        "class1_id": 7,
+        "class2_id": 8
+    },
+    {
+        "class1_id": 46,
+        "class2_id": 49
+    },
+    {
+        "class1_id": 35,
+        "class2_id": 36
+    },
+    {
+        "class1_id": 3,
+        "class2_id": 4
+    },
+    {
+        "class1_id": 3,
+        "class2_id": 36
+    },
+    {
+        "class1_id": 3,
+        "class2_id": 38
+    },
+    {
+        "class1_id": 3,
+        "class2_id": 48
+    },
+    {
+        "class1_id": 38,
+        "class2_id": 5
+    },
+    {
+        "class1_id": 8,
+        "class2_id": 9
+    },
+    {
+        "class1_id": 8,
+        "class2_id": 47
+    },
+    {
+        "class1_id": 8,
+        "class2_id": 33
+    },
+    {
+        "class1_id": null,
+        "class2_id": null
+    },
+    {
+        "class1_id": 36,
+        "class2_id": 37
+    },
+    {
+        "class1_id": 36,
+        "class2_id": 5
+    },
+    {
+        "class1_id": 36,
+        "class2_id": 29
+    },
+    {
+        "class1_id": 36,
+        "class2_id": 21
+    },
+    {
+        "class1_id": 4,
+        "class2_id": 11
+    },
+    {
+        "class1_id": 9,
+        "class2_id": 41
+    },
+    {
+        "class1_id": 24,
+        "class2_id": 25
+    },
+    {
+        "class1_id": 24,
+        "class2_id": 26
+    },
+    {
+        "class1_id": 24,
+        "class2_id": 49
+    },
+    {
+        "class1_id": 48,
+        "class2_id": 49
+    },
+    {
+        "class1_id": 48,
+        "class2_id": 50
+    },
+    {
+        "class1_id": 51,
+        "class2_id": 37
+    },
+    {
+        "class1_id": 51,
+        "class2_id": 50
+    },
+    {
+        "class1_id": 41,
+        "class2_id": 34
+    },
+    {
+        "class1_id": 21,
+        "class2_id": 11
+    },
+    {
+        "class1_id": 29,
+        "class2_id": 30
+    },
+    {
+        "class1_id": 5,
+        "class2_id": 6
+    },
+    {
+        "class1_id": 5,
+        "class2_id": 30
+    },
+    {
+        "class1_id": 30,
+        "class2_id": 6
+    },
+    {
+        "class1_id": 23,
+        "class2_id": 24
+    },
+    {
+        "class1_id": 73,
+        "class2_id": 74
+    },
+    {
+        "class1_id": 82,
+        "class2_id": 74
+    },
+    {
+        "class1_id": 60,
+        "class2_id": 61
+    },
+    {
+        "class1_id": 82,
+        "class2_id": 61
+    },
+    {
+        "class1_id": 81,
+        "class2_id": 83
+    },
+    {
+        "class1_id": 82,
+        "class2_id": 83
+    },
+    {
+        "class1_id": 55,
+        "class2_id": 56
+    },
+    {
+        "class1_id": 74,
+        "class2_id": 94
+    },
+    {
+        "class1_id": 83,
+        "class2_id": 94
+    },
+    {
+        "class1_id": 78,
+        "class2_id": 94
+    },
+    {
+        "class1_id": 61,
+        "class2_id": 71
+    },
+    {
+        "class1_id": 83,
+        "class2_id": 71
+    },
+    {
+        "class1_id": 83,
+        "class2_id": 84
+    },
+    {
+        "class1_id": 83,
+        "class2_id": 70
+    },
+    {
+        "class1_id": 56,
+        "class2_id": 57
+    },
+    {
+        "class1_id": 94,
+        "class2_id": 91
+    },
+    {
+        "class1_id": 71,
+        "class2_id": 88
+    },
+    {
+        "class1_id": 84,
+        "class2_id": 85
+    },
+    {
+        "class1_id": 94,
+        "class2_id": 63
+    },
+    {
+        "class1_id": 71,
+        "class2_id": 63
+    },
+    {
+        "class1_id": 84,
+        "class2_id": 72
+    },
+    {
+        "class1_id": 91,
+        "class2_id": 92
+    },
+    {
+        "class1_id": 57,
+        "class2_id": 66
+    },
+    {
+        "class1_id": 57,
+        "class2_id": 58
+    },
+    {
+        "class1_id": 63,
+        "class2_id": 64
+    },
+    {
+        "class1_id": 85,
+        "class2_id": 86
+    },
+    {
+        "class1_id": 88,
+        "class2_id": 75
+    },
+    {
+        "class1_id": 92,
+        "class2_id": 75
+    },
+    {
+        "class1_id": 63,
+        "class2_id": 75
+    },
+    {
+        "class1_id": 64,
+        "class2_id": 67
+    },
+    {
+        "class1_id": 66,
+        "class2_id": 67
+    },
+    {
+        "class1_id": 64,
+        "class2_id": 65
+    },
+    {
+        "class1_id": 70,
+        "class2_id": 87
+    },
+    {
+        "class1_id": 70,
+        "class2_id": 79
+    },
+    {
+        "class1_id": 75,
+        "class2_id": 76
+    },
+    {
+        "class1_id": 75,
+        "class2_id": 68
+    },
+    {
+        "class1_id": 64,
+        "class2_id": 68
+    },
+    {
+        "class1_id": 79,
+        "class2_id": 80
+    },
+    {
+        "class1_id": 75,
+        "class2_id": 89
+    },
+    {
+        "class1_id": 67,
+        "class2_id": 89
+    },
+    {
+        "class1_id": 64,
+        "class2_id": 89
+    },
+    {
+        "class1_id": 87,
+        "class2_id": 89
+    },
+    {
+        "class1_id": 58,
+        "class2_id": 59
+    },
+    {
+        "class1_id": 76,
+        "class2_id": 77
+    },
+    {
+        "class1_id": 68,
+        "class2_id": 69
+    },
+    {
+        "class1_id": 76,
+        "class2_id": 69
+    },
+    {
+        "class1_id": 89,
+        "class2_id": 90
+    },
+    {
+        "class1_id": 65,
+        "class2_id": 62
+    },
+    {
+        "class1_id": 76,
+        "class2_id": 62
+    },
+    {
+        "class1_id": 80,
+        "class2_id": 93
+    },
+    {
+        "class1_id": 4,
+        "class2_id": 51
+    },
+    {
+        "class1_id": 46,
+        "class2_id": 51
+    },
+    {
+        "class1_id": 36,
+        "class2_id": 51
+    },
+    {
+        "class1_id": 1,
+        "class2_id": 39
+    },
+    {
+        "class1_id": 38,
+        "class2_id": 39
+    },
+    {
+        "class1_id": 30,
+        "class2_id": 31
+    },
+    {
+        "class1_id": 95,
+        "class2_id": 96
+    },
+    {
+        "class1_id": 100,
+        "class2_id": 101
+    },
+    {
+        "class1_id": 121,
+        "class2_id": 101
+    },
+    {
+        "class1_id": 112,
+        "class2_id": 113
+    },
+    {
+        "class1_id": 121,
+        "class2_id": 113
+    },
+    {
+        "class1_id": 120,
+        "class2_id": 122
+    },
+    {
+        "class1_id": 121,
+        "class2_id": 122
+    },
+    {
+        "class1_id": 96,
+        "class2_id": 97
+    },
+    {
+        "class1_id": 122,
+        "class2_id": 108
+    },
+    {
+        "class1_id": 101,
+        "class2_id": 109
+    },
+    {
+        "class1_id": 122,
+        "class2_id": 109
+    },
+    {
+        "class1_id": 122,
+        "class2_id": 123
+    },
+    {
+        "class1_id": 122,
+        "class2_id": 134
+    },
+    {
+        "class1_id": 117,
+        "class2_id": 134
+    },
+    {
+        "class1_id": 113,
+        "class2_id": 134
+    },
+    {
+        "class1_id": 134,
+        "class2_id": 103
+    },
+    {
+        "class1_id": 109,
+        "class2_id": 103
+    },
+    {
+        "class1_id": 123,
+        "class2_id": 111
+    },
+    {
+        "class1_id": 123,
+        "class2_id": 124
+    },
+    {
+        "class1_id": 127,
+        "class2_id": 109
+    },
+    {
+        "class1_id": 131,
+        "class2_id": 134
+    },
+    {
+        "class1_id": 97,
+        "class2_id": 98
+    },
+    {
+        "class1_id": 108,
+        "class2_id": 118
+    },
+    {
+        "class1_id": 118,
+        "class2_id": 119
+    },
+    {
+        "class1_id": 127,
+        "class2_id": 114
+    },
+    {
+        "class1_id": 132,
+        "class2_id": 114
+    },
+    {
+        "class1_id": 103,
+        "class2_id": 114
+    },
+    {
+        "class1_id": 104,
+        "class2_id": 105
+    },
+    {
+        "class1_id": 98,
+        "class2_id": 99
+    },
+    {
+        "class1_id": 114,
+        "class2_id": 115
+    },
+    {
+        "class1_id": 119,
+        "class2_id": 133
+    },
+    {
+        "class1_id": 115,
+        "class2_id": 102
+    },
+    {
+        "class1_id": 105,
+        "class2_id": 102
+    },
+    {
+        "class1_id": 115,
+        "class2_id": 116
+    },
+    {
+        "class1_id": 127,
+        "class2_id": 110
+    },
+    {
+        "class1_id": 110,
+        "class2_id": 106
+    },
+    {
+        "class1_id": 131,
+        "class2_id": 106
+    },
+    {
+        "class1_id": 114,
+        "class2_id": 128
+    },
+    {
+        "class1_id": 114,
+        "class2_id": 129
+    },
+    {
+        "class1_id": 106,
+        "class2_id": 129
+    },
+    {
+        "class1_id": 105,
+        "class2_id": 129
+    },
+    {
+        "class1_id": 126,
+        "class2_id": 129
+    },
+    {
+        "class1_id": 128,
+        "class2_id": 107
+    },
+    {
+        "class1_id": 129,
+        "class2_id": 130
+    },
+    {
+        "class1_id": 198,
+        "class2_id": 199
+    },
+    {
+        "class1_id": 198,
+        "class2_id": 210
+    },
+    {
+        "class1_id": 198,
+        "class2_id": 211
+    },
+    {
+        "class1_id": 217,
+        "class2_id": 216
+    },
+    {
+        "class1_id": 199,
+        "class2_id": 200
+    },
+    {
+        "class1_id": 199,
+        "class2_id": 201
+    },
+    {
+        "class1_id": 199,
+        "class2_id": 212
+    },
+    {
+        "class1_id": 199,
+        "class2_id": 213
+    },
+    {
+        "class1_id": 199,
+        "class2_id": 231
+    },
+    {
+        "class1_id": 210,
+        "class2_id": 212
+    },
+    {
+        "class1_id": 210,
+        "class2_id": 213
+    },
+    {
+        "class1_id": 197,
+        "class2_id": 231
+    },
+    {
+        "class1_id": 201,
+        "class2_id": 202
+    },
+    {
+        "class1_id": 216,
+        "class2_id": 205
+    },
+    {
+        "class1_id": 231,
+        "class2_id": 205
+    },
+    {
+        "class1_id": 213,
+        "class2_id": 208
+    },
+    {
+        "class1_id": 217,
+        "class2_id": 208
+    },
+    {
+        "class1_id": 211,
+        "class2_id": 214
+    },
+    {
+        "class1_id": 213,
+        "class2_id": 219
+    },
+    {
+        "class1_id": 201,
+        "class2_id": 219
+    },
+    {
+        "class1_id": 202,
+        "class2_id": 203
+    },
+    {
+        "class1_id": 210,
+        "class2_id": 207
+    },
+    {
+        "class1_id": 208,
+        "class2_id": 207
+    },
+    {
+        "class1_id": 205,
+        "class2_id": 222
+    },
+    {
+        "class1_id": 231,
+        "class2_id": 222
+    },
+    {
+        "class1_id": 214,
+        "class2_id": 235
+    },
+    {
+        "class1_id": 205,
+        "class2_id": 206
+    },
+    {
+        "class1_id": 207,
+        "class2_id": 206
+    },
+    {
+        "class1_id": 207,
+        "class2_id": 220
+    },
+    {
+        "class1_id": 208,
+        "class2_id": 220
+    },
+    {
+        "class1_id": 232,
+        "class2_id": 223
+    },
+    {
+        "class1_id": 207,
+        "class2_id": 223
+    },
+    {
+        "class1_id": 205,
+        "class2_id": 204
+    },
+    {
+        "class1_id": 220,
+        "class2_id": 204
+    },
+    {
+        "class1_id": 220,
+        "class2_id": 218
+    },
+    {
+        "class1_id": 235,
+        "class2_id": 218
+    },
+    {
+        "class1_id": 203,
+        "class2_id": 224
+    },
+    {
+        "class1_id": 219,
+        "class2_id": 224
+    },
+    {
+        "class1_id": 218,
+        "class2_id": 221
+    },
+    {
+        "class1_id": 233,
+        "class2_id": 234
+    },
+    {
+        "class1_id": 209,
+        "class2_id": 234
+    },
+    {
+        "class1_id": 197,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 198,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 199,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 200,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 201,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 202,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 203,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 204,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 205,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 206,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 207,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 208,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 209,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 210,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 211,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 212,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 213,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 214,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 215,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 216,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 217,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 218,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 219,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 220,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 221,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 222,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 223,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 224,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 225,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 226,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 227,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 228,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 229,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 230,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 231,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 232,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 233,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 234,
+        "class2_id": 280
+    },
+    {
+        "class1_id": 239,
+        "class2_id": 240
+    },
+    {
+        "class1_id": 261,
+        "class2_id": 240
+    },
+    {
+        "class1_id": 248,
+        "class2_id": 249
+    },
+    {
+        "class1_id": 237,
+        "class2_id": 255
+    },
+    {
+        "class1_id": 258,
+        "class2_id": 259
+    },
+    {
+        "class1_id": 239,
+        "class2_id": 259
+    },
+    {
+        "class1_id": 240,
+        "class2_id": 241
+    },
+    {
+        "class1_id": 240,
+        "class2_id": 242
+    },
+    {
+        "class1_id": 255,
+        "class2_id": 256
+    },
+    {
+        "class1_id": 255,
+        "class2_id": 271
+    },
+    {
+        "class1_id": 259,
+        "class2_id": 271
+    },
+    {
+        "class1_id": 240,
+        "class2_id": 279
+    },
+    {
+        "class1_id": 259,
+        "class2_id": 279
+    },
+    {
+        "class1_id": 241,
+        "class2_id": 238
+    },
+    {
+        "class1_id": 242,
+        "class2_id": 238
+    },
+    {
+        "class1_id": 241,
+        "class2_id": 244
+    },
+    {
+        "class1_id": 256,
+        "class2_id": 246
+    },
+    {
+        "class1_id": 271,
+        "class2_id": 246
+    },
+    {
+        "class1_id": 256,
+        "class2_id": 262
+    },
+    {
+        "class1_id": 279,
+        "class2_id": 273
+    },
+    {
+        "class1_id": 242,
+        "class2_id": 273
+    },
+    {
+        "class1_id": 244,
+        "class2_id": 245
+    },
+    {
+        "class1_id": 238,
+        "class2_id": 245
+    },
+    {
+        "class1_id": 246,
+        "class2_id": 247
+    },
+    {
+        "class1_id": 262,
+        "class2_id": 263
+    },
+    {
+        "class1_id": 244,
+        "class2_id": 266
+    },
+    {
+        "class1_id": 244,
+        "class2_id": 269
+    },
+    {
+        "class1_id": 266,
+        "class2_id": 253
+    },
+    {
+        "class1_id": 263,
+        "class2_id": 264
+    },
+    {
+        "class1_id": 247,
+        "class2_id": 270
+    },
+    {
+        "class1_id": 245,
+        "class2_id": 274
+    },
+    {
+        "class1_id": 247,
+        "class2_id": 277
+    },
+    {
+        "class1_id": 264,
+        "class2_id": 250
+    },
+    {
+        "class1_id": 277,
+        "class2_id": 252
+    },
+    {
+        "class1_id": 264,
+        "class2_id": 252
+    },
+    {
+        "class1_id": 253,
+        "class2_id": 260
+    },
+    {
+        "class1_id": 245,
+        "class2_id": 265
+    },
+    {
+        "class1_id": 269,
+        "class2_id": 265
+    },
+    {
+        "class1_id": 253,
+        "class2_id": 267
+    },
+    {
+        "class1_id": 273,
+        "class2_id": 278
+    },
+    {
+        "class1_id": 276,
+        "class2_id": 236
+    },
+    {
+        "class1_id": 250,
+        "class2_id": 251
+    },
+    {
+        "class1_id": 267,
+        "class2_id": 254
+    },
+    {
+        "class1_id": 265,
+        "class2_id": 268
+    },
+    {
+        "class1_id": 252,
+        "class2_id": 272
+    },
+    {
+        "class1_id": 278,
+        "class2_id": 272
+    },
+    {
+        "class1_id": 252,
+        "class2_id": 275
+    },
+    {
+        "class1_id": 281,
+        "class2_id": 287
+    },
+    {
+        "class1_id": 283,
+        "class2_id": 288
+    },
+    {
+        "class1_id": 285,
+        "class2_id": 289
+    },
+    {
+        "class1_id": 286,
+        "class2_id": 291
+    },
+    {
+        "class1_id": 289,
+        "class2_id": 295
+    },
+    {
+        "class1_id": 290,
+        "class2_id": 295
+    },
+    {
+        "class1_id": 292,
+        "class2_id": 297
+    },
+    {
+        "class1_id": 294,
+        "class2_id": 299
+    },
+    {
+        "class1_id": 297,
+        "class2_id": 302
+    },
+    {
+        "class1_id": 299,
+        "class2_id": 304
+    },
+    {
+        "class1_id": 296,
+        "class2_id": 305
+    },
+    {
+        "class1_id": 302,
+        "class2_id": 307
+    },
+    {
+        "class1_id": 303,
+        "class2_id": 308
+    },
+    {
+        "class1_id": 304,
+        "class2_id": 309
+    },
+    {
+        "class1_id": 305,
+        "class2_id": 310
+    },
+    {
+        "class1_id": 306,
+        "class2_id": 311
+    },
+    {
+        "class1_id": 307,
+        "class2_id": 312
+    },
+    {
+        "class1_id": 297,
+        "class2_id": 314
+    },
+    {
+        "class1_id": 308,
+        "class2_id": 315
+    },
+    {
+        "class1_id": 281,
+        "class2_id": 406
+    },
+    {
+        "class1_id": 287,
+        "class2_id": 406
+    },
+    {
+        "class1_id": 312,
+        "class2_id": 317
+    },
+    {
+        "class1_id": 315,
+        "class2_id": 318
+    },
+    {
+        "class1_id": 293,
+        "class2_id": 319
+    },
+    {
+        "class1_id": 314,
+        "class2_id": 320
+    },
+    {
+        "class1_id": 297,
+        "class2_id": 320
+    },
+    {
+        "class1_id": 307,
+        "class2_id": 321
+    },
+    {
+        "class1_id": 294,
+        "class2_id": 321
+    },
+    {
+        "class1_id": 322,
+        "class2_id": 328
+    },
+    {
+        "class1_id": 324,
+        "class2_id": 329
+    },
+    {
+        "class1_id": 326,
+        "class2_id": 330
+    },
+    {
+        "class1_id": 327,
+        "class2_id": 332
+    },
+    {
+        "class1_id": 330,
+        "class2_id": 336
+    },
+    {
+        "class1_id": 331,
+        "class2_id": 336
+    },
+    {
+        "class1_id": 333,
+        "class2_id": 338
+    },
+    {
+        "class1_id": 335,
+        "class2_id": 340
+    },
+    {
+        "class1_id": 338,
+        "class2_id": 343
+    },
+    {
+        "class1_id": 340,
+        "class2_id": 345
+    },
+    {
+        "class1_id": 337,
+        "class2_id": 346
+    },
+    {
+        "class1_id": 343,
+        "class2_id": 348
+    },
+    {
+        "class1_id": 344,
+        "class2_id": 349
+    },
+    {
+        "class1_id": 345,
+        "class2_id": 350
+    },
+    {
+        "class1_id": 346,
+        "class2_id": 351
+    },
+    {
+        "class1_id": 347,
+        "class2_id": 352
+    },
+    {
+        "class1_id": 348,
+        "class2_id": 353
+    },
+    {
+        "class1_id": 353,
+        "class2_id": 360
+    },
+    {
+        "class1_id": 322,
+        "class2_id": 355
+    },
+    {
+        "class1_id": 328,
+        "class2_id": 355
+    },
+    {
+        "class1_id": 350,
+        "class2_id": 356
+    },
+    {
+        "class1_id": 334,
+        "class2_id": 359
+    },
+    {
+        "class1_id": 339,
+        "class2_id": 361
+    },
+    {
+        "class1_id": 356,
+        "class2_id": 362
+    },
+    {
+        "class1_id": 334,
+        "class2_id": 363
+    },
+    {
+        "class1_id": 364,
+        "class2_id": 370
+    },
+    {
+        "class1_id": 366,
+        "class2_id": 371
+    },
+    {
+        "class1_id": 368,
+        "class2_id": 372
+    },
+    {
+        "class1_id": 369,
+        "class2_id": 374
+    },
+    {
+        "class1_id": 372,
+        "class2_id": 378
+    },
+    {
+        "class1_id": 373,
+        "class2_id": 378
+    },
+    {
+        "class1_id": 375,
+        "class2_id": 380
+    },
+    {
+        "class1_id": 377,
+        "class2_id": 382
+    },
+    {
+        "class1_id": 380,
+        "class2_id": 385
+    },
+    {
+        "class1_id": 382,
+        "class2_id": 387
+    },
+    {
+        "class1_id": 379,
+        "class2_id": 388
+    },
+    {
+        "class1_id": 385,
+        "class2_id": 390
+    },
+    {
+        "class1_id": 386,
+        "class2_id": 391
+    },
+    {
+        "class1_id": 387,
+        "class2_id": 392
+    },
+    {
+        "class1_id": 388,
+        "class2_id": 393
+    },
+    {
+        "class1_id": 389,
+        "class2_id": 394
+    },
+    {
+        "class1_id": 394,
+        "class2_id": 402
+    },
+    {
+        "class1_id": 364,
+        "class2_id": 397
+    },
+    {
+        "class1_id": 370,
+        "class2_id": 397
+    },
+    {
+        "class1_id": 394,
+        "class2_id": 400
+    },
+    {
+        "class1_id": 381,
+        "class2_id": 401
+    },
+    {
+        "class1_id": 396,
+        "class2_id": 402
+    },
+    {
+        "class1_id": 376,
+        "class2_id": 403
+    },
+    {
+        "class1_id": 400,
+        "class2_id": 404
+    },
+    {
+        "class1_id": 376,
+        "class2_id": 405
+    },
+    {
+        "class1_id": 138,
+        "class2_id": 139
+    },
+    {
+        "class1_id": 165,
+        "class2_id": 139
+    },
+    {
+        "class1_id": 138,
+        "class2_id": 140
+    },
+    {
+        "class1_id": 165,
+        "class2_id": 142
+    },
+    {
+        "class1_id": 141,
+        "class2_id": 142
+    },
+    {
+        "class1_id": 141,
+        "class2_id": 161
+    },
+    {
+        "class1_id": 141,
+        "class2_id": 162
+    },
+    {
+        "class1_id": 152,
+        "class2_id": 188
+    },
+    {
+        "class1_id": 169,
+        "class2_id": 170
+    },
+    {
+        "class1_id": 142,
+        "class2_id": 143
+    },
+    {
+        "class1_id": 142,
+        "class2_id": 144
+    },
+    {
+        "class1_id": 142,
+        "class2_id": 149
+    },
+    {
+        "class1_id": 162,
+        "class2_id": 149
+    },
+    {
+        "class1_id": 162,
+        "class2_id": 187
+    },
+    {
+        "class1_id": 191,
+        "class2_id": 187
+    },
+    {
+        "class1_id": 140,
+        "class2_id": 190
+    },
+    {
+        "class1_id": 170,
+        "class2_id": 171
+    },
+    {
+        "class1_id": 144,
+        "class2_id": 145
+    },
+    {
+        "class1_id": 149,
+        "class2_id": 150
+    },
+    {
+        "class1_id": 190,
+        "class2_id": 153
+    },
+    {
+        "class1_id": 188,
+        "class2_id": 153
+    },
+    {
+        "class1_id": 143,
+        "class2_id": 189
+    },
+    {
+        "class1_id": 162,
+        "class2_id": 163
+    },
+    {
+        "class1_id": 142,
+        "class2_id": 163
+    },
+    {
+        "class1_id": 143,
+        "class2_id": 164
+    },
+    {
+        "class1_id": 161,
+        "class2_id": 177
+    },
+    {
+        "class1_id": 143,
+        "class2_id": 177
+    },
+    {
+        "class1_id": 180,
+        "class2_id": 192
+    },
+    {
+        "class1_id": 171,
+        "class2_id": 172
+    },
+    {
+        "class1_id": 145,
+        "class2_id": 146
+    },
+    {
+        "class1_id": 175,
+        "class2_id": 147
+    },
+    {
+        "class1_id": 192,
+        "class2_id": 147
+    },
+    {
+        "class1_id": 177,
+        "class2_id": 156
+    },
+    {
+        "class1_id": 192,
+        "class2_id": 157
+    },
+    {
+        "class1_id": 150,
+        "class2_id": 176
+    },
+    {
+        "class1_id": 144,
+        "class2_id": 178
+    },
+    {
+        "class1_id": 164,
+        "class2_id": 178
+    },
+    {
+        "class1_id": 164,
+        "class2_id": 195
+    },
+    {
+        "class1_id": 175,
+        "class2_id": 195
+    },
+    {
+        "class1_id": 172,
+        "class2_id": 173
+    },
+    {
+        "class1_id": 157,
+        "class2_id": 158
+    },
+    {
+        "class1_id": 147,
+        "class2_id": 158
+    },
+    {
+        "class1_id": 178,
+        "class2_id": 135
+    },
+    {
+        "class1_id": 178,
+        "class2_id": 179
+    },
+    {
+        "class1_id": 146,
+        "class2_id": 193
+    },
+    {
+        "class1_id": 195,
+        "class2_id": 196
+    },
+    {
+        "class1_id": 173,
+        "class2_id": 174
+    },
+    {
+        "class1_id": 135,
+        "class2_id": 136
+    },
+    {
+        "class1_id": 179,
+        "class2_id": 136
+    },
+    {
+        "class1_id": 158,
+        "class2_id": 159
+    },
+    {
+        "class1_id": 176,
+        "class2_id": 181
+    },
+    {
+        "class1_id": 196,
+        "class2_id": 181
+    },
+    {
+        "class1_id": 156,
+        "class2_id": 181
+    },
+    {
+        "class1_id": 193,
+        "class2_id": 194
+    },
+    {
+        "class1_id": 153,
+        "class2_id": 160
+    },
+    {
+        "class1_id": 159,
+        "class2_id": 160
+    },
+    {
+        "class1_id": 181,
+        "class2_id": 182
+    },
+    {
+        "class1_id": 154,
+        "class2_id": 184
+    },
+    {
+        "class1_id": 167,
+        "class2_id": 166
+    },
+    {
+        "class1_id": 167,
+        "class2_id": 168
+    },
+    {
+        "class1_id": 183,
+        "class2_id": 168
+    },
+    {
+        "class1_id": 167,
+        "class2_id": 185
+    },
+    {
+        "class1_id": 189,
+        "class2_id": 185
+    },
+    {
+        "class1_id": 155,
+        "class2_id": 183
+    },
+    {
+        "class1_id": 163,
+        "class2_id": 183
+    },
+    {
+        "class1_id": 194,
+        "class2_id": 183
+    },
+    {
+        "class1_id": 136,
+        "class2_id": 151
+    },
+    {
+        "class1_id": 160,
+        "class2_id": 151
+    },
+    {
+        "class1_id": 182,
+        "class2_id": 167
+    },
+    {
+        "class1_id": 135,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 137,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 138,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 141,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 142,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 143,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 144,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 145,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 146,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 165,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 152,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 191,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 148,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 169,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 170,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 171,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 172,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 173,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 174,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 139,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 140,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 186,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 161,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 162,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 163,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 164,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 188,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 175,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 149,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 150,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 187,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 190,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 180,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 189,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 153,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 155,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 192,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 177,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 147,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 156,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 157,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 158,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 159,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 178,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 179,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 136,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 181,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 193,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 194,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 195,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 196,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 176,
+        "class2_id": 154
+    },
+    {
+        "class1_id": 465,
+        "class2_id": 474
+    },
+    {
+        "class1_id": 469,
+        "class2_id": 474
+    },
+    {
+        "class1_id": 466,
+        "class2_id": 474
+    },
+    {
+        "class1_id": 466,
+        "class2_id": 475
+    },
+    {
+        "class1_id": 466,
+        "class2_id": 476
+    },
+    {
+        "class1_id": 470,
+        "class2_id": 477
+    },
+    {
+        "class1_id": 472,
+        "class2_id": 478
+    },
+    {
+        "class1_id": 474,
+        "class2_id": 479
+    },
+    {
+        "class1_id": 474,
+        "class2_id": 480
+    },
+    {
+        "class1_id": 474,
+        "class2_id": 481
+    },
+    {
+        "class1_id": 476,
+        "class2_id": 481
+    },
+    {
+        "class1_id": 474,
+        "class2_id": 482
+    },
+    {
+        "class1_id": 475,
+        "class2_id": 482
+    },
+    {
+        "class1_id": 476,
+        "class2_id": 482
+    },
+    {
+        "class1_id": 476,
+        "class2_id": 483
+    },
+    {
+        "class1_id": 473,
+        "class2_id": 483
+    },
+    {
+        "class1_id": 480,
+        "class2_id": 484
+    },
+    {
+        "class1_id": 481,
+        "class2_id": 485
+    },
+    {
+        "class1_id": 481,
+        "class2_id": 486
+    },
+    {
+        "class1_id": 483,
+        "class2_id": 486
+    },
+    {
+        "class1_id": 482,
+        "class2_id": 487
+    },
+    {
+        "class1_id": 480,
+        "class2_id": 487
+    },
+    {
+        "class1_id": 482,
+        "class2_id": 488
+    },
+    {
+        "class1_id": 484,
+        "class2_id": 489
+    },
+    {
+        "class1_id": 484,
+        "class2_id": 490
+    },
+    {
+        "class1_id": 486,
+        "class2_id": 491
+    },
+    {
+        "class1_id": 486,
+        "class2_id": 492
+    },
+    {
+        "class1_id": 484,
+        "class2_id": 493
+    },
+    {
+        "class1_id": 488,
+        "class2_id": 494
+    },
+    {
+        "class1_id": 473,
+        "class2_id": 495
+    },
+    {
+        "class1_id": 486,
+        "class2_id": 495
+    },
+    {
+        "class1_id": 491,
+        "class2_id": 496
+    },
+    {
+        "class1_id": 492,
+        "class2_id": 497
+    },
+    {
+        "class1_id": 494,
+        "class2_id": 498
+    },
+    {
+        "class1_id": 467,
+        "class2_id": 499
+    },
+    {
+        "class1_id": 493,
+        "class2_id": 499
+    },
+    {
+        "class1_id": 489,
+        "class2_id": 500
+    },
+    {
+        "class1_id": 490,
+        "class2_id": 501
+    },
+    {
+        "class1_id": 495,
+        "class2_id": 502
+    },
+    {
+        "class1_id": 497,
+        "class2_id": 503
+    },
+    {
+        "class1_id": 495,
+        "class2_id": 503
+    },
+    {
+        "class1_id": 496,
+        "class2_id": 503
+    },
+    {
+        "class1_id": 498,
+        "class2_id": 504
+    },
+    {
+        "class1_id": 498,
+        "class2_id": 505
+    },
+    {
+        "class1_id": 501,
+        "class2_id": 506
+    },
+    {
+        "class1_id": 496,
+        "class2_id": 507
+    },
+    {
+        "class1_id": 495,
+        "class2_id": 508
+    },
+    {
+        "class1_id": 503,
+        "class2_id": 509
+    },
+    {
+        "class1_id": 504,
+        "class2_id": 510
+    },
+    {
+        "class1_id": 495,
+        "class2_id": 511
+    },
+    {
+        "class1_id": 507,
+        "class2_id": 512
+    },
+    {
+        "class1_id": 512,
+        "class2_id": 514
+    },
+    {
+        "class1_id": 499,
+        "class2_id": 515
+    },
+    {
+        "class1_id": 509,
+        "class2_id": 516
+    },
+    {
+        "class1_id": 509,
+        "class2_id": 517
+    },
+    {
+        "class1_id": 509,
+        "class2_id": 518
+    },
+    {
+        "class1_id": 515,
+        "class2_id": 519
+    },
+    {
+        "class1_id": 513,
+        "class2_id": 520
+    },
+    {
+        "class1_id": 513,
+        "class2_id": 521
+    },
+    {
+        "class1_id": 513,
+        "class2_id": 522
+    },
+    {
+        "class1_id": 465,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 466,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 467,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 468,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 469,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 470,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 471,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 472,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 473,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 474,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 475,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 476,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 477,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 478,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 479,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 480,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 481,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 482,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 483,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 484,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 485,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 486,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 487,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 488,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 489,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 490,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 491,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 492,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 493,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 494,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 495,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 496,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 497,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 498,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 499,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 500,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 501,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 502,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 503,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 504,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 505,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 506,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 507,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 508,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 509,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 510,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 511,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 512,
+        "class2_id": 513
+    },
+    {
+        "class1_id": 582,
+        "class2_id": 591
+    },
+    {
+        "class1_id": 586,
+        "class2_id": 591
+    },
+    {
+        "class1_id": 583,
+        "class2_id": 591
+    },
+    {
+        "class1_id": 583,
+        "class2_id": 592
+    },
+    {
+        "class1_id": 583,
+        "class2_id": 593
+    },
+    {
+        "class1_id": 587,
+        "class2_id": 594
+    },
+    {
+        "class1_id": 589,
+        "class2_id": 595
+    },
+    {
+        "class1_id": 591,
+        "class2_id": 596
+    },
+    {
+        "class1_id": 591,
+        "class2_id": 597
+    },
+    {
+        "class1_id": 591,
+        "class2_id": 598
+    },
+    {
+        "class1_id": 593,
+        "class2_id": 598
+    },
+    {
+        "class1_id": 591,
+        "class2_id": 599
+    },
+    {
+        "class1_id": 592,
+        "class2_id": 599
+    },
+    {
+        "class1_id": 593,
+        "class2_id": 599
+    },
+    {
+        "class1_id": 593,
+        "class2_id": 600
+    },
+    {
+        "class1_id": 590,
+        "class2_id": 600
+    },
+    {
+        "class1_id": 597,
+        "class2_id": 601
+    },
+    {
+        "class1_id": 598,
+        "class2_id": 602
+    },
+    {
+        "class1_id": 598,
+        "class2_id": 603
+    },
+    {
+        "class1_id": 600,
+        "class2_id": 603
+    },
+    {
+        "class1_id": 599,
+        "class2_id": 604
+    },
+    {
+        "class1_id": 597,
+        "class2_id": 604
+    },
+    {
+        "class1_id": 599,
+        "class2_id": 605
+    },
+    {
+        "class1_id": 601,
+        "class2_id": 606
+    },
+    {
+        "class1_id": 601,
+        "class2_id": 607
+    },
+    {
+        "class1_id": 608,
+        "class2_id": 612
+    },
+    {
+        "class1_id": 609,
+        "class2_id": 613
+    },
+    {
+        "class1_id": 611,
+        "class2_id": 614
+    },
+    {
+        "class1_id": 584,
+        "class2_id": 615
+    },
+    {
+        "class1_id": 610,
+        "class2_id": 615
+    },
+    {
+        "class1_id": 606,
+        "class2_id": 616
+    },
+    {
+        "class1_id": 607,
+        "class2_id": 617
+    },
+    {
+        "class1_id": 610,
+        "class2_id": 618
+    },
+    {
+        "class1_id": 613,
+        "class2_id": 618
+    },
+    {
+        "class1_id": 612,
+        "class2_id": 619
+    },
+    {
+        "class1_id": 617,
+        "class2_id": 620
+    },
+    {
+        "class1_id": 613,
+        "class2_id": 621
+    },
+    {
+        "class1_id": 612,
+        "class2_id": 622
+    },
+    {
+        "class1_id": 612,
+        "class2_id": 623
+    },
+    {
+        "class1_id": 621,
+        "class2_id": 624
+    },
+    {
+        "class1_id": 618,
+        "class2_id": 625
+    },
+    {
+        "class1_id": 619,
+        "class2_id": 626
+    },
+    {
+        "class1_id": 619,
+        "class2_id": 627
+    },
+    {
+        "class1_id": 621,
+        "class2_id": 628
+    },
+    {
+        "class1_id": 622,
+        "class2_id": 629
+    },
+    {
+        "class1_id": 629,
+        "class2_id": 631
+    },
+    {
+        "class1_id": 633,
+        "class2_id": 624
+    },
+    {
+        "class1_id": 632,
+        "class2_id": 624
+    },
+    {
+        "class1_id": 615,
+        "class2_id": 634
+    },
+    {
+        "class1_id": 627,
+        "class2_id": 635
+    },
+    {
+        "class1_id": 634,
+        "class2_id": 636
+    },
+    {
+        "class1_id": 630,
+        "class2_id": 637
+    },
+    {
+        "class1_id": 630,
+        "class2_id": 638
+    },
+    {
+        "class1_id": 630,
+        "class2_id": 639
+    },
+    {
+        "class1_id": 582,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 583,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 584,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 585,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 586,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 587,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 588,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 589,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 590,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 591,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 592,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 593,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 594,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 595,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 596,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 597,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 598,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 599,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 600,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 601,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 602,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 603,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 604,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 605,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 606,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 607,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 608,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 609,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 610,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 611,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 612,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 613,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 614,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 615,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 616,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 617,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 618,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 619,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 620,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 621,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 622,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 623,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 624,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 625,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 626,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 627,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 628,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 629,
+        "class2_id": 630
+    },
+    {
+        "class1_id": 747,
+        "class2_id": 753
+    },
+    {
+        "class1_id": 746,
+        "class2_id": 754
+    },
+    {
+        "class1_id": 747,
+        "class2_id": 755
+    },
+    {
+        "class1_id": 749,
+        "class2_id": 755
+    },
+    {
+        "class1_id": 746,
+        "class2_id": 755
+    },
+    {
+        "class1_id": 747,
+        "class2_id": 756
+    },
+    {
+        "class1_id": 748,
+        "class2_id": 757
+    },
+    {
+        "class1_id": 751,
+        "class2_id": 758
+    },
+    {
+        "class1_id": 748,
+        "class2_id": 759
+    },
+    {
+        "class1_id": 752,
+        "class2_id": 760
+    },
+    {
+        "class1_id": 757,
+        "class2_id": 760
+    },
+    {
+        "class1_id": 757,
+        "class2_id": 761
+    },
+    {
+        "class1_id": 755,
+        "class2_id": 762
+    },
+    {
+        "class1_id": 756,
+        "class2_id": 763
+    },
+    {
+        "class1_id": 759,
+        "class2_id": 764
+    },
+    {
+        "class1_id": 758,
+        "class2_id": 765
+    },
+    {
+        "class1_id": 754,
+        "class2_id": 767
+    },
+    {
+        "class1_id": 766,
+        "class2_id": 767
+    },
+    {
+        "class1_id": 760,
+        "class2_id": 768
+    },
+    {
+        "class1_id": 766,
+        "class2_id": 769
+    },
+    {
+        "class1_id": 762,
+        "class2_id": 770
+    },
+    {
+        "class1_id": 764,
+        "class2_id": 771
+    },
+    {
+        "class1_id": 750,
+        "class2_id": 772
+    },
+    {
+        "class1_id": 765,
+        "class2_id": 773
+    },
+    {
+        "class1_id": 761,
+        "class2_id": 774
+    },
+    {
+        "class1_id": 768,
+        "class2_id": 774
+    },
+    {
+        "class1_id": 773,
+        "class2_id": 782
+    },
+    {
+        "class1_id": 771,
+        "class2_id": 776
+    },
+    {
+        "class1_id": 770,
+        "class2_id": 777
+    },
+    {
+        "class1_id": 769,
+        "class2_id": 777
+    },
+    {
+        "class1_id": 764,
+        "class2_id": 778
+    },
+    {
+        "class1_id": 760,
+        "class2_id": 778
+    },
+    {
+        "class1_id": 764,
+        "class2_id": 779
+    },
+    {
+        "class1_id": 773,
+        "class2_id": 779
+    },
+    {
+        "class1_id": 767,
+        "class2_id": 780
+    },
+    {
+        "class1_id": 764,
+        "class2_id": 781
+    },
+    {
+        "class1_id": 775,
+        "class2_id": 782
+    },
+    {
+        "class1_id": 780,
+        "class2_id": 783
+    },
+    {
+        "class1_id": 778,
+        "class2_id": 783
+    },
+    {
+        "class1_id": 777,
+        "class2_id": 784
+    },
+    {
+        "class1_id": 780,
+        "class2_id": 784
+    },
+    {
+        "class1_id": 778,
+        "class2_id": 785
+    },
+    {
+        "class1_id": 778,
+        "class2_id": 786
+    },
+    {
+        "class1_id": 776,
+        "class2_id": 786
+    },
+    {
+        "class1_id": 774,
+        "class2_id": 787
+    },
+    {
+        "class1_id": 784,
+        "class2_id": 788
+    },
+    {
+        "class1_id": 785,
+        "class2_id": 789
+    },
+    {
+        "class1_id": 781,
+        "class2_id": 790
+    },
+    {
+        "class1_id": 778,
+        "class2_id": 791
+    },
+    {
+        "class1_id": 776,
+        "class2_id": 791
+    },
+    {
+        "class1_id": 785,
+        "class2_id": 792
+    },
+    {
+        "class1_id": 787,
+        "class2_id": 792
+    },
+    {
+        "class1_id": 784,
+        "class2_id": 793
+    },
+    {
+        "class1_id": 786,
+        "class2_id": 794
+    },
+    {
+        "class1_id": 788,
+        "class2_id": 795
+    },
+    {
+        "class1_id": 789,
+        "class2_id": 798
+    },
+    {
+        "class1_id": 767,
+        "class2_id": 798
+    },
+    {
+        "class1_id": 792,
+        "class2_id": 799
+    },
+    {
+        "class1_id": 791,
+        "class2_id": 799
+    },
+    {
+        "class1_id": 792,
+        "class2_id": 800
+    },
+    {
+        "class1_id": 798,
+        "class2_id": 802
+    },
+    {
+        "class1_id": 795,
+        "class2_id": 807
+    },
+    {
+        "class1_id": 799,
+        "class2_id": 807
+    },
+    {
+        "class1_id": 798,
+        "class2_id": 807
+    },
+    {
+        "class1_id": 800,
+        "class2_id": 805
+    },
+    {
+        "class1_id": 805,
+        "class2_id": 808
+    },
+    {
+        "class1_id": 792,
+        "class2_id": 811
+    },
+    {
+        "class1_id": 802,
+        "class2_id": 811
+    },
+    {
+        "class1_id": 800,
+        "class2_id": 812
+    },
+    {
+        "class1_id": 802,
+        "class2_id": 812
+    },
+    {
+        "class1_id": 524,
+        "class2_id": 532
+    },
+    {
+        "class1_id": 527,
+        "class2_id": 532
+    },
+    {
+        "class1_id": 523,
+        "class2_id": 532
+    },
+    {
+        "class1_id": 524,
+        "class2_id": 533
+    },
+    {
+        "class1_id": 524,
+        "class2_id": 534
+    },
+    {
+        "class1_id": 528,
+        "class2_id": 535
+    },
+    {
+        "class1_id": 530,
+        "class2_id": 536
+    },
+    {
+        "class1_id": 532,
+        "class2_id": 537
+    },
+    {
+        "class1_id": 532,
+        "class2_id": 538
+    },
+    {
+        "class1_id": 532,
+        "class2_id": 539
+    },
+    {
+        "class1_id": 534,
+        "class2_id": 539
+    },
+    {
+        "class1_id": 532,
+        "class2_id": 540
+    },
+    {
+        "class1_id": 534,
+        "class2_id": 540
+    },
+    {
+        "class1_id": 533,
+        "class2_id": 540
+    },
+    {
+        "class1_id": 534,
+        "class2_id": 541
+    },
+    {
+        "class1_id": 531,
+        "class2_id": 541
+    },
+    {
+        "class1_id": 538,
+        "class2_id": 542
+    },
+    {
+        "class1_id": 539,
+        "class2_id": 543
+    },
+    {
+        "class1_id": 539,
+        "class2_id": 544
+    },
+    {
+        "class1_id": 541,
+        "class2_id": 544
+    },
+    {
+        "class1_id": 540,
+        "class2_id": 545
+    },
+    {
+        "class1_id": 538,
+        "class2_id": 545
+    },
+    {
+        "class1_id": 540,
+        "class2_id": 546
+    },
+    {
+        "class1_id": 542,
+        "class2_id": 547
+    },
+    {
+        "class1_id": 542,
+        "class2_id": 548
+    },
+    {
+        "class1_id": 530,
+        "class2_id": 549
+    },
+    {
+        "class1_id": 544,
+        "class2_id": 550
+    },
+    {
+        "class1_id": 542,
+        "class2_id": 551
+    },
+    {
+        "class1_id": 546,
+        "class2_id": 552
+    },
+    {
+        "class1_id": 550,
+        "class2_id": 553
+    },
+    {
+        "class1_id": 543,
+        "class2_id": 554
+    },
+    {
+        "class1_id": 552,
+        "class2_id": 555
+    },
+    {
+        "class1_id": 525,
+        "class2_id": 556
+    },
+    {
+        "class1_id": 551,
+        "class2_id": 556
+    },
+    {
+        "class1_id": 549,
+        "class2_id": 557
+    },
+    {
+        "class1_id": 547,
+        "class2_id": 558
+    },
+    {
+        "class1_id": 554,
+        "class2_id": 559
+    },
+    {
+        "class1_id": 552,
+        "class2_id": 561
+    },
+    {
+        "class1_id": 552,
+        "class2_id": 562
+    },
+    {
+        "class1_id": 553,
+        "class2_id": 563
+    },
+    {
+        "class1_id": 555,
+        "class2_id": 564
+    },
+    {
+        "class1_id": 559,
+        "class2_id": 565
+    },
+    {
+        "class1_id": 560,
+        "class2_id": 566
+    },
+    {
+        "class1_id": 561,
+        "class2_id": 567
+    },
+    {
+        "class1_id": 560,
+        "class2_id": 568
+    },
+    {
+        "class1_id": 563,
+        "class2_id": 569
+    },
+    {
+        "class1_id": 560,
+        "class2_id": 569
+    },
+    {
+        "class1_id": 563,
+        "class2_id": 570
+    },
+    {
+        "class1_id": 565,
+        "class2_id": 571
+    },
+    {
+        "class1_id": 556,
+        "class2_id": 572
+    },
+    {
+        "class1_id": 570,
+        "class2_id": 573
+    },
+    {
+        "class1_id": 569,
+        "class2_id": 574
+    },
+    {
+        "class1_id": 560,
+        "class2_id": 575
+    },
+    {
+        "class1_id": 570,
+        "class2_id": 576
+    },
+    {
+        "class1_id": 568,
+        "class2_id": 576
+    },
+    {
+        "class1_id": 551,
+        "class2_id": 577
+    },
+    {
+        "class1_id": 574,
+        "class2_id": 577
+    },
+    {
+        "class1_id": 562,
+        "class2_id": 578
+    },
+    {
+        "class1_id": 567,
+        "class2_id": 578
+    },
+    {
+        "class1_id": 571,
+        "class2_id": 579
+    },
+    {
+        "class1_id": 551,
+        "class2_id": 579
+    },
+    {
+        "class1_id": 574,
+        "class2_id": 580
+    },
+    {
+        "class1_id": 572,
+        "class2_id": 581
+    },
+    {
+        "class1_id": 408,
+        "class2_id": 416
+    },
+    {
+        "class1_id": 411,
+        "class2_id": 416
+    },
+    {
+        "class1_id": 407,
+        "class2_id": 416
+    },
+    {
+        "class1_id": 408,
+        "class2_id": 417
+    },
+    {
+        "class1_id": 408,
+        "class2_id": 418
+    },
+    {
+        "class1_id": 412,
+        "class2_id": 419
+    },
+    {
+        "class1_id": 414,
+        "class2_id": 420
+    },
+    {
+        "class1_id": 416,
+        "class2_id": 421
+    },
+    {
+        "class1_id": 416,
+        "class2_id": 422
+    },
+    {
+        "class1_id": 416,
+        "class2_id": 423
+    },
+    {
+        "class1_id": 418,
+        "class2_id": 423
+    },
+    {
+        "class1_id": 416,
+        "class2_id": 424
+    },
+    {
+        "class1_id": 418,
+        "class2_id": 424
+    },
+    {
+        "class1_id": 417,
+        "class2_id": 424
+    },
+    {
+        "class1_id": 418,
+        "class2_id": 425
+    },
+    {
+        "class1_id": 415,
+        "class2_id": 425
+    },
+    {
+        "class1_id": 422,
+        "class2_id": 426
+    },
+    {
+        "class1_id": 423,
+        "class2_id": 427
+    },
+    {
+        "class1_id": 423,
+        "class2_id": 428
+    },
+    {
+        "class1_id": 425,
+        "class2_id": 428
+    },
+    {
+        "class1_id": 424,
+        "class2_id": 429
+    },
+    {
+        "class1_id": 422,
+        "class2_id": 429
+    },
+    {
+        "class1_id": 424,
+        "class2_id": 430
+    },
+    {
+        "class1_id": 428,
+        "class2_id": 433
+    },
+    {
+        "class1_id": 428,
+        "class2_id": 434
+    },
+    {
+        "class1_id": 426,
+        "class2_id": 435
+    },
+    {
+        "class1_id": 426,
+        "class2_id": 431
+    },
+    {
+        "class1_id": 430,
+        "class2_id": 436
+    },
+    {
+        "class1_id": 433,
+        "class2_id": 437
+    },
+    {
+        "class1_id": 434,
+        "class2_id": 438
+    },
+    {
+        "class1_id": 436,
+        "class2_id": 439
+    },
+    {
+        "class1_id": 409,
+        "class2_id": 440
+    },
+    {
+        "class1_id": 435,
+        "class2_id": 440
+    },
+    {
+        "class1_id": 431,
+        "class2_id": 441
+    },
+    {
+        "class1_id": 432,
+        "class2_id": 442
+    },
+    {
+        "class1_id": 438,
+        "class2_id": 443
+    },
+    {
+        "class1_id": 437,
+        "class2_id": 444
+    },
+    {
+        "class1_id": 438,
+        "class2_id": 445
+    },
+    {
+        "class1_id": 442,
+        "class2_id": 446
+    },
+    {
+        "class1_id": 437,
+        "class2_id": 447
+    },
+    {
+        "class1_id": 437,
+        "class2_id": 448
+    },
+    {
+        "class1_id": 444,
+        "class2_id": 449
+    },
+    {
+        "class1_id": 443,
+        "class2_id": 450
+    },
+    {
+        "class1_id": 445,
+        "class2_id": 451
+    },
+    {
+        "class1_id": 444,
+        "class2_id": 451
+    },
+    {
+        "class1_id": 445,
+        "class2_id": 452
+    },
+    {
+        "class1_id": 444,
+        "class2_id": 452
+    },
+    {
+        "class1_id": 443,
+        "class2_id": 453
+    },
+    {
+        "class1_id": 447,
+        "class2_id": 454
+    },
+    {
+        "class1_id": 407,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 408,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 409,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 411,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 410,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 412,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 413,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 414,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 415,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 416,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 417,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 418,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 419,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 420,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 421,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 422,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 423,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 424,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 425,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 426,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 427,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 428,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 429,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 430,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 433,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 434,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 435,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 431,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 436,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 437,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 438,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 439,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 440,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 441,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 442,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 443,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 444,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 445,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 446,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 447,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 448,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 449,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 450,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 451,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 452,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 453,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 454,
+        "class2_id": 455
+    },
+    {
+        "class1_id": 454,
+        "class2_id": 456
+    },
+    {
+        "class1_id": 454,
+        "class2_id": 457
+    },
+    {
+        "class1_id": 440,
+        "class2_id": 458
+    },
+    {
+        "class1_id": 450,
+        "class2_id": 459
+    },
+    {
+        "class1_id": 449,
+        "class2_id": 460
+    },
+    {
+        "class1_id": 458,
+        "class2_id": 461
+    },
+    {
+        "class1_id": 455,
+        "class2_id": 462
+    },
+    {
+        "class1_id": 455,
+        "class2_id": 463
+    },
+    {
+        "class1_id": 455,
+        "class2_id": 464
+    },
+    {
+        "class1_id": 878,
+        "class2_id": 884
+    },
+    {
+        "class1_id": 879,
+        "class2_id": 885
+    },
+    {
+        "class1_id": 877,
+        "class2_id": 886
+    },
+    {
+        "class1_id": 878,
+        "class2_id": 887
+    },
+    {
+        "class1_id": 878,
+        "class2_id": 888
+    },
+    {
+        "class1_id": 883,
+        "class2_id": 894
+    },
+    {
+        "class1_id": 884,
+        "class2_id": 889
+    },
+    {
+        "class1_id": 884,
+        "class2_id": 890
+    },
+    {
+        "class1_id": 880,
+        "class2_id": 890
+    },
+    {
+        "class1_id": 884,
+        "class2_id": 891
+    },
+    {
+        "class1_id": 888,
+        "class2_id": 891
+    },
+    {
+        "class1_id": 886,
+        "class2_id": 892
+    },
+    {
+        "class1_id": 884,
+        "class2_id": 893
+    },
+    {
+        "class1_id": 888,
+        "class2_id": 893
+    },
+    {
+        "class1_id": 887,
+        "class2_id": 895
+    },
+    {
+        "class1_id": 890,
+        "class2_id": 896
+    },
+    {
+        "class1_id": 891,
+        "class2_id": 897
+    },
+    {
+        "class1_id": 891,
+        "class2_id": 898
+    },
+    {
+        "class1_id": 893,
+        "class2_id": 899
+    },
+    {
+        "class1_id": 890,
+        "class2_id": 899
+    },
+    {
+        "class1_id": 893,
+        "class2_id": 900
+    },
+    {
+        "class1_id": 889,
+        "class2_id": 901
+    },
+    {
+        "class1_id": 896,
+        "class2_id": 902
+    },
+    {
+        "class1_id": 888,
+        "class2_id": 903
+    },
+    {
+        "class1_id": 898,
+        "class2_id": 904
+    },
+    {
+        "class1_id": 898,
+        "class2_id": 905
+    },
+    {
+        "class1_id": 900,
+        "class2_id": 905
+    },
+    {
+        "class1_id": 899,
+        "class2_id": 906
+    },
+    {
+        "class1_id": 897,
+        "class2_id": 907
+    },
+    {
+        "class1_id": 892,
+        "class2_id": 907
+    },
+    {
+        "class1_id": 903,
+        "class2_id": 908
+    },
+    {
+        "class1_id": 905,
+        "class2_id": 909
+    },
+    {
+        "class1_id": 906,
+        "class2_id": 910
+    },
+    {
+        "class1_id": 906,
+        "class2_id": 911
+    },
+    {
+        "class1_id": 907,
+        "class2_id": 912
+    },
+    {
+        "class1_id": 904,
+        "class2_id": 913
+    },
+    {
+        "class1_id": 902,
+        "class2_id": 914
+    },
+    {
+        "class1_id": 908,
+        "class2_id": 915
+    },
+    {
+        "class1_id": 913,
+        "class2_id": 915
+    },
+    {
+        "class1_id": 910,
+        "class2_id": 916
+    },
+    {
+        "class1_id": 909,
+        "class2_id": 917
+    },
+    {
+        "class1_id": 912,
+        "class2_id": 918
+    },
+    {
+        "class1_id": 914,
+        "class2_id": 919
+    },
+    {
+        "class1_id": 904,
+        "class2_id": 920
+    },
+    {
+        "class1_id": 881,
+        "class2_id": 921
+    },
+    {
+        "class1_id": 918,
+        "class2_id": 922
+    },
+    {
+        "class1_id": 916,
+        "class2_id": 923
+    },
+    {
+        "class1_id": 917,
+        "class2_id": 924
+    },
+    {
+        "class1_id": 920,
+        "class2_id": 925
+    },
+    {
+        "class1_id": 919,
+        "class2_id": 925
+    },
+    {
+        "class1_id": 894,
+        "class2_id": 925
+    },
+    {
+        "class1_id": 915,
+        "class2_id": 926
+    },
+    {
+        "class1_id": 911,
+        "class2_id": 926
+    },
+    {
+        "class1_id": 923,
+        "class2_id": 927
+    },
+    {
+        "class1_id": 926,
+        "class2_id": 928
+    },
+    {
+        "class1_id": 922,
+        "class2_id": 928
+    },
+    {
+        "class1_id": 924,
+        "class2_id": 930
+    },
+    {
+        "class1_id": 924,
+        "class2_id": 931
+    },
+    {
+        "class1_id": 923,
+        "class2_id": 932
+    },
+    {
+        "class1_id": 921,
+        "class2_id": 933
+    },
+    {
+        "class1_id": 921,
+        "class2_id": 934
+    },
+    {
+        "class1_id": 932,
+        "class2_id": 936
+    },
+    {
+        "class1_id": 930,
+        "class2_id": 937
+    },
+    {
+        "class1_id": 925,
+        "class2_id": 938
+    },
+    {
+        "class1_id": 928,
+        "class2_id": 938
+    },
+    {
+        "class1_id": 927,
+        "class2_id": 938
+    },
+    {
+        "class1_id": 939,
+        "class2_id": 940
+    },
+    {
+        "class1_id": 941,
+        "class2_id": 942
+    },
+    {
+        "class1_id": 952,
+        "class2_id": 942
+    },
+    {
+        "class1_id": 941,
+        "class2_id": 949
+    },
+    {
+        "class1_id": 941,
+        "class2_id": 950
+    },
+    {
+        "class1_id": 939,
+        "class2_id": 947
+    },
+    {
+        "class1_id": 945,
+        "class2_id": 946
+    },
+    {
+        "class1_id": 942,
+        "class2_id": 943
+    },
+    {
+        "class1_id": 942,
+        "class2_id": 944
+    },
+    {
+        "class1_id": 942,
+        "class2_id": 957
+    },
+    {
+        "class1_id": 950,
+        "class2_id": 957
+    },
+    {
+        "class1_id": 947,
+        "class2_id": 957
+    },
+    {
+        "class1_id": 955,
+        "class2_id": 948
+    },
+    {
+        "class1_id": 949,
+        "class2_id": 948
+    },
+    {
+        "class1_id": 950,
+        "class2_id": 948
+    },
+    {
+        "class1_id": 949,
+        "class2_id": 956
+    },
+    {
+        "class1_id": 950,
+        "class2_id": 951
+    },
+    {
+        "class1_id": 942,
+        "class2_id": 951
+    },
+    {
+        "class1_id": 940,
+        "class2_id": 954
+    },
+    {
+        "class1_id": 944,
+        "class2_id": 958
+    },
+    {
+        "class1_id": 943,
+        "class2_id": 960
+    },
+    {
+        "class1_id": 951,
+        "class2_id": 961
+    },
+    {
+        "class1_id": 944,
+        "class2_id": 961
+    },
+    {
+        "class1_id": 951,
+        "class2_id": 962
+    },
+    {
+        "class1_id": 957,
+        "class2_id": 963
+    },
+    {
+        "class1_id": 944,
+        "class2_id": 964
+    },
+    {
+        "class1_id": 958,
+        "class2_id": 965
+    },
+    {
+        "class1_id": 961,
+        "class2_id": 966
+    },
+    {
+        "class1_id": 954,
+        "class2_id": 967
+    },
+    {
+        "class1_id": 964,
+        "class2_id": 967
+    },
+    {
+        "class1_id": 948,
+        "class2_id": 968
+    },
+    {
+        "class1_id": 963,
+        "class2_id": 968
+    },
+    {
+        "class1_id": 950,
+        "class2_id": 969
+    },
+    {
+        "class1_id": 948,
+        "class2_id": 970
+    },
+    {
+        "class1_id": 965,
+        "class2_id": 971
+    },
+    {
+        "class1_id": 966,
+        "class2_id": 972
+    },
+    {
+        "class1_id": 966,
+        "class2_id": 973
+    },
+    {
+        "class1_id": 966,
+        "class2_id": 974
+    },
+    {
+        "class1_id": 969,
+        "class2_id": 974
+    },
+    {
+        "class1_id": 969,
+        "class2_id": 975
+    },
+    {
+        "class1_id": 971,
+        "class2_id": 976
+    },
+    {
+        "class1_id": 972,
+        "class2_id": 976
+    },
+    {
+        "class1_id": 975,
+        "class2_id": 976
+    },
+    {
+        "class1_id": 971,
+        "class2_id": 977
+    },
+    {
+        "class1_id": 973,
+        "class2_id": 977
+    },
+    {
+        "class1_id": 975,
+        "class2_id": 977
+    },
+    {
+        "class1_id": 968,
+        "class2_id": 978
+    },
+    {
+        "class1_id": 972,
+        "class2_id": 978
+    },
+    {
+        "class1_id": 971,
+        "class2_id": 979
+    },
+    {
+        "class1_id": 972,
+        "class2_id": 979
+    },
+    {
+        "class1_id": 971,
+        "class2_id": 980
+    },
+    {
+        "class1_id": 968,
+        "class2_id": 981
+    },
+    {
+        "class1_id": 968,
+        "class2_id": 982
+    },
+    {
+        "class1_id": 974,
+        "class2_id": 982
+    },
+    {
+        "class1_id": 981,
+        "class2_id": 983
+    },
+    {
+        "class1_id": 970,
+        "class2_id": 984
+    },
+    {
+        "class1_id": 982,
+        "class2_id": 984
+    },
+    {
+        "class1_id": 970,
+        "class2_id": 985
+    },
+    {
+        "class1_id": 978,
+        "class2_id": 985
+    },
+    {
+        "class1_id": 982,
+        "class2_id": 985
+    },
+    {
+        "class1_id": 978,
+        "class2_id": 986
+    },
+    {
+        "class1_id": 982,
+        "class2_id": 986
+    },
+    {
+        "class1_id": 976,
+        "class2_id": 987
+    },
+    {
+        "class1_id": 970,
+        "class2_id": 988
+    },
+    {
+        "class1_id": 970,
+        "class2_id": 989
+    },
+    {
+        "class1_id": 983,
+        "class2_id": 990
+    },
+    {
+        "class1_id": 984,
+        "class2_id": 990
+    },
+    {
+        "class1_id": 984,
+        "class2_id": 991
+    },
+    {
+        "class1_id": 985,
+        "class2_id": 991
+    },
+    {
+        "class1_id": 988,
+        "class2_id": 991
+    },
+    {
+        "class1_id": 988,
+        "class2_id": 992
+    },
+    {
+        "class1_id": 953,
+        "class2_id": 993
+    },
+    {
+        "class1_id": 989,
+        "class2_id": 994
+    },
+    {
+        "class1_id": 991,
+        "class2_id": 996
+    },
+    {
+        "class1_id": 992,
+        "class2_id": 996
+    },
+    {
+        "class1_id": 991,
+        "class2_id": 997
+    },
+    {
+        "class1_id": 992,
+        "class2_id": 997
+    },
+    {
+        "class1_id": 993,
+        "class2_id": 998
+    },
+    {
+        "class1_id": 991,
+        "class2_id": 1000
+    },
+    {
+        "class1_id": 820,
+        "class2_id": 816
+    },
+    {
+        "class1_id": 820,
+        "class2_id": 872
+    },
+    {
+        "class1_id": 820,
+        "class2_id": 827
+    },
+    {
+        "class1_id": 843,
+        "class2_id": 827
+    },
+    {
+        "class1_id": 820,
+        "class2_id": 845
+    },
+    {
+        "class1_id": 851,
+        "class2_id": 852
+    },
+    {
+        "class1_id": 824,
+        "class2_id": 863
+    },
+    {
+        "class1_id": 820,
+        "class2_id": 822
+    },
+    {
+        "class1_id": 844,
+        "class2_id": 825
+    },
+    {
+        "class1_id": 845,
+        "class2_id": 846
+    },
+    {
+        "class1_id": 852,
+        "class2_id": 853
+    },
+    {
+        "class1_id": 863,
+        "class2_id": 864
+    },
+    {
+        "class1_id": 852,
+        "class2_id": 864
+    },
+    {
+        "class1_id": 846,
+        "class2_id": 847
+    },
+    {
+        "class1_id": 816,
+        "class2_id": 850
+    },
+    {
+        "class1_id": 853,
+        "class2_id": 854
+    },
+    {
+        "class1_id": 821,
+        "class2_id": 856
+    },
+    {
+        "class1_id": 874,
+        "class2_id": 856
+    },
+    {
+        "class1_id": 840,
+        "class2_id": 856
+    },
+    {
+        "class1_id": 864,
+        "class2_id": 865
+    },
+    {
+        "class1_id": 853,
+        "class2_id": 865
+    },
+    {
+        "class1_id": 827,
+        "class2_id": 814
+    },
+    {
+        "class1_id": 876,
+        "class2_id": 814
+    },
+    {
+        "class1_id": 820,
+        "class2_id": 817
+    },
+    {
+        "class1_id": 847,
+        "class2_id": 848
+    },
+    {
+        "class1_id": 854,
+        "class2_id": 855
+    },
+    {
+        "class1_id": 865,
+        "class2_id": 866
+    },
+    {
+        "class1_id": 817,
+        "class2_id": 818
+    },
+    {
+        "class1_id": 817,
+        "class2_id": 823
+    },
+    {
+        "class1_id": 814,
+        "class2_id": 841
+    },
+    {
+        "class1_id": 848,
+        "class2_id": 867
+    },
+    {
+        "class1_id": 848,
+        "class2_id": 868
+    },
+    {
+        "class1_id": 827,
+        "class2_id": 868
+    },
+    {
+        "class1_id": 814,
+        "class2_id": 815
+    },
+    {
+        "class1_id": 876,
+        "class2_id": 815
+    },
+    {
+        "class1_id": 856,
+        "class2_id": 819
+    },
+    {
+        "class1_id": 867,
+        "class2_id": 849
+    },
+    {
+        "class1_id": 814,
+        "class2_id": 871
+    },
+    {
+        "class1_id": 855,
+        "class2_id": 875
+    },
+    {
+        "class1_id": 818,
+        "class2_id": 875
+    },
+    {
+        "class1_id": 819,
+        "class2_id": 873
+    },
+    {
+        "class1_id": 849,
+        "class2_id": 873
+    },
+    {
+        "class1_id": 866,
+        "class2_id": 869
+    },
+    {
+        "class1_id": 823,
+        "class2_id": 869
+    },
+    {
+        "class1_id": 875,
+        "class2_id": 869
+    },
+    {
+        "class1_id": 871,
+        "class2_id": 870
+    },
+    {
+        "class1_id": 815,
+        "class2_id": 870
+    },
+    {
+        "class1_id": 849,
+        "class2_id": 870
+    },
+    {
+        "class1_id": 700,
+        "class2_id": 701
+    },
+    {
+        "class1_id": 701,
+        "class2_id": 702
+    },
+    {
+        "class1_id": 701,
+        "class2_id": 703
+    },
+    {
+        "class1_id": 703,
+        "class2_id": 704
+    },
+    {
+        "class1_id": 703,
+        "class2_id": 705
+    },
+    {
+        "class1_id": 716,
+        "class2_id": 717
+    },
+    {
+        "class1_id": 700,
+        "class2_id": 708
+    },
+    {
+        "class1_id": 708,
+        "class2_id": 709
+    },
+    {
+        "class1_id": 701,
+        "class2_id": 709
+    },
+    {
+        "class1_id": 709,
+        "class2_id": 710
+    },
+    {
+        "class1_id": 702,
+        "class2_id": 710
+    },
+    {
+        "class1_id": 710,
+        "class2_id": 711
+    },
+    {
+        "class1_id": 708,
+        "class2_id": 714
+    },
+    {
+        "class1_id": 701,
+        "class2_id": 714
+    },
+    {
+        "class1_id": 710,
+        "class2_id": 712
+    },
+    {
+        "class1_id": 704,
+        "class2_id": 712
+    },
+    {
+        "class1_id": 705,
+        "class2_id": 712
+    },
+    {
+        "class1_id": 698,
+        "class2_id": 699
+    },
+    {
+        "class1_id": 699,
+        "class2_id": 715
+    },
+    {
+        "class1_id": 706,
+        "class2_id": 707
+    },
+    {
+        "class1_id": 703,
+        "class2_id": 722
+    },
+    {
+        "class1_id": 715,
+        "class2_id": 722
+    },
+    {
+        "class1_id": 722,
+        "class2_id": 721
+    },
+    {
+        "class1_id": 714,
+        "class2_id": 723
+    },
+    {
+        "class1_id": 709,
+        "class2_id": 720
+    },
+    {
+        "class1_id": 717,
+        "class2_id": 720
+    },
+    {
+        "class1_id": 720,
+        "class2_id": 718
+    },
+    {
+        "class1_id": 714,
+        "class2_id": 718
+    },
+    {
+        "class1_id": 718,
+        "class2_id": 724
+    },
+    {
+        "class1_id": 711,
+        "class2_id": 724
+    },
+    {
+        "class1_id": 720,
+        "class2_id": 725
+    },
+    {
+        "class1_id": 722,
+        "class2_id": 725
+    },
+    {
+        "class1_id": 712,
+        "class2_id": 719
+    },
+    {
+        "class1_id": 718,
+        "class2_id": 719
+    },
+    {
+        "class1_id": 720,
+        "class2_id": 735
+    },
+    {
+        "class1_id": 725,
+        "class2_id": 735
+    },
+    {
+        "class1_id": 707,
+        "class2_id": 735
+    },
+    {
+        "class1_id": 735,
+        "class2_id": 736
+    },
+    {
+        "class1_id": 725,
+        "class2_id": 728
+    },
+    {
+        "class1_id": 728,
+        "class2_id": 729
+    },
+    {
+        "class1_id": 718,
+        "class2_id": 729
+    },
+    {
+        "class1_id": 724,
+        "class2_id": 737
+    },
+    {
+        "class1_id": 729,
+        "class2_id": 727
+    },
+    {
+        "class1_id": 733,
+        "class2_id": 727
+    },
+    {
+        "class1_id": 719,
+        "class2_id": 733
+    },
+    {
+        "class1_id": 733,
+        "class2_id": 731
+    },
+    {
+        "class1_id": 733,
+        "class2_id": 734
+    },
+    {
+        "class1_id": 731,
+        "class2_id": 732
+    },
+    {
+        "class1_id": 734,
+        "class2_id": 732
+    },
+    {
+        "class1_id": 731,
+        "class2_id": 726
+    },
+    {
+        "class1_id": 734,
+        "class2_id": 726
+    },
+    {
+        "class1_id": 726,
+        "class2_id": 730
+    },
+    {
+        "class1_id": 732,
+        "class2_id": 730
+    },
+    {
+        "class1_id": 736,
+        "class2_id": 738
+    },
+    {
+        "class1_id": 737,
+        "class2_id": 738
+    },
+    {
+        "class1_id": 738,
+        "class2_id": 739
+    },
+    {
+        "class1_id": 739,
+        "class2_id": 740
+    },
+    {
+        "class1_id": 727,
+        "class2_id": 743
+    },
+    {
+        "class1_id": 738,
+        "class2_id": 744
+    },
+    {
+        "class1_id": 744,
+        "class2_id": 745
+    },
+    {
+        "class1_id": 721,
+        "class2_id": 742
+    },
+    {
+        "class1_id": 742,
+        "class2_id": 741
+    },
+    {
+        "class1_id": 646,
+        "class2_id": 651
+    },
+    {
+        "class1_id": 647,
+        "class2_id": 652
+    },
+    {
+        "class1_id": 646,
+        "class2_id": 654
+    },
+    {
+        "class1_id": 644,
+        "class2_id": 649
+    },
+    {
+        "class1_id": 647,
+        "class2_id": 655
+    },
+    {
+        "class1_id": 646,
+        "class2_id": 650
+    },
+    {
+        "class1_id": 647,
+        "class2_id": 653
+    },
+    {
+        "class1_id": 651,
+        "class2_id": 657
+    },
+    {
+        "class1_id": 654,
+        "class2_id": 659
+    },
+    {
+        "class1_id": 655,
+        "class2_id": 660
+    },
+    {
+        "class1_id": 650,
+        "class2_id": 661
+    },
+    {
+        "class1_id": 652,
+        "class2_id": 656
+    },
+    {
+        "class1_id": 649,
+        "class2_id": 662
+    },
+    {
+        "class1_id": 653,
+        "class2_id": 658
+    },
+    {
+        "class1_id": 661,
+        "class2_id": 669
+    },
+    {
+        "class1_id": 653,
+        "class2_id": 669
+    },
+    {
+        "class1_id": 662,
+        "class2_id": 667
+    },
+    {
+        "class1_id": 662,
+        "class2_id": 670
+    },
+    {
+        "class1_id": 657,
+        "class2_id": 663
+    },
+    {
+        "class1_id": 659,
+        "class2_id": 666
+    },
+    {
+        "class1_id": 660,
+        "class2_id": 668
+    },
+    {
+        "class1_id": 658,
+        "class2_id": 665
+    },
+    {
+        "class1_id": 656,
+        "class2_id": 664
+    },
+    {
+        "class1_id": 669,
+        "class2_id": 686
+    },
+    {
+        "class1_id": 667,
+        "class2_id": 694
+    },
+    {
+        "class1_id": 667,
+        "class2_id": 673
+    },
+    {
+        "class1_id": 663,
+        "class2_id": 692
+    },
+    {
+        "class1_id": 668,
+        "class2_id": 682
+    },
+    {
+        "class1_id": 664,
+        "class2_id": 674
+    },
+    {
+        "class1_id": 665,
+        "class2_id": 671
+    },
+    {
+        "class1_id": 686,
+        "class2_id": 693
+    },
+    {
+        "class1_id": 665,
+        "class2_id": 693
+    },
+    {
+        "class1_id": 694,
+        "class2_id": 684
+    },
+    {
+        "class1_id": 694,
+        "class2_id": 696
+    },
+    {
+        "class1_id": 686,
+        "class2_id": 688
+    },
+    {
+        "class1_id": 682,
+        "class2_id": 683
+    },
+    {
+        "class1_id": 671,
+        "class2_id": 680
+    },
+    {
+        "class1_id": 670,
+        "class2_id": 680
+    },
+    {
+        "class1_id": 673,
+        "class2_id": 695
+    },
+    {
+        "class1_id": 696,
+        "class2_id": 690
+    },
+    {
+        "class1_id": 684,
+        "class2_id": 697
+    },
+    {
+        "class1_id": 680,
+        "class2_id": 685
+    },
+    {
+        "class1_id": 695,
+        "class2_id": 672
+    },
+    {
+        "class1_id": 672,
+        "class2_id": 689
+    },
+    {
+        "class1_id": 1001,
+        "class2_id": 1006
+    },
+    {
+        "class1_id": 1002,
+        "class2_id": 1006
+    },
+    {
+        "class1_id": 1003,
+        "class2_id": 1007
+    },
+    {
+        "class1_id": 1002,
+        "class2_id": 1008
+    },
+    {
+        "class1_id": 1004,
+        "class2_id": 1008
+    },
+    {
+        "class1_id": 1002,
+        "class2_id": 1009
+    },
+    {
+        "class1_id": 1004,
+        "class2_id": 1009
+    },
+    {
+        "class1_id": 1006,
+        "class2_id": 1011
+    },
+    {
+        "class1_id": 1008,
+        "class2_id": 1011
+    },
+    {
+        "class1_id": 1006,
+        "class2_id": 1012
+    },
+    {
+        "class1_id": 1005,
+        "class2_id": 1013
+    },
+    {
+        "class1_id": 1006,
+        "class2_id": 1014
+    },
+    {
+        "class1_id": 1009,
+        "class2_id": 1014
+    },
+    {
+        "class1_id": 1008,
+        "class2_id": 1015
+    },
+    {
+        "class1_id": 1011,
+        "class2_id": 1016
+    },
+    {
+        "class1_id": 1012,
+        "class2_id": 1017
+    },
+    {
+        "class1_id": 1012,
+        "class2_id": 1018
+    },
+    {
+        "class1_id": 1013,
+        "class2_id": 1018
+    },
+    {
+        "class1_id": 1011,
+        "class2_id": 1019
+    },
+    {
+        "class1_id": 1015,
+        "class2_id": 1019
+    },
+    {
+        "class1_id": 1014,
+        "class2_id": 1020
+    },
+    {
+        "class1_id": 1012,
+        "class2_id": 1020
+    },
+    {
+        "class1_id": 1017,
+        "class2_id": 1021
+    },
+    {
+        "class1_id": 1016,
+        "class2_id": 1022
+    },
+    {
+        "class1_id": 1019,
+        "class2_id": 1022
+    },
+    {
+        "class1_id": 1004,
+        "class2_id": 1023
+    },
+    {
+        "class1_id": 1017,
+        "class2_id": 1023
+    },
+    {
+        "class1_id": 1001,
+        "class2_id": 1024
+    },
+    {
+        "class1_id": 1019,
+        "class2_id": 1024
+    },
+    {
+        "class1_id": 1001,
+        "class2_id": 1025
+    },
+    {
+        "class1_id": 1019,
+        "class2_id": 1025
+    },
+    {
+        "class1_id": 1004,
+        "class2_id": 1026
+    },
+    {
+        "class1_id": 1007,
+        "class2_id": 1026
+    },
+    {
+        "class1_id": 1008,
+        "class2_id": 1027
+    },
+    {
+        "class1_id": 1018,
+        "class2_id": 1027
+    },
+    {
+        "class1_id": 1021,
+        "class2_id": 1027
+    },
+    {
+        "class1_id": 1022,
+        "class2_id": 1028
+    },
+    {
+        "class1_id": 1025,
+        "class2_id": 1029
+    },
+    {
+        "class1_id": 1024,
+        "class2_id": 1029
+    },
+    {
+        "class1_id": 1018,
+        "class2_id": 1030
+    },
+    {
+        "class1_id": 1021,
+        "class2_id": 1030
+    },
+    {
+        "class1_id": 1022,
+        "class2_id": 1031
+    },
+    {
+        "class1_id": 1022,
+        "class2_id": 1032
+    },
+    {
+        "class1_id": 1025,
+        "class2_id": 1032
+    }
+]

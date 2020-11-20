@@ -1,0 +1,93 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+ion-calendar { 
+
+    .today{
+      // background-color: rgba(44, 25, 214, 0.555) !important;
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--ion-color-primary) !important;
+      p{
+        font-weight: 500 !important;
+        color: var(--ion-color-dark) !important;
+      }
+      
+    }
+    .markedDay{
+      // background-color: var(--ion-color-primary) !important;
+      // border-radius: 6px  ;
+      p{ 
+          color: var(--ion-color-primary) ; 
+      } 
+    }
+    .markedDay.today{
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--ion-color-warning) !important;
+      p{
+        font-weight: 500 !important;
+        color: var(--ion-color-warning) !important;
+      }
+    }
+    .daysbox{
+      padding: 0px;
+    }
+}
+
+.divider{
+  border-bottom: 1px solid black !important;
+}
+
+ion-popover {
+	--width: 90% !important;
+}
+
+ion-fab-button[data-desc] {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  right: 15px;
+  border-color: var(--ion-color-primary);
+  color: var(--ion-color-primary);
+
+}
+
+ion-fab-button[data-desc]::after {
+  position: absolute;
+  content: attr(data-desc);
+  z-index: 1;
+  right: 66px;
+  bottom: 8px;
+  background-color:var(--ion-color-light);
+  padding: 9px;
+  border-radius: 15px;
+  color: var(--ion-color-medium);
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+}
+

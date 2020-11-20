@@ -1,0 +1,16 @@
+<ion-button (click)="page = 3" expand="block" fill="clear" shape="round">
+ {{page}}
+</ion-button>
+<ng-container *ngIf="mostrar else otro">
+  <ion-label>mostrar == true</ion-label>
+
+</ng-container>
+
+<ng-template #otro>
+  <ng-container *ngTemplateOutlet="customTemplate ? customTemplate: defaultTemplate ">
+  </ng-container>
+</ng-template>
+
+<ng-template #defaultTemplate>
+  <ion-label>{{x}}</ion-label>
+</ng-template>

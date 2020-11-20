@@ -1,0 +1,27 @@
+[
+  {
+    "semestre": 1,
+    "materias":[
+      {
+        "materia": "lculo"
+      },
+      {
+        "materia": "goritmos"
+      },
+      {
+        "materia": "stellano"
+      }
+    ]
+  },
+  {
+    "semestre": 2,
+    "materias": [
+      {
+        "materia": "lculo2"
+      },
+      {
+        "materia": "goritmos2"
+      }
+    ]
+  }
+]

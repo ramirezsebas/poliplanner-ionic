@@ -1,0 +1,122 @@
+[
+  {
+    "_id": 1,
+    "code": "LEL",
+    "enf": "-- --",
+    "name": "Licenciatura en Electricidad"
+  },
+  {
+    "_id": 2,
+    "code": "LCA",
+    "enf": "-- --",
+    "name": "Licenciatura en Ciencias Atmosféricas"
+  },
+  {
+    "_id": 3,
+    "code": "LGH",
+    "enf": "G",
+    "name": "Licenciatura en Gestión de la Hospitalidad con énfasis en Gastronomía"
+  },
+  {
+    "_id": 4,
+    "code": "LGH",
+    "enf": "H",
+    "name": "Licenciatura en Gestión de la Hospitalidad con énfasis en Hotelería"
+  },
+  {
+    "_id": 5,
+    "code": "LGH",
+    "enf": "T",
+    "name": "Licenciatura en Gestión de la Hospitalidad con énfasis en Turismo"
+  },
+  {
+    "_id": 6,
+    "code": "LCI",
+    "enf": "-- --",
+    "name": "Licenciatura en Ciencias de la Información"
+  },
+  {
+    "_id": 7,
+    "code": "IMK",
+    "enf": "-- --",
+    "name": "Ingeniería en Marketing"
+  },
+  {
+    "_id": 8,
+    "code": "IIN",
+    "enf": "-- --",
+    "name": "Ingeniería en Informática"
+  },
+  {
+    "_id": 9,
+    "code": "IEK",
+    "enf": "EM",
+    "name": "Ingeniería en Electrónica con énfasis en Electrónica Médica"
+  },
+  {
+    "_id": 10,
+    "code": "IEK",
+    "enf": "TI",
+    "name": "Ingeniería en Electrónica con énfasis en Teleprocesamiento de la Información"
+  },
+  {
+    "_id": 11,
+    "code": "IEK",
+    "enf": "CI",
+    "name": "Ingeniería en Electrónica con énfasis en Control Industrial"
+  },
+  {
+    "_id": 12,
+    "code": "IEK",
+    "enf": "MEC",
+    "name": "Ingeniería en Electrónica con énfasis en Mecatrónica"
+  },
+  {
+    "_id": 13,
+    "code": "IEL",
+    "enf": "-- --",
+    "name": "Ingeniería en Electricidad"
+  },
+  {
+    "_id": 14,
+    "code": "LCIk",
+    "enf": "ASI",
+    "name": "Licenciatura en Ciencias Informáticas con énfasis en Análisis de Sistemas Informáticos"
+  },
+  {
+    "_id": 15,
+    "code": "LCIk",
+    "enf": "PC",
+    "name": "Licenciatura en Ciencias Informáticas con énfasis en Programación de Computadoras"
+  },
+  {
+    "_id": 16,
+    "code": "ISP",
+    "enf": "-- --",
+    "name": "Ingeniería en Sistemas de Producción"
+  },
+  {
+    "_id": 17,
+    "code": "ICM",
+    "enf": "-- --",
+    "name": "Ingeniería en Ciencias de los Materiales"
+  },
+  {
+    "_id": 18,
+    "code": "IAE",
+    "enf": "-- --",
+    "name": "Ingeniería en Aeronáutica"
+  },
+  {
+    "_id": 19,
+    "code": "IEN",
+    "enf": "-- --",
+    "name": "Ingeniería en Energía"
+  },
+  {
+    "_id": 20,
+    "code": "TSE",
+    "enf": "-- --",
+    "name": "Técnico Superior en Electrónica"
+  }
+]
