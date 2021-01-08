@@ -27,10 +27,10 @@ export class FilePickerComponent implements OnInit {
     const alert = await this.alertController.create({
       cssClass: "my-custom-class",
       header: "Seleccionar Horario",
-      message: "<button>Message <strong>text</strong></button>!!!",
+      message: "<p>Actualizado de la Facultad!</p>",
       buttons: [
         {
-          text: "Cancel",
+          text: "Cancelar",
           role: "cancel",
           cssClass: "secondary",
           handler: (blah) => {

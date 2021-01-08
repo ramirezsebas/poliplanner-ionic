@@ -10,7 +10,7 @@ import { DataService } from '../../../servicios/armar-horario/data.service';
 export class SeleccionarMateriaComponent implements OnInit {
   seccionInicial: number;
   seleccionados;
-  materias: import("/home/fer/Documentos/projects/poliplaner-ionic/poliplanner/src/app/servicios/armar-horario/data.service").career[];
+  materias: import("/home/gerar/Escritorio/Poliplanner/poliplaner-ionic/src/app/servicios/armar-horario/data.service").career[];
   
   constructor(public data:DataService){
     this.materias=data.seleccionados;

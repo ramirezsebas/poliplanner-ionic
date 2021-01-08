@@ -1,7 +1,9 @@
+
+
 <ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
-  <ion-header>
+  <ion-header translucent>
     <ion-toolbar>
-      <ion-title>Paso {{data.seccionActual}}: Sel. mat. aprobadas {{carrera.code}}</ion-title>
+      <ion-title class="ion-padding">Paso {{data.seccionActual}}: Sel. materias aprobadas de: {{carrera.code}}</ion-title>
     </ion-toolbar>
   </ion-header>
     <app-por-carrera *ngIf="data.seccionActual-2==i" [selectedCareerId]="carrera._id" (seleccionados)="onChange($event,carrera._id)"></app-por-carrera>

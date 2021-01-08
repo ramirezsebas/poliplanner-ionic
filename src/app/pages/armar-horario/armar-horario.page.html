@@ -2,6 +2,7 @@
 <app-menu></app-menu>
 
 <ion-content [ngSwitch]="validarSeccion()">
+  
   <app-seleccionar-carrera *ngSwitchCase="1"></app-seleccionar-carrera>
   <app-seleccionar-materias-aprobadas *ngSwitchCase="2"></app-seleccionar-materias-aprobadas>
   <app-file-picker *ngSwitchCase="2"></app-file-picker>

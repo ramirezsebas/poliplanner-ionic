@@ -1,4 +1,5 @@
-<ion-list *ngFor="let sem of semestersClasses; let i=index">
+<ion-content fullscreen>
+ <ion-list *ngFor="let sem of semestersClasses; let i=index">
   <ion-grid>
     <ion-row>
       <ion-item class="ion-align-self-end" lines="none">
@@ -7,7 +8,7 @@
       </ion-item>
       <ion-col>
         <ion-item>
-          <ion-label><strong>Semestre {{sem.semestre}}</strong></ion-label>
+          <ion-label class="ion-text-wrap"><strong>Semestre {{sem.semestre}}</strong></ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -16,6 +17,7 @@
     <span slot="start">&#09;</span>
     <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked" (ionChange)="verifyEvent(i)">
     </ion-checkbox>
-    <ion-label>{{materia.nombre}}</ion-label>
+    <ion-label class="ion-text-wrap">{{materia.nombre}}</ion-label>
   </ion-item>
-</ion-list>
+ </ion-list>
+</ion-content>
