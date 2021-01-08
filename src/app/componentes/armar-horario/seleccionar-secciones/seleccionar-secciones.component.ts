@@ -56,19 +56,28 @@ export class SeleccionarSeccionesComponent implements OnInit {
       
 
       data.forEach(clase => {
+        console.log(materiasSeleccionadas)
+        console.log(clase);
+        
         materiasSeleccionadas.forEach(nombre => {
-          if (condicionDeFiltro(clase, nombre, enfasis)) {
-            let index = agrupador.findIndex(x => x.padre === nombre);
-            agrupador[index].sigla = clase["5"];
-            agrupador[index].hijos.push({
-              id: clase['0'],
-              nombre: clase["2"].split('(*)')[0].split('-')[1],
-              def: clase["2"].split('(*)')[1],
-              seccion: clase["9"],
-              profesor: `${clase["10"]} ${clase["12"]} ${clase["11"]}`,
-            });
-
-            todoLosDatos.push(clase)
+          try {
+            
+            if (condicionDeFiltro(clase, nombre, enfasis)) {
+              let index = agrupador.findIndex(x => x.padre === nombre);
+              agrupador[index].sigla = clase["5"];
+              agrupador[index].hijos.push({
+                id: clase['0'],
+                nombre: clase["2"].split('(*)')[0].split('-')[1],
+                def: clase["2"].split('(*)')[1],
+                seccion: clase["9"],
+                profesor: `${clase["10"]} ${clase["12"]} ${clase["11"]}`,
+              });
+  
+              todoLosDatos.push(clase)
+            }
+            
+          } catch (error) {
+            
           }
         });
       });
