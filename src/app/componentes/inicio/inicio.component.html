@@ -1,4 +1,4 @@
-<ion-content class="card">
+
   <ion-toolbar>
     <ion-segment #segment scrollable (ionChange)="segmentChanged($event, slides)">
       <ion-segment-button *ngFor="let dia of semana; let i = index" value="{{i}}">
@@ -25,4 +25,3 @@
       </ion-infinite-scroll>
     </ion-slide>
   </ion-slides>
-</ion-content>
