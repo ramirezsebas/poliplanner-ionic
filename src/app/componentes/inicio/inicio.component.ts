@@ -9,12 +9,12 @@ import { DataService } from '../../servicios/armar-horario/data.service';
 })
 export class InicioComponent implements OnInit {
   semana = [
-    { nombre: "LUNES", clases: [], },
-    { nombre: "MARTES", clases: [], },
-    { nombre: "MIERCOLES", clases: [], },
-    { nombre: "JUEVES", clases: [], },
-    { nombre: "VIERNES", clases: [], },
-    { nombre: "SABADO", clases: [], },
+    {nombre:"Lunes", clases:[],},
+    {nombre:"Martes", clases:[],},
+    {nombre:"Mi­ércoles", clases:[],},
+    {nombre:"Jueves", clases:[],},
+    {nombre:"Viernes", clases:[],},
+    {nombre:"Sábado", clases:[],},
   ];
   constructor(
     public modalController: ModalController, 
@@ -107,7 +107,7 @@ export class InicioComponent implements OnInit {
         element.hijos.forEach(clase => {
           if (clase.isItemChecked) {
             let itemselected = this.data.seccionesElegidas.find(x => {
-              return clase.id === x['0']
+              return clase.id === x['Item'];
             })
             toCalendar.push(itemselected)
           }
@@ -115,7 +115,7 @@ export class InicioComponent implements OnInit {
       });
       console.log('tocalendar', toCalendar);
       
-      toCalendar = columnNameFix(toCalendar)
+      //toCalendar = columnNameFix(toCalendar)
       console.log('toCalendar', toCalendar);
       window.localStorage.clear()
       window.localStorage['toInicio'] = JSON.stringify(toCalendar);
@@ -124,7 +124,7 @@ export class InicioComponent implements OnInit {
     console.log('this.data.seccionesElegidasForView', this.data.seccionesElegidasForView);
     console.log('this.data.seccionesElegidas', this.data.seccionesElegidas);
     
-    formatearDatos();
+    formatearDatos(); 
 
     // Get data from 
     let data = window.localStorage.getItem('toInicio')
@@ -134,19 +134,14 @@ export class InicioComponent implements OnInit {
 
       a.forEach(element => {
         this.semana.forEach(dia => {
-          console.log(element);
+          console.log('elementos',element);
           console.log(dia.nombre);
-          let nombreIndex = dia.nombre.toLowerCase()
+          let nombreIndex = dia.nombre
 
-          if (element[nombreIndex].horario)
+          if (element[nombreIndex] && element[nombreIndex].Horario )
             dia.clases.push({
-              horario: element[nombreIndex].horario.replace("-", "a"),
-              nombre: element.asignatura,
-            });
-          else if (nombreIndex === 'sabado' && element[nombreIndex].noche)
-            dia.clases.push({
-              horario: element[nombreIndex].noche,
-              nombre: element.asignatura,
+              horario: element[nombreIndex].Horario.replace("-", "a"),
+              nombre: element.Asignatura,
             });
         })
       });

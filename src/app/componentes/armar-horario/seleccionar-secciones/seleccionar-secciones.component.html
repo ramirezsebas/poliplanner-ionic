@@ -1,11 +1,9 @@
-<ion-header translucent>
+<ion-header>
   <ion-toolbar>
-    <ion-title class="ion-padding">Paso {{data.seccionActual}}: Seleccione secciones </ion-title>
+    <ion-title>Paso {{data.seccionActual}}: Sel. secciones </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content fullscreen>
- <ion-list *ngFor="let mat of clasesElegidasPorSeccionesForView; let i=index">
+<ion-list *ngFor="let mat of clasesElegidasPorSeccionesForView; let i=index">
   <ion-grid>
     <ion-row>
       <ion-item>
@@ -17,12 +15,16 @@
     <span slot="start">&#09;</span>
     <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked" (ionChange)="onChange()">
     </ion-checkbox>
-    <ion-label class="ion-text-wrap">
-    {{materia.nombre}}
-    
+    <ion-label>
+      <h2 class="ion-text-wrap">
+        {{materia.nombre}}
+      </h2>
+      <h2 class="ion-text-wrap">
         {{materia.seccion}} - {{materia.profesor}}
-      
+      </h2>
+      <h2 class="ion-text-wrap">
+        {{materia.especial}}
+      </h2>
     </ion-label>
   </ion-item>
- </ion-list>
-</ion-content>
+</ion-list>

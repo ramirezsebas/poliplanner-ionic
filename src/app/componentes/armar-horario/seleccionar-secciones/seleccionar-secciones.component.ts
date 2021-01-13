@@ -24,16 +24,16 @@ export class SeleccionarSeccionesComponent implements OnInit {
     const datos = this.data.dataFromExcel;
 
     const condicionDeFiltro = (clase, nombre, enf) => {
-      let principioCoinc = clase['2'].match(RegExp('' + nombre));
-      let esLaPalabra = clase['2'] === nombre;
-      let nombreCompleto = clase['2'][nombre.length] == " ";
+      let principioCoinc = clase['Asignatura'].match(RegExp('' + nombre));
+      let esLaPalabra = clase['Asignatura'] === nombre;
+      let nombreCompleto = clase['Asignatura'][nombre.length] == " ";
 
       let enfasisCorrecto =
         //tieneEnfasisGnral  ...puede estar vacio :/
-        typeof clase["6"] === "undefined" ||
-        clase["6"] === "-- --" ||
+        typeof clase["Enfasis"] === "undefined" ||
+        clase["Enfasis"] === "-- --" ||
         //tieneEnfasisEspecifico
-        clase["6"].includes(enf);
+        clase["Enfasis"].includes(enf);
 
       let finCoincide = esLaPalabra || nombreCompleto
 
@@ -59,18 +59,19 @@ export class SeleccionarSeccionesComponent implements OnInit {
         console.log(materiasSeleccionadas)
         console.log(clase);
         
-        materiasSeleccionadas.forEach(nombre => {
+        materiasSeleccionadas.forEach(materia => {
           try {
             
-            if (condicionDeFiltro(clase, nombre, enfasis)) {
-              let index = agrupador.findIndex(x => x.padre === nombre);
-              agrupador[index].sigla = clase["5"];
+            if (condicionDeFiltro(clase, materia, enfasis)) {
+              let index = agrupador.findIndex(x => x.padre === materia);
+              agrupador[index].sigla = clase["Sigla carrera"];
               agrupador[index].hijos.push({
-                id: clase['0'],
-                nombre: clase["2"].split('(*)')[0].split('-')[1],
-                def: clase["2"].split('(*)')[1],
-                seccion: clase["9"],
-                profesor: `${clase["10"]} ${clase["12"]} ${clase["11"]}`,
+                id: clase['Item'],
+                materia: clase["Asignatura"].split('(*)')[0].split('-')[0],
+                especial: clase["Asignatura"].split('(*)')[0].split('-')[1],
+                def: clase["Asignatura"].split('(*)')[1],
+                seccion: clase["Sección"],
+                profesor: `${clase["Tít"]} ${clase["Nombre"]} ${clase["Apellido"]}`,
               });
   
               todoLosDatos.push(clase)

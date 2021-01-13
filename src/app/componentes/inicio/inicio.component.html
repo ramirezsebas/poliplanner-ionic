@@ -1,30 +1,28 @@
-
-
-  <ion-toolbar class="ion-padding">
+<ion-content class="card">
+  <ion-toolbar>
     <ion-segment #segment scrollable (ionChange)="segmentChanged($event, slides)">
       <ion-segment-button *ngFor="let dia of semana; let i = index" value="{{i}}">
-        <ion-label class="padding">{{dia.nombre}}</ion-label>
+        <ion-label>{{dia.nombre}}</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-  
-<ion-content class="card" fullscreen>
 
-  <ion-slides #slides (ionSlideDidChange)="ionSlideDidChange($event,segment,slides)"
-    (ionSlideDidChange)="onSlideChanged()">
+  <ion-slides #slides (ionSlideDidChange)="ionSlideDidChange($event,segment,slides)" (ionSlideDidChange)="onSlideChanged()">
 
     <ion-slide *ngFor="let dia of semana; let i = index" value="{{i}}" class="slide-{{i}}">
-      
+      <ion-infinite-scroll  class="ion-align-self-start">
         <ion-list>
           <ion-item lines="full" *ngFor="let clase of dia.clases">
             <ion-icon size="large" name="ellipse-sharp" color="primary"></ion-icon>
             <ion-label class="ion-text-wrap ion-padding">
-                {{clase.nombre}}
-                {{clase.horario}}
+              <ion-text color="primary">
+                <h1 #materia>{{clase.nombre}}</h1>
+              </ion-text>
+              <p #hora>{{clase.horario}}</p>
             </ion-label>
           </ion-item>
         </ion-list>
-     
+      </ion-infinite-scroll>
     </ion-slide>
   </ion-slides>
 </ion-content>

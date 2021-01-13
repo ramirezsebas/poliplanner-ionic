@@ -2,18 +2,18 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, IonSlides, ModalController } from '@ionic/angular';
 
 @Component({
-  selector: "app-inicio",
+  selector: "page-inicio",
   templateUrl: "./inicio.page.html",
   styleUrls: ["./inicio.page.scss"],
 })
 export class InicioPage implements OnInit {
   semana = [
-    {nombre:"LUNES", clases:[],},
-    {nombre:"MARTES", clases:[],},
-    {nombre:"MIERCOLES", clases:[],},
-    {nombre:"JUEVES", clases:[],},
-    {nombre:"VIERNES", clases:[],},
-    {nombre:"SABADO", clases:[],},
+    {nombre:"Lunes", clases:[],},
+    {nombre:"Martes", clases:[],},
+    {nombre:"Mi­ércoles", clases:[],},
+    {nombre:"Jueves", clases:[],},
+    {nombre:"Viernes", clases:[],},
+    {nombre:"Sábado", clases:[],},
   ];
   constructor(public modalController: ModalController) {}
 
@@ -38,7 +38,7 @@ export class InicioPage implements OnInit {
           
           if (element[nombreIndex].horario)
             dia.clases.push({
-              horario: element[nombreIndex].horario.replace("-", "a"),
+              horario: element[nombreIndex].replace("-", "a"),
               nombre: element.asignatura,
             });
           else if(nombreIndex==='sabado' && element[nombreIndex].noche)
