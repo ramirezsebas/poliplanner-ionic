@@ -9,6 +9,7 @@ import { ModalComponent } from './calendario/modal/modal.component';
 import { Page1Component } from './armar-horario/page1/page1.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { CalendarModule } from './calendario/ion2-calendar';
 
 
 
@@ -26,6 +27,7 @@ import { InicioComponent } from './inicio/inicio.component';
     CommonModule,
     IonicModule,
     RouterModule,
+    CalendarModule
   ],
   exports: [
     HeaderComponent,
@@ -35,6 +37,7 @@ import { InicioComponent } from './inicio/inicio.component';
     Page1Component,
     CalendarioComponent,
     InicioComponent,
+    ModalComponent,
   ]
 })
 export class ComponentesModule { }

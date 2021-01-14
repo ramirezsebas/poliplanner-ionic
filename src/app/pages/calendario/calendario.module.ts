@@ -8,7 +8,7 @@ import { CalendarioPageRoutingModule } from './calendario-routing.module';
 
 import { CalendarioPage } from './calendario.page';
 import { ComponentesModule } from '../../componentes/componentes.module';
-import { CalendarModule } from '../../ion2-calendar';
+import { CalendarModule } from '../../componentes/calendario/ion2-calendar';
 
 @NgModule({
   imports: [
