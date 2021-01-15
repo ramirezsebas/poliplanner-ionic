@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../../../servicios/armar-horario/data.service';
 
 @Component({
@@ -8,13 +8,14 @@ import { DataService } from '../../../servicios/armar-horario/data.service';
 })
 export class SeleccionarMateriasAprobadasComponent implements OnInit {
 
-  constructor( private data: DataService) { 
+  @Input() data: DataService;
+
+  constructor() {}
+
+  ngOnInit() {
     this.data.esAprobar=true;
     console.log(this.data.esAprobar);
-    
   }
-
-  ngOnInit() {}
 
   onChange(selected, id) {
     this.data.materiasAprobadas[id] = selected;

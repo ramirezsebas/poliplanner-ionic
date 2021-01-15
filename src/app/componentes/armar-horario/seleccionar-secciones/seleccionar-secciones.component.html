@@ -20,8 +20,13 @@
         {{materia.nombre}}
       </h2>
       <h2 class="ion-text-wrap">
-        {{materia.seccion}} - {{materia.profesor}}
+        Seccion {{materia.seccion}}
       </h2>
+      <div *ngFor="let profesor of materia.profesor">
+        <h2 class="ion-text-wrap">
+          {{profesor}}
+        </h2>
+      </div>
       <h2 class="ion-text-wrap">
         {{materia.especial}}
       </h2>

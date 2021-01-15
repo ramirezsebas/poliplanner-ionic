@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PopoverController, AlertController } from '@ionic/angular';
 import { DataService } from '../../../servicios/armar-horario/data.service';
 import * as XLSX from "xlsx";
@@ -12,10 +12,11 @@ import * as XLSX from "xlsx";
 export class FilePickerComponent implements OnInit {
   FileName: string;
   dataFromExcel: any[];
+  @Input() data: DataService;
+
 
   constructor(
     private alertController: AlertController,
-    private data: DataService,
   ) {
     this.readFilePopup();
   }
@@ -65,10 +66,10 @@ export class FilePickerComponent implements OnInit {
             if(dia ==  datos_sin_limpiar[0][j]){
               key = datos_sin_limpiar[0][j]
               let clase = {
-                'Aula': "",
+                //'Aula': "",
                 'Horario': "",
               };
-              clase['Aula'] = datos_sin_limpiar[i][j-1];
+              //clase['Aula'] = datos_sin_limpiar[i][j-1];
               clase['Horario'] = datos_sin_limpiar[i][j];
               aux[key] = clase;
               esUnDia = true;
@@ -79,13 +80,14 @@ export class FilePickerComponent implements OnInit {
               let examen = {
                 Día:"",
                 Hora:"",
-                Aula:"",
+              //  Aula:"",
               }
 
               examen['Día' ]=datos_sin_limpiar[i][j];
               examen['Hora']= datos_sin_limpiar[i][j+1];
-              examen['Aula']= datos_sin_limpiar[i][j+2]+"";
-              j=j+2;
+             // examen['Aula']= datos_sin_limpiar[i][j+2]+"";
+             //j=j+2;
+             j=j+1;
 
               if(cont == 0)
                 key = '1p' ;

@@ -11,14 +11,19 @@ export class SeleccionarMateriaComponent implements OnInit {
   seccionInicial: number;
   seleccionados;
   materias: import("src/app/servicios/armar-horario/data.service").career[];
+  @Input() data: DataService;
+
   
-  constructor(public data:DataService){
-    this.materias=data.seleccionados;
-    this.seccionInicial = this.data.seccionActual;
-    this.data.esAprobar=false;
+  constructor(){
+    console.log(this.data);
+    
   }
   
   ngOnInit(): void {
+    console.log(this.data);
+
+    this.materias=this.data.seleccionados;
+    this.seccionInicial = this.data.seccionActual;
   }
 
   onChange(selected,id){

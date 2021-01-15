@@ -3,13 +3,13 @@
 
 <ion-content [ngSwitch]="validarSeccion()">
   
-  <app-seleccionar-carrera *ngSwitchCase="1"></app-seleccionar-carrera>
-  <app-seleccionar-materias-aprobadas *ngSwitchCase="2"></app-seleccionar-materias-aprobadas>
-  <app-file-picker *ngSwitchCase="2"></app-file-picker>
-  <app-seleccionar-materia *ngSwitchCase="3"></app-seleccionar-materia>
-  <app-seleccionar-secciones *ngSwitchCase="4"></app-seleccionar-secciones>
-  <app-inicio *ngSwitchCase="5"></app-inicio>
-  <app-calendario *ngSwitchCase="6"></app-calendario>
+  <app-seleccionar-carrera [data]="data" *ngSwitchCase="1"></app-seleccionar-carrera>
+  <app-seleccionar-materias-aprobadas [data]="data" *ngSwitchCase="2"></app-seleccionar-materias-aprobadas>
+  <app-file-picker [data]="data" *ngSwitchCase="2"></app-file-picker>
+  <app-seleccionar-materia [data]="data" *ngSwitchCase="3"></app-seleccionar-materia>
+  <app-seleccionar-secciones [data]="data" *ngSwitchCase="4"></app-seleccionar-secciones>
+  <app-inicio [data]="data" *ngSwitchCase="5"></app-inicio>
+  <app-calendario [data]="data" *ngSwitchCase="6"></app-calendario>
 </ion-content>
 
 <!-- <ion-content *ngIf="currentSection <= currentCareer.length+1 && currentSection!=1">
@@ -18,4 +18,4 @@
   </ng-container>
 </ion-content> -->
 
-<app-footer></app-footer>
+<app-footer [data]="data"></app-footer>

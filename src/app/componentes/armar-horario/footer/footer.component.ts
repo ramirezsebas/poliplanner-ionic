@@ -9,10 +9,14 @@ import { DataService } from '../../../servicios/armar-horario/data.service';
 export class FooterComponent implements OnInit {
 
   @Input() ultimo: number = 3;
+  @Input() data: DataService;
 
-  constructor(public data: DataService) { }
+  constructor() { console.log(this.data);
+  }
 
   next(){
+    console.log(this.data);
+    
     this.data.seccionActual++;
   }
   
@@ -21,7 +25,7 @@ export class FooterComponent implements OnInit {
   }
 
   validarSeccion(x: number) {
-    return this.data.seccionActual == x + this.data.offset+1;
+    return this.data.seccionActual == x + 4;
   }
   
   ngOnInit() {}

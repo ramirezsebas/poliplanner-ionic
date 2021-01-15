@@ -13,6 +13,34 @@ export interface career {
 })
 export class DataService {
   validarSeccion() {
+    const formatearDatos=()=>{
+
+      let toCalendar = [];
+      this.seccionesElegidasForView.forEach(element => {
+        element.hijos.forEach(clase => {
+          if (clase.isItemChecked) {
+            let itemselected = this.seccionesElegidas.find(x => {
+              return clase.id === x['Item'];
+            })
+            toCalendar.push(itemselected)
+          }
+        });
+      });
+      console.log('tocalendar', toCalendar);
+      
+      //toCalendar = columnNameFix(toCalendar)
+      console.log('toCalendar', toCalendar);
+      window.localStorage['toInicio'] = JSON.stringify(toCalendar);
+    }
+    //console.log(this.seccionActual);
+    
+    if (this.seccionActual == 4){
+      formatearDatos();
+    }else if (this.seccionActual == 6){
+      formatearDatos();
+    }
+    return this.seccionActual;
+
     if(this.seccionActual==1)
       return 1;
     else if (this.seccionActual - this.seleccionados.length < 2){
@@ -22,8 +50,12 @@ export class DataService {
       return 2;
     } else if (this.seccionActual - (2*this.seleccionados.length) < 2){
       this.offset = 2* this.seleccionados.length;
+      formatearDatos()
+
       console.log(`seccion actual ${this.seccionActual}, retorno: ${3}`);
       return 3;
+    }else if(this.offset+2 > this.seccionActual){
+      formatearDatos()
     }else{
       console.log(`seccion actual ${this.seccionActual}, retorno: ${this.seccionActual - this.offset + 2}`);
       
@@ -42,7 +74,7 @@ export class DataService {
   esAprobar: boolean =true;
   clasesTodas: any;
   seccionesElegidas: any;
-  seccionesElegidasForView: any;
+  seccionesElegidasForView: any= [];
   
   constructor() { }
 

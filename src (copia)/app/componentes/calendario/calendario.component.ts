@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalComponent } from './modal/modal.component';
 import { PopoverController } from '@ionic/angular';
 
@@ -13,6 +13,8 @@ import { DataService } from '../../services/data.service';
 })
 export class CalendarioComponent implements OnInit {
 
+  @Input() data: DataService;
+  
   date: string;
   type: "string"; // 'string' | 'js-date' | 'moment' | 'time' | 'object'
   diasMarcados: DayConfig[] = [];
@@ -28,7 +30,6 @@ export class CalendarioComponent implements OnInit {
 
   constructor(
     private popoverController: PopoverController,
-    private data: DataService
   ){
     //Para tener los meses en espanhol
     moment.locale("es-es");

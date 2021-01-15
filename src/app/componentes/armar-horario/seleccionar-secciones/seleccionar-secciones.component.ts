@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../../../servicios/armar-horario/data.service';
 
 @Component({
@@ -9,19 +9,25 @@ import { DataService } from '../../../servicios/armar-horario/data.service';
 export class SeleccionarSeccionesComponent implements OnInit {
   clasesElegidasPorSecciones: any=[];
   clasesElegidasPorSeccionesForView: any=[];
+  @Input() data: DataService;
+
   // clasesElegidasPorSecciones: any[];
   // clasesElegidasPorSeccionesForView: any;
 
-  constructor( private data: DataService) {
+  constructor() {}
+
+  ngOnInit() {
     this.init();
   }
-
-  ngOnInit() {}
   
   init(){
+    console.log('hola');
+    
+    this.clasesElegidasPorSeccionesForView = this.data.seccionesElegidasForView 
     const materiasSeleccionadas = this.data.materiasSeleccionadas.filter(x=>x)
     const carrerasSeleccionadas = this.data.seleccionados;
     const datos = this.data.dataFromExcel;
+    
 
     const condicionDeFiltro = (clase, nombre, enf) => {
       let principioCoinc = clase['Asignatura'].match(RegExp('' + nombre));
@@ -56,7 +62,6 @@ export class SeleccionarSeccionesComponent implements OnInit {
       
 
       data.forEach(clase => {
-        console.log(materiasSeleccionadas)
         console.log(clase);
         
         materiasSeleccionadas.forEach(materia => {
@@ -65,13 +70,20 @@ export class SeleccionarSeccionesComponent implements OnInit {
             if (condicionDeFiltro(clase, materia, enfasis)) {
               let index = agrupador.findIndex(x => x.padre === materia);
               agrupador[index].sigla = clase["Sigla carrera"];
+              
+              // Valindando si la materia tiene 2 profes
+              let prof = [];
+              let tit = clase['Tít'].split('\n')
+              for(let i=0; i<tit.length; i++){
+                prof.push(`${clase["Tít"].split('\n')[i]} ${clase["Nombre"].split('\n')[i]} ${clase["Apellido"].split('\n')[i]}`)
+              }
               agrupador[index].hijos.push({
                 id: clase['Item'],
                 materia: clase["Asignatura"].split('(*)')[0].split('-')[0],
                 especial: clase["Asignatura"].split('(*)')[0].split('-')[1],
                 def: clase["Asignatura"].split('(*)')[1],
                 seccion: clase["Sección"],
-                profesor: `${clase["Tít"]} ${clase["Nombre"]} ${clase["Apellido"]}`,
+                profesor: prof,
               });
   
               todoLosDatos.push(clase)
@@ -90,23 +102,25 @@ export class SeleccionarSeccionesComponent implements OnInit {
     console.log('datos', datos);
     console.log('materiasSeleccionadas', materiasSeleccionadas);
     console.log('carrerasSeleccionadas', carrerasSeleccionadas);
+    if(!this.clasesElegidasPorSeccionesForView[0])
+    {  
+      for (let i = 0; i < carrerasSeleccionadas.length; i++) {
+        const datosDe1Carrera = datos[i];
+        const carrera = carrerasSeleccionadas[i];
+        const materias = materiasSeleccionadas[i];
+        
+        let r = fitroMateriasPorSeccion(datosDe1Carrera,materias,carrera.enf)
+        this.clasesElegidasPorSecciones.push(r.all)
+        this.clasesElegidasPorSeccionesForView.push(r.forView)
+      }
 
-    for (let i = 0; i < carrerasSeleccionadas.length; i++) {
-      const datosDe1Carrera = datos[i];
-      const carrera = carrerasSeleccionadas[i];
-      const materias = materiasSeleccionadas[i];
-      
-      let r = fitroMateriasPorSeccion(datosDe1Carrera,materias,carrera.enf)
-      this.clasesElegidasPorSecciones.push(r.all)
-      this.clasesElegidasPorSeccionesForView.push(r.forView)
+      this.clasesElegidasPorSeccionesForView = this.clasesElegidasPorSeccionesForView.flat().sort((x,y)=>x.padre<y.padre);
+
+      console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
+      console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
+      this.data.seccionesElegidasForView = this.clasesElegidasPorSeccionesForView;
+      this.data.seccionesElegidas = this.clasesElegidasPorSecciones.flat();
     }
-
-    this.clasesElegidasPorSeccionesForView = this.clasesElegidasPorSeccionesForView.flat().sort((x,y)=>x.padre<y.padre);
-
-    console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
-    console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
-    this.data.seccionesElegidasForView = this.clasesElegidasPorSeccionesForView;
-    this.data.seccionesElegidas = this.clasesElegidasPorSecciones.flat();
   }
 
   onChange(){

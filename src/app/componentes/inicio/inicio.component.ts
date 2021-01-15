@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ModalController, IonContent } from '@ionic/angular';
 import { DataService } from '../../servicios/armar-horario/data.service';
 
@@ -8,22 +8,28 @@ import { DataService } from '../../servicios/armar-horario/data.service';
   styleUrls: ['./inicio.component.scss'],
 })
 export class InicioComponent implements OnInit {
+  @Input() data: DataService;
+
   semana = [
     {nombre:"Lunes", clases:[],},
     {nombre:"Martes", clases:[],},
-    {nombre:"Mi­ércoles", clases:[],},
+    {nombre:"Miércoles", clases:[],},
     {nombre:"Jueves", clases:[],},
     {nombre:"Viernes", clases:[],},
     {nombre:"Sábado", clases:[],},
   ];
   constructor(
     public modalController: ModalController, 
-    public data: DataService
-  ) { 
+  ) {}
+
+  ngOnInit() {
+    this.init();
+
+  }
+  
+  ionViewWillEnter(){
     this.init();
   }
-
-  ngOnInit() { }
 
   /**
    * Inicio
@@ -34,47 +40,21 @@ export class InicioComponent implements OnInit {
     console.log('hoola');
     
 
-    const formatearDatos=()=>{
-
-      let toCalendar = [];
-      this.data.seccionesElegidasForView.forEach(element => {
-        element.hijos.forEach(clase => {
-          if (clase.isItemChecked) {
-            let itemselected = this.data.seccionesElegidas.find(x => {
-              return clase.id === x['Item'];
-            })
-            toCalendar.push(itemselected)
-          }
-        });
-      });
-      console.log('tocalendar', toCalendar);
-      
-      //toCalendar = columnNameFix(toCalendar)
-      console.log('toCalendar', toCalendar);
-      window.localStorage.clear()
-      window.localStorage['toInicio'] = JSON.stringify(toCalendar);
-    }
-
-    console.log('this.data.seccionesElegidasForView', this.data.seccionesElegidasForView);
-    console.log('this.data.seccionesElegidas', this.data.seccionesElegidas);
-    
-
     // Get data from 
     let data = window.localStorage.getItem('toInicio')
     if (data) {
-      formatearDatos(); 
+      //formatearDatos(); 
       console.log(JSON.parse(data));
       let a = JSON.parse(data)
 
       a.forEach(element => {
         this.semana.forEach(dia => {
           console.log('elementos',element);
-          console.log(dia.nombre);
-          let nombreIndex = dia.nombre
+          let clase = element[dia.nombre];
 
-          if (element[nombreIndex] && element[nombreIndex].Horario )
+          if (clase!=undefined && clase['Horario'] != undefined )
             dia.clases.push({
-              horario: element[nombreIndex].Horario.replace("-", "a"),
+              horario: clase['Horario'].replace("-", "a"),
               nombre: element.Asignatura,
             });
         })
@@ -85,6 +65,7 @@ export class InicioComponent implements OnInit {
       console.log(this.semana);
 
     } else {
+      console.log('hola2')
       let semana = window.localStorage.getItem("semana");
       console.log(JSON.parse(semana));
       

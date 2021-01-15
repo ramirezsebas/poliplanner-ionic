@@ -10,15 +10,21 @@ import { DataService, career } from '../../../servicios/armar-horario/data.servi
 export class SeleccionarCarreraComponent implements OnInit {
   
   seleccionados: career[];
+  @Input() data: DataService;
+
   
   careers: any[];
   
-  constructor( private fpuna: FpunaService, public data: DataService) { 
+  constructor( private fpuna: FpunaService) { 
+    
     this.initData();
-    this.seleccionados = this.data.seleccionados;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.data);
+    this.seleccionados = this.data.seleccionados;
+
+  }
 
   initData() {
     this.fpuna.getCarrerasAll().subscribe((r) => {

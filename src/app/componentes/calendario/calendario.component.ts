@@ -33,10 +33,14 @@ export class CalendarioComponent implements OnInit {
     let hoy = new Date();
     this.currentMes= hoy.getMonth()+1;
     this.currentYear = hoy.getFullYear();
+    console.log(window.localStorage.toCalendar);
+
   }
 
   ngOnInit() {
     console.log('hola');
+    console.log(window.localStorage.toCalendar);
+    
     
     let data = window.localStorage.toCalendar;
     // [{tipo:"",materia:"",fecha:"",hora,""}]
@@ -58,15 +62,21 @@ export class CalendarioComponent implements OnInit {
         ];
         let keys = ["1p", "2p","1f","2f"]
         for (const key in keys) {
-          let index = parseInt(element[keys[key]]['Día'].split("/")[1]);
-          this.eventosMes[index].push({
-            tipo: tipos[key],
-            materia: element["Asignatura"],
-            fecha: element[keys[key]]['Día'],
-            hora: element[keys[key]]['Hora'],
-            aula: element[keys[key]]['Aula'],
-          });
-          marcarDia(this.diasMarcados, element[keys[key]]['Día']);
+          console.log(element);
+          let index;
+          try {
+            index = parseInt(element[keys[key]]['Día'].split("/")[1]);
+            this.eventosMes[index].push({
+              tipo: tipos[key],
+              materia: element["Asignatura"],
+              fecha: element[keys[key]]['Día'],
+              hora: element[keys[key]]['Hora'],
+              aula: element[keys[key]]['Aula'],
+            });
+            marcarDia(this.diasMarcados, element[keys[key]]['Día']);
+          } catch (error) {
+            
+          }
         }
       });
 

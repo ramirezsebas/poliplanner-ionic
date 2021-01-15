@@ -9,12 +9,18 @@ import { DataService } from '../../../../servicios/armar-horario/data.service';
 })
 export class PorCarreraComponent implements OnInit {
 
+  @Input() data:DataService;
   @Input() selectedCareerId;
+  @Input() esAprobar;
   @Output() seleccionados = new EventEmitter();
   semestersClasses: any[];
   
-  constructor(private fpuna: FpunaService, private data: DataService) {
-    if (this.data.esAprobar){
+  constructor(private fpuna: FpunaService) {
+  }
+  ngOnInit() {
+    console.log(this.data);
+    
+    if (this.esAprobar){
       console.log('esto aprov');
       
       this.getData();
@@ -22,7 +28,6 @@ export class PorCarreraComponent implements OnInit {
     else
       this.descartarDatosPrerrequisito();
   }
-  ngOnInit() {}
 
   descartarDatosPrerrequisito(){
     this.fpuna.getPrerrequisitosAll().subscribe(prerrequisitos=>{

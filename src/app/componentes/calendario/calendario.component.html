@@ -1,6 +1,6 @@
 <ion-infinite-scroll>
   <div class="ion-padding-top" *ngIf="mostrarCalendario">
-    <ion-calendar [(ngModel)]="date" (change)="onChange($event)" [type]="type" [format]="'DD-MM-YYYY'" [options]="optionsMulti" (monthChange)="monthChange($event)">
+    <ion-calendar (change)="onChange($event)" [type]="type" [format]="'DD-MM-YYYY'" [options]="optionsMulti" (monthChange)="monthChange($event)">
     </ion-calendar>
   </div>
   <div class="divider"></div>
