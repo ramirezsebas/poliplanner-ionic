@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-segment #segment scrollable (ionChange)="segmentChanged($event, slides)">
       <ion-segment-button *ngFor="let dia of semana; let i = index" value="{{i}}">
-        <ion-label>{{dia.nombre}}</ion-label>
+        <ion-label id="dia">{{dia.nombre}}</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
