@@ -1,29 +1,6 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>SheetJS Ionic Demo</ion-title>
-    </ion-navbar>
-</ion-header>
-<ion-content padding>
-    
-    <ion-avatar>
-        <ion-label>Hola</ion-label>
-    </ion-avatar>
-    <span class="circle" color="primary">Hola QUE TAL muy wenas </span>
+<app-header></app-header>
+<app-menu></app-menu>
+
+<ion-content>
+    <ion-label>Aun no implementado :c</ion-label>
 </ion-content>
-<ion-footer>
-    <ion-toolbar>
-    </ion-toolbar>
-    <!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->
-    <input type="file" (change)="onFileChange($event)" multiple="false" />
-    <!-- <button ion-button color="secondary" (click)="import()">Import Data</button> -->
-    <ion-input type="url" placeholder="Awesome Input"></ion-input>
-    <button ion-button color="secondary" (click)="export()">Export Data</button>
-</ion-footer>
-
-<ion-label color="primary">{{page}}</ion-label>
-
-<app-prueba [page]="page"></app-prueba>
-
-<ng-template #miTemplate>
-    <ion-label color="primary">{{a}}</ion-label>
-</ng-template>
