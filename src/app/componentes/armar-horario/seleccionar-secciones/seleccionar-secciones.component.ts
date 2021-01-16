@@ -127,4 +127,20 @@ export class SeleccionarSeccionesComponent implements OnInit {
     console.log(this.clasesElegidasPorSeccionesForView);
   }
 
+  ngOnDestroy(){
+    console.log('chau');
+    this.data.toCalendar= [];
+    this.data.seccionesElegidasForView.forEach(element => {
+      element.hijos.forEach(clase => {
+        if (clase.isItemChecked) {
+          let itemselected = this.data.seccionesElegidas.find(x => {
+            return clase.id === x['Item'];
+          })
+          this.data.toCalendar.push(itemselected)
+        }
+      });
+    });
+    
+  }
+
 }

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CalendarComponentOptions, DayConfig, CalendarComponent } from 'ion2-calendar';
 import * as moment from "moment";
 import { ModalController, PopoverController } from '@ionic/angular';
 import { ModalComponent } from '../../componentes/calendario/modal/modal.component';
+import { DataService } from 'src/app/servicios/armar-horario/data.service';
 
 @Component({
   selector: "app-calendario",
@@ -23,8 +24,11 @@ export class CalendarioComponent implements OnInit {
   currentMes: number;
   currentYear: number;
   mostrarCalendario: boolean;
+  @Input() toCalendar;
 
-  constructor(private popoverController: PopoverController) {
+  constructor(
+    private popoverController: PopoverController,
+    ) {
     //Para tener los meses en espanhol
     moment.locale("es-es");
 
@@ -33,70 +37,49 @@ export class CalendarioComponent implements OnInit {
     let hoy = new Date();
     this.currentMes= hoy.getMonth()+1;
     this.currentYear = hoy.getFullYear();
-    console.log(window.localStorage.toCalendar);
 
   }
 
   ngOnInit() {
     console.log('hola');
-    console.log(window.localStorage.toCalendar);
-    
-    
-    let data = window.localStorage.toCalendar;
-    // [{tipo:"",materia:"",fecha:"",hora,""}]
-    if(data){
-      let datos_a_filtrar = JSON.parse(window.localStorage.toCalendar);
-
-      let x=0;while(x++<13)this.eventosMes.push([])
-      console.log(this);
-      console.log(datos_a_filtrar);
       
+    let datos_a_filtrar = this.toCalendar;
 
-      datos_a_filtrar.forEach(element => {
-        
-        let tipos = [
-          "Primer Parcial",
-          "Segundo Parcial",
-          "Primer Final",
-          "Segundo Final",
-        ];
-        let keys = ["1p", "2p","1f","2f"]
-        for (const key in keys) {
-          console.log(element);
-          let index;
-          try {
-            index = parseInt(element[keys[key]]['Día'].split("/")[1]);
-            this.eventosMes[index].push({
-              tipo: tipos[key],
-              materia: element["Asignatura"],
-              fecha: element[keys[key]]['Día'],
-              hora: element[keys[key]]['Hora'],
-              aula: element[keys[key]]['Aula'],
-            });
-            marcarDia(this.diasMarcados, element[keys[key]]['Día']);
-          } catch (error) {
-            
-          }
+    let x=0;while(x++<13)this.eventosMes.push([])
+    console.log(this);
+    console.log(datos_a_filtrar);
+    
+
+    datos_a_filtrar.forEach(element => {
+      
+      let tipos = [
+        "Primer Parcial",
+        "Segundo Parcial",
+        "Primer Final",
+        "Segundo Final",
+      ];
+      let keys = ["1p", "2p","1f","2f"]
+      for (const key in keys) {
+        console.log(element);
+        let index;
+        try {
+          index = parseInt(element[keys[key]]['Día'].split("/")[1]);
+          this.eventosMes[index].push({
+            tipo: tipos[key],
+            materia: element["Asignatura"],
+            fecha: element[keys[key]]['Día'],
+            hora: element[keys[key]]['Hora'],
+            aula: element[keys[key]]['Aula'],
+          });
+          marcarDia(this.diasMarcados, element[keys[key]]['Día']);
+        } catch (error) {
+          
         }
-      });
-
-      delete window.localStorage['toCalendar'];
-      window.localStorage['eventosMes'] = JSON.stringify(this.eventosMes);
-      window.localStorage['diasMarcados'] = JSON.stringify(this.diasMarcados);
-    } else {
-      let eventosMes = window.localStorage.getItem("eventosMes");
-      let diasMarcados = window.localStorage.getItem("diasMarcados");
-      if (eventosMes) {
-        console.log(this.diasMarcados);
-        console.log('josn diasMarcados', JSON.parse(diasMarcados));
-        
-        
-        this.eventosMes = JSON.parse(eventosMes);
-        this.diasMarcados = JSON.parse(diasMarcados);
-        console.log('this', this.diasMarcados);
-        
       }
-    }
+    });
+    console.log(this);
+      
+    
     this.optionsMulti["daysConfig"] = this.diasMarcados;
     this.mostrarCalendario = true;
     console.log(this.optionsMulti);

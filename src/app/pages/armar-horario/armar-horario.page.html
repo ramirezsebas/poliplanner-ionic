@@ -8,7 +8,7 @@
   <app-file-picker [data]="data" *ngSwitchCase="2"></app-file-picker>
   <app-seleccionar-materia [data]="data" *ngSwitchCase="3"></app-seleccionar-materia>
   <app-seleccionar-secciones [data]="data" *ngSwitchCase="4"></app-seleccionar-secciones>
-  <app-inicio [data]="data" *ngSwitchCase="5"></app-inicio>
+  <app-inicio [semana]="data.semana" [toCalendar]="data.toCalendar" *ngSwitchCase="5"></app-inicio>
   <app-calendario [data]="data" *ngSwitchCase="6"></app-calendario>
 </ion-content>
 

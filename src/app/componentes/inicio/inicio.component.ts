@@ -8,27 +8,19 @@ import { DataService } from '../../servicios/armar-horario/data.service';
   styleUrls: ['./inicio.component.scss'],
 })
 export class InicioComponent implements OnInit {
-  @Input() data: DataService;
+  @Input() semana;
+  @Input() toCalendar;
 
-  semana = [
-    {nombre:"Lunes", clases:[],},
-    {nombre:"Martes", clases:[],},
-    {nombre:"Miércoles", clases:[],},
-    {nombre:"Jueves", clases:[],},
-    {nombre:"Viernes", clases:[],},
-    {nombre:"Sábado", clases:[],},
-  ];
   constructor(
     public modalController: ModalController, 
   ) {}
 
   ngOnInit() {
+    
     this.init();
+    console.log(this.toCalendar);
+    
 
-  }
-  
-  ionViewWillEnter(){
-    this.init();
   }
 
   /**
@@ -39,17 +31,16 @@ export class InicioComponent implements OnInit {
 
     console.log('hoola');
     
+    
 
     // Get data from 
-    let data = window.localStorage.getItem('toInicio')
+    let data = this.toCalendar
+    
     if (data) {
       //formatearDatos(); 
-      console.log(JSON.parse(data));
-      let a = JSON.parse(data)
 
-      a.forEach(element => {
+      data.forEach(element => {
         this.semana.forEach(dia => {
-          console.log('elementos',element);
           let clase = element[dia.nombre];
 
           if (clase!=undefined && clase['Horario'] != undefined )
@@ -59,19 +50,15 @@ export class InicioComponent implements OnInit {
             });
         })
       });
-      window.localStorage.clear()
-      window.localStorage['toCalendar'] = data
-      window.localStorage['semana'] = JSON.stringify(this.semana)
-      console.log(this.semana);
 
     } else {
-      console.log('hola2')
-      let semana = window.localStorage.getItem("semana");
-      console.log(JSON.parse(semana));
-      
-      if (semana) {
-        this.semana = JSON.parse(semana);
-      }
+      console.log('hola2: toCalendar no tiene nada')
+      //let semana = window.localStorage.getItem("semana");
+      //console.log(JSON.parse(semana));
+      //
+      //if (semana) {
+      //  this.data.semana = JSON.parse(semana);
+      //}
     }
   }
 

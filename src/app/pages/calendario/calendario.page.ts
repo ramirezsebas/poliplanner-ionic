@@ -3,6 +3,7 @@ import { CalendarComponentOptions, DayConfig, CalendarComponent } from 'ion2-cal
 import * as moment from "moment";
 import { ModalController, PopoverController } from '@ionic/angular';
 import { ModalComponent } from '../../componentes/calendario/modal/modal.component';
+import { DataService } from 'src/app/servicios/armar-horario/data.service';
 
 @Component({
   selector: "app-page",
@@ -10,5 +11,9 @@ import { ModalComponent } from '../../componentes/calendario/modal/modal.compone
   styleUrls: ["./calendario.page.scss"],
 })
 export class CalendarioPage implements OnInit {
-  ngOnInit() {}
+  constructor(public data: DataService){}
+  ngOnInit() {
+    console.log(this.data);
+    
+  }
 }

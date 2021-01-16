@@ -11,7 +11,7 @@ export class ArmarHorarioPage implements OnInit {
 
   data = new DataService;
 
-  constructor(public dataTrue: DataService,private navCtrl:NavController) { 
+  constructor(public dataTrue: DataService, private navCtrl:NavController) { 
     
   }
 
@@ -21,7 +21,10 @@ export class ArmarHorarioPage implements OnInit {
     if(this.data.seccionActual == 1){
       //this.data = this.dataTrue;
     }else if(this.data.seccionActual == 7){
-      //this.dataTrue = this.data;
+      console.log('data', this.data);
+      
+      this.dataTrue.remplazarDatos(this.data)
+      window.localStorage.clear()
       this.navCtrl.navigateRoot('inicio')
     }
     return this.data.validarSeccion();

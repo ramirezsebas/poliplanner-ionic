@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, IonSlides, ModalController } from '@ionic/angular';
+import { DataService } from 'src/app/servicios/armar-horario/data.service';
 
 @Component({
   selector: "page-inicio",
@@ -7,17 +8,26 @@ import { IonContent, IonSlides, ModalController } from '@ionic/angular';
   styleUrls: ["./inicio.page.scss"],
 })
 export class InicioPage implements OnInit {
-  semana = [
-    {nombre:"Lunes", clases:[],},
-    {nombre:"Martes", clases:[],},
-    {nombre:"Mi­ércoles", clases:[],},
-    {nombre:"Jueves", clases:[],},
-    {nombre:"Viernes", clases:[],},
-    {nombre:"Sábado", clases:[],},
-  ];
-  constructor(public modalController: ModalController) {}
+ 
+  constructor(public modalController: ModalController, public data: DataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.ionViewWillEnter()
+  }
+
+  ionViewWillEnter(){
+    console.log('haseoau');
+    
+    console.log(this.data.semana);
+    
+    let datos = window.localStorage.data
+    if(datos){
+      this.data.remplazarDatos(JSON.parse(datos))
+      
+    }else{
+      window.localStorage.data = JSON.stringify(this.data);
+    }
+  }
 
   
 

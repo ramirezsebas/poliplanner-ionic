@@ -1,12 +1,6 @@
 <app-menu></app-menu>
 <app-header></app-header>
 
-<ion-content>
-  <app-inicio ></app-inicio>
-</ion-content>
-
-
-
 <ion-fab vertical="bottom" horizontal="end" class="ion-padding">
   <ion-fab-button>
     <ion-icon name="add"></ion-icon>
@@ -23,3 +17,8 @@
     </ion-fab-button>
   </ion-fab-list>
 </ion-fab>
+
+
+<ion-content>
+  <app-inicio [semana]="data.semana" [toCalendar]="data.toCalendar"></app-inicio>
+</ion-content>
