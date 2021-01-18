@@ -1,11 +1,14 @@
 <ion-infinite-scroll  class="ion-align-self-start">
   <ion-list>
     <ion-item lines="full" *ngFor="let clase of toCalendar; let i = index">
+
      <div class="circle">{{clase.Asignatura[0]}}</div>
       <ion-label class="ion-text-wrap ion-padding">
-        <ion-label color="primary" style="font-size:20px" #materia>{{clase.Asignatura}}</ion-label>
+        <ion-label  class="ion-text-wrap" color="primary" style="font-size:20px" #materia>{{clase.Asignatura}}</ion-label>
         <p #hora>{{clase['Tít']+' '+clase['Nombre']+' '+clase['Apellido']}}</p>
       </ion-label>
+      <h3 style="color:var(--ion-color-primary)">{{clase['Sección']}}</h3>
+
     </ion-item>
   </ion-list>
 </ion-infinite-scroll>

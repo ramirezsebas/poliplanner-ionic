@@ -8,7 +8,6 @@ import { DataService } from 'src/app/servicios/armar-horario/data.service';
 })
 export class SeccionesPage implements OnInit {
   constructor(public data: DataService) {
-    console.log(data.toCalendar);
     
   }
 

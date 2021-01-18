@@ -14,7 +14,7 @@ ion-toolbar {
 }
 
 ion-segment-button{
-    --color-checked: white;
+    --color-checked:  var(--ion-color-primary-contrast);
 }
 
 .circle {

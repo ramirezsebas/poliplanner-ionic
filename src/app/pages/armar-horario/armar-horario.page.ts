@@ -20,7 +20,7 @@ export class ArmarHorarioPage implements OnInit {
     
     if(this.data.seccionActual == 1){
       //this.data = this.dataTrue;
-    }else if(this.data.seccionActual == 7){
+    }else if(this.data.seccionActual == 8){
       console.log('data', this.data);
       
       this.dataTrue.remplazarDatos(this.data)

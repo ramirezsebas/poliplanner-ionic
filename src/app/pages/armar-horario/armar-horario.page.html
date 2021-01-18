@@ -10,12 +10,20 @@
   <div *ngSwitchCase="5">
     <ion-header slot="fixed">
       <ion-toolbar>
+        <ion-title>Paso {{data.seccionActual}}: Confirma las secciones </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <app-secciones [toCalendar]="data.toCalendar" ></app-secciones>
+  </div>
+  <div *ngSwitchCase="6">
+    <ion-header slot="fixed">
+      <ion-toolbar>
         <ion-title>Paso {{data.seccionActual}}: Confirma el Horario </ion-title>
       </ion-toolbar>
     </ion-header>
     <app-inicio [semana]="data.semana" [toCalendar]="data.toCalendar" ></app-inicio>
   </div>
-  <div *ngSwitchCase="6">
+  <div *ngSwitchCase="7">
     <ion-header slot="fixed">
       <ion-toolbar>
         <ion-title>Paso {{data.seccionActual}}: Confirma el Calendario </ion-title>
