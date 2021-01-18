@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
@@ -10,6 +10,7 @@ import { Page1Component } from './armar-horario/page1/page1.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CalendarModule } from './calendario/ion2-calendar';
+import { SeccionesComponent } from './secciones/secciones.component';
 
 
 
@@ -22,6 +23,7 @@ import { CalendarModule } from './calendario/ion2-calendar';
     Page1Component,
     CalendarioComponent,
     InicioComponent,
+    SeccionesComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +40,9 @@ import { CalendarModule } from './calendario/ion2-calendar';
     CalendarioComponent,
     InicioComponent,
     ModalComponent,
-  ]
+    SeccionesComponent,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
 export class ComponentesModule { }

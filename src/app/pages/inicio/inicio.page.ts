@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonContent, IonSlides, ModalController } from '@ionic/angular';
+import { IonContent, IonSlides, ModalController, NavController } from '@ionic/angular';
 import { DataService } from 'src/app/servicios/armar-horario/data.service';
 
 @Component({
@@ -9,7 +9,11 @@ import { DataService } from 'src/app/servicios/armar-horario/data.service';
 })
 export class InicioPage implements OnInit {
  
-  constructor(public modalController: ModalController, public data: DataService) {}
+  constructor(
+    public modalController: ModalController, 
+    public data: DataService,
+    private navCtrl:NavController,
+  ) {}
 
   ngOnInit() {
     this.ionViewWillEnter()
@@ -23,8 +27,9 @@ export class InicioPage implements OnInit {
     let datos = window.localStorage.data
     if(datos){
       this.data.remplazarDatos(JSON.parse(datos))
-      
+
     }else{
+      this.navCtrl.navigateForward('armar-horario')
       window.localStorage.data = JSON.stringify(this.data);
     }
   }

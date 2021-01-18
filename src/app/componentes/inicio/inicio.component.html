@@ -13,11 +13,9 @@
       <ion-infinite-scroll  class="ion-align-self-start">
         <ion-list>
           <ion-item lines="full" *ngFor="let clase of dia.clases">
-            <ion-icon size="large" name="ellipse-sharp" color="primary"></ion-icon>
+           <div class="circle">{{clase.nombre[0]}}</div>
             <ion-label class="ion-text-wrap ion-padding">
-              <ion-text color="primary">
-                <h1 #materia>{{clase.nombre}}</h1>
-              </ion-text>
+              <ion-label color="primary" style="font-size:20px" #materia>{{clase.nombre}}</ion-label>
               <p #hora>{{clase.horario}}</p>
             </ion-label>
           </ion-item>

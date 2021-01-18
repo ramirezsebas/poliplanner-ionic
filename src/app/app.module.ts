@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FpunaService } from './fpuna.service';
 import { File } from "@ionic-native/file/ngx";
 import { DataService } from './servicios/armar-horario/data.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { DataService } from './servicios/armar-horario/data.service';
     HttpClientModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,
@@ -33,5 +36,7 @@ import { DataService } from './servicios/armar-horario/data.service';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],
+
+  schemas: [ NO_ERRORS_SCHEMA ],
 })
 export class AppModule {}

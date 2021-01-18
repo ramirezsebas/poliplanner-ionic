@@ -2,14 +2,27 @@
 <app-menu></app-menu>
 
 <ion-content [ngSwitch]="validarSeccion()">
-  
   <app-seleccionar-carrera [data]="data" *ngSwitchCase="1"></app-seleccionar-carrera>
   <app-seleccionar-materias-aprobadas [data]="data" *ngSwitchCase="2"></app-seleccionar-materias-aprobadas>
   <app-file-picker [data]="data" *ngSwitchCase="2"></app-file-picker>
-  <app-seleccionar-materia [data]="data" *ngSwitchCase="3"></app-seleccionar-materia>
+  <app-seleccionar-materia [data]="data" *ngSwitchCase="3"></app-seleccionar-materia> 
   <app-seleccionar-secciones [data]="data" *ngSwitchCase="4"></app-seleccionar-secciones>
-  <app-inicio [semana]="data.semana" [toCalendar]="data.toCalendar" *ngSwitchCase="5"></app-inicio>
-  <app-calendario [data]="data" *ngSwitchCase="6"></app-calendario>
+  <div *ngSwitchCase="5">
+    <ion-header slot="fixed">
+      <ion-toolbar>
+        <ion-title>Paso {{data.seccionActual}}: Confirma el Horario </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <app-inicio [semana]="data.semana" [toCalendar]="data.toCalendar" ></app-inicio>
+  </div>
+  <div *ngSwitchCase="6">
+    <ion-header slot="fixed">
+      <ion-toolbar>
+        <ion-title>Paso {{data.seccionActual}}: Confirma el Calendario </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <app-calendario [toCalendar]="data.toCalendar"></app-calendario>
+  </div>
 </ion-content>
 
 <!-- <ion-content *ngIf="currentSection <= currentCareer.length+1 && currentSection!=1">

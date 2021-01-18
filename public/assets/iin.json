@@ -1,0 +1,25 @@
+[
+  {
+    "semestre": 1,
+    "materias":[
+      { "materia": "Fundamentos de matemática" },
+      { "materia": "Matemática discreta" },
+      { "materia": "Organización y arquitectura de computadoras I" },
+      { "materia": "Algoritmos y estructuras de datos I" },
+      { "materia": "Expresión oral y escrita" },
+      { "materia": "Emprendedorismo" }
+    ]
+  },
+  {
+    "semestre": 2,
+    "materias": [
+      {
+        "materia": "Calculo2"
+      },
+      {
+        "materia": "Algoritmos2"
+      }
+    ]
+  }
+]
+
