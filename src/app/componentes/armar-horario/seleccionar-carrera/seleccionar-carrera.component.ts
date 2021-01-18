@@ -38,5 +38,9 @@ export class SeleccionarCarreraComponent implements OnInit {
     this.data.seleccionados = this.careers.filter(x=>x.isChecked);
   }
 
+  ngOnDestroy(){
+    this.data.seleccionados = this.careers.filter(x=>x.isChecked);
+  }
+
 
 }

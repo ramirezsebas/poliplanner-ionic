@@ -1,11 +1,11 @@
 <ion-header slot="fixed">
   <ion-toolbar>
-    <ion-title>Paso {{data.seccionActual}}: Selecciona tu/s carrera/s</ion-title>
+    <ion-title class="ion-text-wrap">Paso {{data.seccionActual}}: Selecciona tu/s carrera/s</ion-title>
   </ion-toolbar>
 </ion-header>
   <ion-list *ngFor="let career of careers;">
     <ion-item>
-      <ion-label>{{career.name}}</ion-label>
+      <ion-label class="ion-text-wrap">{{career.name}}</ion-label>
       <ion-checkbox slot="start" [(ngModel)]="career.isChecked" (ionChange)="onChange()"></ion-checkbox>
     </ion-item>
   </ion-list>

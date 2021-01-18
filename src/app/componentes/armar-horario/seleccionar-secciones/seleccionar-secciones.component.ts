@@ -71,17 +71,18 @@ export class SeleccionarSeccionesComponent implements OnInit {
               let index = agrupador.findIndex(x => x.padre === materia);
               agrupador[index].sigla = clase["Sigla carrera"];
               
-              // Valindando si la materia tiene 2 profes
+              // Valindando si la materia tiene 2 o + profes
               let prof = [];
               let tit = clase['Tít'].split('\n')
               for(let i=0; i<tit.length; i++){
                 prof.push(`${clase["Tít"].split('\n')[i]} ${clase["Nombre"].split('\n')[i]} ${clase["Apellido"].split('\n')[i]}`)
               }
+
               agrupador[index].hijos.push({
                 id: clase['Item'],
                 materia: clase["Asignatura"].split('(*)')[0].split('-')[0],
                 especial: clase["Asignatura"].split('(*)')[0].split('-')[1],
-                def: clase["Asignatura"].split('(*)')[1],
+                def: clase["Asignatura"].includes('(*)') ? '(*)': '',
                 seccion: clase["Sección"],
                 profesor: prof,
               });
@@ -102,6 +103,8 @@ export class SeleccionarSeccionesComponent implements OnInit {
     console.log('datos', datos);
     console.log('materiasSeleccionadas', materiasSeleccionadas);
     console.log('carrerasSeleccionadas', carrerasSeleccionadas);
+    this.clasesElegidasPorSecciones = [];
+    this.clasesElegidasPorSeccionesForView = [];
     if(!this.clasesElegidasPorSeccionesForView[0])
     {  
       for (let i = 0; i < carrerasSeleccionadas.length; i++) {

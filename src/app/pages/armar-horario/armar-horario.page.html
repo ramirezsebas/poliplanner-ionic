@@ -4,7 +4,7 @@
 <ion-content [ngSwitch]="validarSeccion()">
   <app-seleccionar-carrera [data]="data" *ngSwitchCase="1"></app-seleccionar-carrera>
   <app-seleccionar-materias-aprobadas [data]="data" *ngSwitchCase="2"></app-seleccionar-materias-aprobadas>
-  <app-file-picker [data]="data" *ngSwitchCase="2"></app-file-picker>
+  <app-file-picker [data]="data" *ngIf="!data.dataFromExcel && validarSeccion()==2"></app-file-picker>
   <app-seleccionar-materia [data]="data" *ngSwitchCase="3"></app-seleccionar-materia> 
   <app-seleccionar-secciones [data]="data" *ngSwitchCase="4"></app-seleccionar-secciones>
   <div *ngSwitchCase="5">

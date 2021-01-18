@@ -31,10 +31,20 @@ export class InicioComponent implements OnInit {
 
     console.log('hoola');
     
+    const inicializarSemana = ()=>
+      [
+        {nombre:"Lunes", clases:[],},
+        {nombre:"Martes", clases:[],},
+        {nombre:"Miércoles", clases:[],},
+        {nombre:"Jueves", clases:[],},
+        {nombre:"Viernes", clases:[],},
+        {nombre:"Sábado", clases:[],},
+      ];
     
 
     // Get data from 
     let data = this.toCalendar
+    this.semana = inicializarSemana();
     
     if (data) {
       //formatearDatos(); 
