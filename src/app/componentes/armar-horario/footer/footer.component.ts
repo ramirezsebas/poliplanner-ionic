@@ -25,7 +25,7 @@ export class FooterComponent implements OnInit {
   }
 
   validarSeccion(x: number) {
-    return this.data.seccionActual == x + 4;
+    return this.data.seccionActual == x + 5;
   }
   
   ngOnInit() {}

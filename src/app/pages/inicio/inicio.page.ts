@@ -22,15 +22,18 @@ export class InicioPage implements OnInit {
   ionViewWillEnter(){
     console.log('haseoau');
     
-    console.log(this.data.semana);
+    console.log(this.data);
     
     let datos = window.localStorage.data
     if(datos){
+      console.log('hola');
+      
       this.data.remplazarDatos(JSON.parse(datos))
-
     }else{
-      this.navCtrl.navigateForward('armar-horario')
-      window.localStorage.data = JSON.stringify(this.data);
+      if( this.data.toCalendar.length == 0 )
+        this.navCtrl.navigateForward('armar-horario')
+      else
+        window.localStorage.data = JSON.stringify(this.data);
     }
   }
 

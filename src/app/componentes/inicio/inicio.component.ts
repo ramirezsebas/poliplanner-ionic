@@ -19,10 +19,12 @@ export class InicioComponent implements OnInit {
     
     this.init();
     console.log(this.toCalendar);
+    console.log(this.semana)
     
 
   }
 
+  ionViewWillEnter(){this.init()}
   /**
    * Inicio
    */
@@ -44,7 +46,10 @@ export class InicioComponent implements OnInit {
 
     // Get data from 
     let data = this.toCalendar
-    this.semana = inicializarSemana();
+    //this.semana = inicializarSemana();
+    console.log(data);
+    console.log(this.semana);
+    
     
     if (data) {
       //formatearDatos(); 
@@ -53,11 +58,14 @@ export class InicioComponent implements OnInit {
         this.semana.forEach(dia => {
           let clase = element[dia.nombre];
 
-          if (clase!=undefined && clase['Horario'] != undefined )
+          console.log('hola');
+          if (clase!=undefined && clase['Horario'] != undefined ){
+            
             dia.clases.push({
               horario: clase['Horario'].replace("-", "a"),
               nombre: element.Asignatura,
             });
+          }
         })
       });
 

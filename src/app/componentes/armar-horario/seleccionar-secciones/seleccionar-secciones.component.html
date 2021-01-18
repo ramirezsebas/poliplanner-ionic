@@ -1,8 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Paso {{data.seccionActual}}: Sel. secciones </ion-title>
-  </ion-toolbar>
-</ion-header>
 <ion-list *ngFor="let mat of clasesElegidasPorSeccionesForView; let i=index">
   <ion-grid>
     <ion-row>
@@ -11,7 +6,7 @@
       </ion-item>
     </ion-row>
   </ion-grid>
-  <ion-item *ngFor="let materia of mat.hijos">
+  <ion-item *ngFor="let materia of mat.hijos" class="no-ripple">
     <span slot="start">&#09;</span>
     <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked" (ionChange)="onChange()">
     </ion-checkbox>

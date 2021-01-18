@@ -13,7 +13,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-item *ngFor="let materia of sem.materias">
+  <ion-item *ngFor="let materia of sem.materias" class="no-ripple">
     <span slot="start">&#09;</span>
     <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked" (ionChange)="verifyEvent(i)">
     </ion-checkbox>
