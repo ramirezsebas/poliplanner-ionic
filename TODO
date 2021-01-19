@@ -2,6 +2,7 @@
 ionic build --prod --service-worker
 firebase deploy
 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_animate
 
 [] Separar Profesores de una clase
 [] Arreglar a confirmar de los excels

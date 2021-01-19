@@ -25,7 +25,9 @@ export class ArmarHorarioPage implements OnInit {
       
       this.dataTrue.remplazarDatos(this.data)
       window.localStorage.clear()
+      window.localStorage.data = JSON.stringify(this.data);
       this.navCtrl.navigateRoot('inicio')
+      window.location.replace('inicio')
     }
     return this.data.validarSeccion();
   }

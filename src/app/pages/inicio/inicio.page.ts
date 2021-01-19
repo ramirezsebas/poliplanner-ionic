@@ -16,24 +16,21 @@ export class InicioPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.ionViewWillEnter()
+    this.init()
+    
+  }
+  ionViewDidEnter(){
+    
   }
 
-  ionViewWillEnter(){
-    console.log('haseoau');
-    
-    console.log(this.data);
-    
+  init(){
     let datos = window.localStorage.data
     if(datos){
-      console.log('hola');
-      
       this.data.remplazarDatos(JSON.parse(datos))
+      console.log(this.data.toCalendar);
     }else{
       if( this.data.toCalendar.length == 0 )
         this.navCtrl.navigateForward('armar-horario')
-      else
-        window.localStorage.data = JSON.stringify(this.data);
     }
   }
 

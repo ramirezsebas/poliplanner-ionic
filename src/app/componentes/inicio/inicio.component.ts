@@ -1,27 +1,36 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { ModalController, IonContent } from '@ionic/angular';
+import { AfterViewChecked, AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ModalController, IonContent, IonSegment } from '@ionic/angular';
 import { DataService } from '../../servicios/armar-horario/data.service';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss'],
 })
-export class InicioComponent implements OnInit {
+export class InicioComponent implements OnInit{
   @Input() semana;
   @Input() toCalendar;
+  slideOpts = {
+    initialSlide: 0,
+    pagination: true,
+  };
+  @ViewChild('segment', {static: true}) segment: IonSegment;
+
 
   constructor(
     public modalController: ModalController, 
-  ) {}
+  ) {
+    this.slideOpts.initialSlide = new Date().getDay()-1
+  }
+  
 
   ngOnInit() {
     
     this.init();
     console.log(this.toCalendar);
     console.log(this.semana)
-    
-
+    this.segment.value=(new Date().getDay()-1).toString()
   }
 
   ionViewWillEnter(){this.init()}
@@ -46,7 +55,7 @@ export class InicioComponent implements OnInit {
 
     // Get data from 
     let data = this.toCalendar
-    //this.semana = inicializarSemana();
+    this.semana = inicializarSemana();
     console.log(data);
     console.log(this.semana);
     
@@ -85,11 +94,15 @@ export class InicioComponent implements OnInit {
    */
   segmentChanged(ev: any, slides: any) {
     slides.slideTo(ev.detail.value);
+    
   }
 
   async ionSlideDidChange(ev: any, segment: any, slides: any) {
     let index = await slides.getActiveIndex();
+    
     segment.value = index;
+    console.log(segment);
+    
     let active = segment.el.childNodes[index];
     active.scrollIntoView({ behavior: "smooth", inline: "center" });
   }
