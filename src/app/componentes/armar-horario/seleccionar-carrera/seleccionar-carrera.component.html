@@ -1,7 +1,9 @@
 
-  <ion-list *ngFor="let career of careers;">
-    <ion-item class="no-ripple">
+  <ion-list >
+    <ion-radio-group (ionChange)="onChange($event)">
+    <ion-item *ngFor="let career of careers;" class="no-ripple">
       <ion-label class="ion-text-wrap">{{career.name}}</ion-label>
-      <ion-checkbox slot="start" [(ngModel)]="career.isChecked" (ionChange)="onChange()"></ion-checkbox>
+      <ion-radio slot="start" value="{{career._id}}" ></ion-radio>
     </ion-item>
+    </ion-radio-group>  
   </ion-list>

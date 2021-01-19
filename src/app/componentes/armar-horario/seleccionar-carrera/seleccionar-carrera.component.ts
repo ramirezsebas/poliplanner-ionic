@@ -11,6 +11,7 @@ export class SeleccionarCarreraComponent implements OnInit {
   
   seleccionados: career[];
   @Input() data: DataService;
+  carreraElegida;
 
   
   careers: any[];
@@ -32,15 +33,18 @@ export class SeleccionarCarreraComponent implements OnInit {
     });
   }
 
-  onChange() {
-    console.log('da');
+  onChange(e) {
+    let id = e.detail.value;
     
-    this.data.seleccionados = this.careers.filter(x=>x.isChecked);
+    
+    console.log(e.detail.value);
+    console.log(this.careers);
+    console.log(this.data.seleccionados);
+    
+    
+    this.data.seleccionados = this.careers.filter(x=>x._id==id);
+    console.log(this.data);
+    
   }
-
-  ngOnDestroy(){
-    this.data.seleccionados = this.careers.filter(x=>x.isChecked);
-  }
-
 
 }

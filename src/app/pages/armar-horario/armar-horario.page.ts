@@ -16,7 +16,6 @@ export class ArmarHorarioPage implements OnInit {
   }
 
   validarSeccion(){
-    //console.log(this.data);
     
     if(this.data.seccionActual == 1){
       //this.data = this.dataTrue;
@@ -33,7 +32,6 @@ export class ArmarHorarioPage implements OnInit {
   }
 
   onClick(){
-    console.log(this.data.seccionesElegidas);
     
   }
 

@@ -1,11 +1,11 @@
 ion-title {
-    --color: trasparent;
+    --color: var(--ion-color-medium-contrast);
     font-size: 15px;
     font-weight: 8;
     
 }
 ion-toolbar {
-    --background: lightgray; 
+    --background: var(--ion-color-medium); 
     --opacity: 1;
     --padding-bottom: 4px;
     --padding-end: 4px;
