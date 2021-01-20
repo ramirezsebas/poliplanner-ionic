@@ -27,12 +27,12 @@ export class InicioPage implements OnInit {
     let datos = window.localStorage.data
     if(datos){
       this.data.remplazarDatos(JSON.parse(datos))
-      console.log(this.data.toCalendar);
+      // console.log(this.data.toCalendar);
     }else{
       if( this.data.toCalendar.length == 0 )
         this.navCtrl.navigateForward('armar-horario')
     }
-    console.log(this.data)
+    // console.log(this.data)
 
   }
 

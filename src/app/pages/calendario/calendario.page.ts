@@ -13,7 +13,7 @@ import { DataService } from 'src/app/servicios/armar-horario/data.service';
 export class CalendarioPage implements OnInit {
   constructor(public data: DataService){}
   ngOnInit() {
-    console.log(this.data);
+    // console.log(this.data);
     
   }
 }

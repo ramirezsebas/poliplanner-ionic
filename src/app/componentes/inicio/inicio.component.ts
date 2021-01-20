@@ -38,7 +38,7 @@ export class InicioComponent implements OnInit{
 
   init() {
 
-    console.log('hoola');
+    // console.log('hoola');
     
     const inicializarSemana = ()=>
       [
@@ -63,7 +63,7 @@ export class InicioComponent implements OnInit{
         this.semana.forEach(dia => {
           let clase = element[dia.nombre];
 
-          console.log('hola');
+          // console.log('hola');
           if (clase!=undefined && clase['Horario'] != undefined && clase['Horario'] != " "){
             
             dia.clases.push({
@@ -78,9 +78,9 @@ export class InicioComponent implements OnInit{
       this.semana.forEach(dia=> dia.clases.sort((a,b)=>a.horario>b.horario))
 
     } else {
-      console.log('hola2: toCalendar no tiene nada')
+      // console.log('hola2: toCalendar no tiene nada')
       //let semana = window.localStorage.getItem("semana");
-      //console.log(JSON.parse(semana));
+      // console.log(JSON.parse(semana));
       //
       //if (semana) {
       //  this.data.semana = JSON.parse(semana);
@@ -107,7 +107,7 @@ export class InicioComponent implements OnInit{
 
   @ViewChild(IonContent, { static: false }) content: IonContent;
   async onSlideChanged(): Promise<void> {
-    //console.log(this.content);
+    // console.log(this.content);
     
     this.content.scrollToTop;
   }

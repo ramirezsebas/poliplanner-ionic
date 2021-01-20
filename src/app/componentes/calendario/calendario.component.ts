@@ -41,13 +41,13 @@ export class CalendarioComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('hola');
+    // console.log('hola');
       
     let datos_a_filtrar = this.toCalendar;
 
     let x=0;while(x++<13)this.eventosMes.push([])
-    console.log(this);
-    console.log(datos_a_filtrar);
+    // console.log(this);
+    // console.log(datos_a_filtrar);
     
 
     datos_a_filtrar.forEach(element => {
@@ -60,7 +60,7 @@ export class CalendarioComponent implements OnInit {
       ];
       let keys = ["1p", "2p","1f","2f"]
       for (const key in keys) {
-        console.log(element);
+        // console.log(element);
         let index;
         try {
           index = parseInt(element[keys[key]]['Día'].split("/")[1]);
@@ -77,17 +77,17 @@ export class CalendarioComponent implements OnInit {
         }
       }
     });
-    console.log(this);
+    // console.log(this);
       
     
     this.optionsMulti["daysConfig"] = this.diasMarcados;
     this.mostrarCalendario = true;
-    console.log(this.optionsMulti);
+    // console.log(this.optionsMulti);
     
 
     // Marcar dias
     function marcarDia(array,fecha: string) {
-      console.log('fecha',fecha);
+      // console.log('fecha',fecha);
       
       let dia = parseInt(fecha[4] + fecha[5])
       let mes = parseInt(fecha[7] + fecha[8])
@@ -103,7 +103,7 @@ export class CalendarioComponent implements OnInit {
   }
 
   monthChange(e){
-    console.log(e);
+    // console.log(e);
     this.currentMes = e.newMonth.months;
     this.currentYear = e.newMonth.years;
 
@@ -116,8 +116,8 @@ export class CalendarioComponent implements OnInit {
     let month = (fecha.getMonth()+1) < 10 ? "0" + (fecha.getMonth()+1) :( fecha.getMonth()+1).toString();
     let year = fecha.getFullYear().toString().substr(2,3)
     let fechaFormateada =`${day}/${month}/${year}`;
-    console.log(fechaFormateada);
-    console.log('da',this.eventosMes);
+    // console.log(fechaFormateada);
+    // console.log('da',this.eventosMes);
     
     let eventosPorMostrar=[]
     this.eventosMes[fecha.getMonth()+1].forEach(element => {
@@ -125,15 +125,15 @@ export class CalendarioComponent implements OnInit {
         eventosPorMostrar.push(element);
       }
     });
-    console.log(eventosPorMostrar);
+    // console.log(eventosPorMostrar);
     
     if(eventosPorMostrar.length)
       this.presentModal(eventosPorMostrar, fechaFormateada,$event)
-    console.log($event);
+    // console.log($event);
   }
 
   async presentModal(eventosPorMostrar, fechaActual,e) {
-    console.log('presentmodal', eventosPorMostrar);
+    // console.log('presentmodal', eventosPorMostrar);
     
     const popover = await this.popoverController.create({
       component: ModalComponent,

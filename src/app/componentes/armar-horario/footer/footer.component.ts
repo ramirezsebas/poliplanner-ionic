@@ -15,7 +15,7 @@ export class FooterComponent implements OnInit {
   }
 
   next(){
-    console.log(this.data);
+    // console.log(this.data);
     if(this.data.seccionActual==1 && this.data.seleccionados.length==0){
       this.presentToast('Debes seleccionar alguna carrera')
     }else if(this.data.seccionActual==3 && (this.data.materiasSeleccionadas == undefined || this.data.materiasSeleccionadas.flat().length==0)){

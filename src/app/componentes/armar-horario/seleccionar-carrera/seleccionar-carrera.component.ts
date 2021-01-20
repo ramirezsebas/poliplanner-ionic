@@ -22,7 +22,7 @@ export class SeleccionarCarreraComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.data);
+    // console.log(this.data);
     this.seleccionados = this.data.seleccionados;
 
   }
@@ -37,13 +37,13 @@ export class SeleccionarCarreraComponent implements OnInit {
     let id = e.detail.value;
     
     
-    console.log(e.detail.value);
-    console.log(this.careers);
-    console.log(this.data.seleccionados);
+    // console.log(e.detail.value);
+    // console.log(this.careers);
+    // console.log(this.data.seleccionados);
     
     
     this.data.seleccionados = this.careers.filter(x=>x._id==id);
-    console.log(this.data);
+    // console.log(this.data);
     
   }
 

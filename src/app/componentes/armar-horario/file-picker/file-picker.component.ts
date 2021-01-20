@@ -101,7 +101,7 @@ export class FilePickerComponent implements OnInit {
         
       }
       datosLimpios.shift();
-      console.log(datosLimpios);
+      // console.log(datosLimpios);
       
       return datosLimpios;
     }

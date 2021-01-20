@@ -14,7 +14,7 @@ export class SeleccionarMateriasAprobadasComponent implements OnInit {
 
   ngOnInit() {
     this.data.esAprobar=true;
-    console.log(this.data.esAprobar);
+    // console.log(this.data.esAprobar);
   }
 
   onChange(selected, id) {

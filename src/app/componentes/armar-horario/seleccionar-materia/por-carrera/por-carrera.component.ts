@@ -20,10 +20,10 @@ export class PorCarreraComponent implements OnInit {
   }
   ngOnInit() {
     
-    console.log(this.data);
+    // console.log(this.data);
     
     if (this.esAprobar){
-      console.log('esto aprov');
+      // console.log('esto aprov');
       
       this.getData();
     }
@@ -36,15 +36,15 @@ export class PorCarreraComponent implements OnInit {
       const idCarrera = this.selectedCareerId;
       let aprobadas:any = this.data.materiasAprobadas.flat();
       const todas = this.data.clasesTodas.filter(x => x.career_id == idCarrera)
-      console.log('todas', todas);
+      // console.log('todas', todas);
       
       let ids_aprobadas = todas.filter(x => aprobadas.includes(x.name)).map(x=>x._id);
 
       aprobadas = todas.filter(x=>ids_aprobadas.includes(x._id));
-      console.log('aprobadas', aprobadas);
+      // console.log('aprobadas', aprobadas);
       
       let candidatos:any[] = todas;
-      console.log('antes de creditos', candidatos);
+      // console.log('antes de creditos', candidatos);
 
       //Filtrar por creditos
       let totalCreditosApro = 0;
@@ -54,11 +54,11 @@ export class PorCarreraComponent implements OnInit {
       if (totalCreditosCarrera==0)
         totalCreditosCarrera=1
       const porcentajeCreditos = totalCreditosApro / totalCreditosCarrera
-      console.log('total', totalCreditosCarrera);
+      // console.log('total', totalCreditosCarrera);
       
 
       candidatos = candidatos.filter(x => x.credits_percentage_required <= porcentajeCreditos);
-      console.log('despues de creditos', candidatos);
+      // console.log('despues de creditos', candidatos);
       
 
       //Filtra prerrequisitos
@@ -88,7 +88,7 @@ export class PorCarreraComponent implements OnInit {
       // Ordenar
       this.semestersClasses = c.sort((x, y) => x.semestre - y.semestre);
       this.semestersClasses.map(x => x.materias.sort((x, y) => x.sem > y.sem));
-      console.log('this.semestersClasses', this.semestersClasses)
+      // console.log('this.semestersClasses', this.semestersClasses)
       
 
       
@@ -120,13 +120,13 @@ export class PorCarreraComponent implements OnInit {
       this.semestersClasses = c.sort((x, y) => x.semestre - y.semestre);
       this.semestersClasses.map(x => x.materias.sort((x, y) => x.sem > y.sem));
 
-      console.log(JSON.stringify(this.semestersClasses));
+      // console.log(JSON.stringify(this.semestersClasses));
       
     });
   }
 
   checkCheckbox(ev: Event, index: number) {
-    console.log('antes',document.getElementById('0').style.maxHeight);
+    // console.log('antes',document.getElementById('0').style.maxHeight);
     let aux = document.getElementById(index.toString()).style.maxHeight;
     
     // Marcar los demas(?
@@ -135,12 +135,12 @@ export class PorCarreraComponent implements OnInit {
         materia["isItemChecked"] = this.semestersClasses[index].checkParent;
       });
     });
-    console.log('despues',document.getElementById('0').style.maxHeight);
+    // console.log('despues',document.getElementById('0').style.maxHeight);
 
-    console.log(aux);
+    // console.log(aux);
     this.toggleCollapse(document.getElementById(index.toString()))
 
-    console.log('checkbox(?');
+    // console.log('checkbox(?');
     
   }
 

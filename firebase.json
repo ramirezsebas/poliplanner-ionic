@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "poliplanner-una",
     "public": "public",
     "ignore": [
       "firebase.json",

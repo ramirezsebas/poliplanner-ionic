@@ -21,7 +21,7 @@ export class SeleccionarSeccionesComponent implements OnInit {
   }
   
   init(){
-    console.log('hola');
+    // console.log('hola');
     
     this.clasesElegidasPorSeccionesForView = this.data.seccionesElegidasForView 
     const materiasSeleccionadas = this.data.materiasSeleccionadas.filter(x=>x)
@@ -58,11 +58,11 @@ export class SeleccionarSeccionesComponent implements OnInit {
         }
       })
 
-      console.log('agrupador', agrupador);
+      // console.log('agrupador', agrupador);
       
 
       data.forEach(clase => {
-        console.log(clase);
+        // console.log(clase);
         
         materiasSeleccionadas.forEach(materia => {
           try {
@@ -95,14 +95,14 @@ export class SeleccionarSeccionesComponent implements OnInit {
           }
         });
       });
-      console.log(agrupador);
+      // console.log(agrupador);
 
       return { 'all': todoLosDatos, 'forView': agrupador };
     }
 
-    console.log('datos', datos);
-    console.log('materiasSeleccionadas', materiasSeleccionadas);
-    console.log('carrerasSeleccionadas', carrerasSeleccionadas);
+    // console.log('datos', datos);
+    // console.log('materiasSeleccionadas', materiasSeleccionadas);
+    // console.log('carrerasSeleccionadas', carrerasSeleccionadas);
     this.clasesElegidasPorSecciones = [];
     this.clasesElegidasPorSeccionesForView = [];
     if(!this.clasesElegidasPorSeccionesForView[0])
@@ -119,16 +119,16 @@ export class SeleccionarSeccionesComponent implements OnInit {
 
       this.clasesElegidasPorSeccionesForView = this.clasesElegidasPorSeccionesForView.flat().sort((x,y)=>x.padre<y.padre);
 
-      console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
-      console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
+      // console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
+      // console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
       this.data.seccionesElegidasForView = this.clasesElegidasPorSeccionesForView;
       this.data.seccionesElegidas = this.clasesElegidasPorSecciones.flat();
     }
   }
 
   onChange(){
-    console.log(this.clasesElegidasPorSeccionesForView);
-    console.log('chau');
+    // console.log(this.clasesElegidasPorSeccionesForView);
+    // console.log('chau');
     this.data.toCalendar= [];
     this.data.seccionesElegidasForView.forEach(element => {
       element.hijos.forEach(clase => {

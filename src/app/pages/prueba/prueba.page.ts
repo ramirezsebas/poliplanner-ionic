@@ -22,7 +22,7 @@ export class PruebaPage {
       this.data.seccionActual = 3
     }else{
     }
-    console.log(this.data)
+    // console.log(this.data)
   }
   ionViewWillEnter(){
     this.ngOnInit()
@@ -38,7 +38,7 @@ export class PruebaPage {
 
     /* save data */
     this.data = <any>XLSX.utils.sheet_to_json(ws, { header: 1, range:11 });
-    console.log(this.data);
+    // console.log(this.data);
     
   }
 
@@ -46,7 +46,7 @@ export class PruebaPage {
   onFileChange(evt: any) {
     /* wire up file reader */
     const target: DataTransfer = <DataTransfer>evt.target;
-    console.log('target',target);
+    // console.log('target',target);
     
     if (target.files.length !== 1) throw new Error("Cannot use multiple files");
     const reader: FileReader = new FileReader();
@@ -73,7 +73,7 @@ export class PruebaPage {
   //       "SheetJSIonic.xlsx"
   //     );
   //     this.read(bstr);
-  //     console.log(this.data);
+      // console.log(this.data);
       
   //   } catch (e) {
   //     const m: string = e.message;

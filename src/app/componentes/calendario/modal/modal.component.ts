@@ -11,12 +11,12 @@ export class ModalComponent implements OnInit {
   @Input() fechaActual: string;
 
   constructor() {
-    console.log("Hola",this.eventosPorMostrar, this.fechaActual);
+    // console.log("Hola",this.eventosPorMostrar, this.fechaActual);
     
    }
 
   onClick(){
-    console.log(this.eventosPorMostrar);
+    // console.log(this.eventosPorMostrar);
     
   }
   ngOnInit() {}

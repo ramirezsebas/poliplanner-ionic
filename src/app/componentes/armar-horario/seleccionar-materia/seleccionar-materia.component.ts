@@ -15,12 +15,12 @@ export class SeleccionarMateriaComponent implements OnInit {
 
   
   constructor(){
-    console.log(this.data);
+    // console.log(this.data);
     
   }
   
   ngOnInit(): void {
-    console.log(this.data);
+    // console.log(this.data);
 
     this.materias=this.data.seleccionados;
     this.seccionInicial = this.data.seccionActual;
