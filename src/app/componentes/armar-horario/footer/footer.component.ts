@@ -16,8 +16,15 @@ export class FooterComponent implements OnInit {
 
   next(){
     console.log(this.data);
-    
-    this.data.seccionActual++;
+    if(this.data.seccionActual==1 && this.data.seleccionados.length==0){
+      this.presentToast('Debes seleccionar alguna carrera')
+    }else if(this.data.seccionActual==3 && (this.data.materiasSeleccionadas == undefined || this.data.materiasSeleccionadas.flat().length==0)){
+      this.presentToast('Debes seleccionar al menos una materia')
+    }else if(this.data.seccionActual==4 && this.data.toCalendar.length==0){
+      this.presentToast('Debes seleccionar al menos una materia')
+    }else{
+      this.data.seccionActual++;
+    }
   }
   
   previous(){
@@ -25,9 +32,18 @@ export class FooterComponent implements OnInit {
   }
 
   validarSeccion(x: number) {
-    return this.data.seccionActual == x + 5;
+    return this.data.seccionActual === x + 5;
   }
   
   ngOnInit() {}
+
+  async presentToast(msg="") {
+    const toast = document.createElement('ion-toast');
+    toast.message = msg;
+    toast.duration = 2000;
+  
+    document.body.appendChild(toast);
+    return toast.present();
+  }
 
 }

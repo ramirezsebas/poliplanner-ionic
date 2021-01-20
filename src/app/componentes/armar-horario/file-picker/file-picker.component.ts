@@ -29,15 +29,8 @@ export class FilePickerComponent implements OnInit {
       cssClass: "my-custom-class",
       header: "Seleccionar Horario",
       message: "<p>Actualizado de la Facultad!</p>",
+      backdropDismiss: false,
       buttons: [
-        {
-          text: "Cancelar",
-          role: "cancel",
-          cssClass: "secondary",
-          handler: (blah) => {
-            console.log("Confirm Cancel: blah");
-          },
-        },
         {
           text: "Buscar",
           handler: () => {

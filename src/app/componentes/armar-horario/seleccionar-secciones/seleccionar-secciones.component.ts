@@ -128,9 +128,6 @@ export class SeleccionarSeccionesComponent implements OnInit {
 
   onChange(){
     console.log(this.clasesElegidasPorSeccionesForView);
-  }
-
-  ngOnDestroy(){
     console.log('chau');
     this.data.toCalendar= [];
     this.data.seccionesElegidasForView.forEach(element => {
@@ -143,6 +140,10 @@ export class SeleccionarSeccionesComponent implements OnInit {
         }
       });
     });
+  }
+
+  ngOnDestroy(){
+   
     
   }
 

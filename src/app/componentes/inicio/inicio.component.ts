@@ -12,7 +12,7 @@ export class InicioComponent implements OnInit{
   @Input() semana;
   @Input() toCalendar;
   slideOpts = {
-    initialSlide: 0,
+    initialSlide: new Date().getDay()-1,
     pagination: true,
   };
   @ViewChild('segment', {static: true}) segment: IonSegment;
@@ -21,13 +21,13 @@ export class InicioComponent implements OnInit{
   constructor(
     public modalController: ModalController, 
   ) {
-    this.slideOpts.initialSlide = new Date().getDay()-1
   }
   
 
   ngOnInit() {
     
     this.init();
+
     this.segment.value=(new Date().getDay()-1).toString()
   }
 
@@ -54,8 +54,6 @@ export class InicioComponent implements OnInit{
     // Get data from 
     let data = this.toCalendar
     this.semana = inicializarSemana();
-    console.log(data);
-    console.log(this.semana);
     
     
     if (data) {
@@ -75,6 +73,9 @@ export class InicioComponent implements OnInit{
           }
         })
       });
+
+      // Ordeno por hora
+      this.semana.forEach(dia=> dia.clases.sort((a,b)=>a.horario>b.horario))
 
     } else {
       console.log('hola2: toCalendar no tiene nada')
@@ -108,7 +109,7 @@ export class InicioComponent implements OnInit{
   async onSlideChanged(): Promise<void> {
     //console.log(this.content);
     
-    //this.content.scrollToTop;
+    this.content.scrollToTop;
   }
 
 }
