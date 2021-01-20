@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MenuController} from '@ionic/angular';
 import * as XLSX from "xlsx";
 import { File as File1 } from '@ionic-native/file/ngx';
+import { DataService } from 'src/app/servicios/armar-horario/data.service';
 
 
 @Component({
@@ -11,11 +12,21 @@ import { File as File1 } from '@ionic-native/file/ngx';
 export class PruebaPage {
   page =5;
   x = "hola"
-  data: any[][] = [
-    [1, 2, 3],
-    [4, 5, 6],
-  ];
-  constructor(private file: File1) {}
+  constructor(private file: File1,
+              public data: DataService) {}
+
+  ngOnInit(){
+    let datos = window.localStorage.data
+    if(datos){
+      this.data.remplazarDatos(JSON.parse(datos))
+      this.data.seccionActual = 3
+    }else{
+    }
+    console.log(this.data)
+  }
+  ionViewWillEnter(){
+    this.ngOnInit()
+  }
 
   read(bstr: string) {
     /* read workbook */
@@ -29,17 +40,6 @@ export class PruebaPage {
     this.data = <any>XLSX.utils.sheet_to_json(ws, { header: 1, range:11 });
     console.log(this.data);
     
-  }
-
-  write(): XLSX.WorkBook {
-    /* generate worksheet */
-    const ws: XLSX.WorkSheet = XLSX.utils.aoa_to_sheet(this.data);
-
-    /* generate workbook and add the worksheet */
-    const wb: XLSX.WorkBook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "SheetJS");
-
-    return wb;
   }
 
   /* File Input element for browser */
@@ -83,38 +83,4 @@ export class PruebaPage {
   //   }
   // }
 
-  /* Export button */
-  async export() {
-    const wb: XLSX.WorkBook = this.write();
-    const filename: string = "SheetJSIonic.xlsx";
-    try {
-      /* generate Blob */
-      const wbout: ArrayBuffer = XLSX.write(wb, {
-        bookType: "xlsx",
-        type: "array",
-      });
-      const blob: Blob = new Blob([wbout], {
-        type: "application/octet-stream",
-      });
-      alert(':Fdas')
-
-      /* find appropriate path for mobile */
-      const target: string =
-        this.file.documentsDirectory ||
-        this.file.externalDataDirectory ||
-        this.file.dataDirectory ||
-        "";
-      const dentry = await this.file.resolveDirectoryUrl(target);
-      const url: string = dentry.nativeURL || "";
-
-      /* attempt to save blob to file */
-      await this.file.writeFile(url, filename, blob, { replace: true });
-      alert(`Wrote to SheetJSIonic.xlsx in ${url}`);
-    } catch (e) {
-      if (e.message.match(/It was determined/)) {
-        /* in the browser, use writeFile */
-        XLSX.writeFile(wb, filename);
-      } else alert(`Error: ${e.message}`);
-    }
-  }
 }

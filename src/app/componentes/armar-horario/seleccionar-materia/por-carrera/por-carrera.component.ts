@@ -14,10 +14,12 @@ export class PorCarreraComponent implements OnInit {
   @Input() esAprobar;
   @Output() seleccionados = new EventEmitter();
   semestersClasses: any[];
-  
+  maxHeight=[];
+
   constructor(private fpuna: FpunaService) {
   }
   ngOnInit() {
+    
     console.log(this.data);
     
     if (this.esAprobar){
@@ -124,11 +126,20 @@ export class PorCarreraComponent implements OnInit {
   }
 
   checkCheckbox(ev: Event, index: number) {
+    console.log('antes',document.getElementById('0').style.maxHeight);
+    let aux = document.getElementById(index.toString()).style.maxHeight;
+    
+    // Marcar los demas(?
     setTimeout(() => {
       this.semestersClasses[index].materias.forEach((materia) => {
         materia["isItemChecked"] = this.semestersClasses[index].checkParent;
       });
     });
+    console.log('despues',document.getElementById('0').style.maxHeight);
+
+    console.log(aux);
+    this.toggleCollapse(document.getElementById(index.toString()))
+
     console.log('checkbox(?');
     
   }
@@ -169,4 +180,26 @@ export class PorCarreraComponent implements OnInit {
     
   }
 
+  expandItem(e){
+    let colapsible = e.target
+    while(!colapsible.classList.contains('collapsible')) colapsible = colapsible.parentElement
+    colapsible.classList.toggle("active");
+    let content = colapsible.nextElementSibling;
+    this.toggleCollapse(content);
+    
+  }
+
+  toggleCollapse(content){
+    if (content.style.maxHeight){
+      content.style.setProperty('max-height',null)
+    } else {
+      content.style.setProperty('max-height',content.scrollHeight+'px')
+    }   
+  }
+  estaActivo(i){
+    const aux = document.getElementById(i.toString())
+    if(aux)
+      return document.getElementById(i.toString()).previousElementSibling.classList.contains('active')
+    else return false
+  }
 }

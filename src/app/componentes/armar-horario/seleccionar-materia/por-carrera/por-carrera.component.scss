@@ -1,0 +1,20 @@
+
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible.active .icon-active:after{
+    max-height: 0px;
+}

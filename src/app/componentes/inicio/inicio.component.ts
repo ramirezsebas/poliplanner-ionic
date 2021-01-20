@@ -28,8 +28,6 @@ export class InicioComponent implements OnInit{
   ngOnInit() {
     
     this.init();
-    console.log(this.toCalendar);
-    console.log(this.semana)
     this.segment.value=(new Date().getDay()-1).toString()
   }
 
@@ -68,7 +66,7 @@ export class InicioComponent implements OnInit{
           let clase = element[dia.nombre];
 
           console.log('hola');
-          if (clase!=undefined && clase['Horario'] != undefined ){
+          if (clase!=undefined && clase['Horario'] != undefined && clase['Horario'] != " "){
             
             dia.clases.push({
               horario: clase['Horario'].replace("-", "a"),
@@ -101,7 +99,6 @@ export class InicioComponent implements OnInit{
     let index = await slides.getActiveIndex();
     
     segment.value = index;
-    console.log(segment);
     
     let active = segment.el.childNodes[index];
     active.scrollIntoView({ behavior: "smooth", inline: "center" });

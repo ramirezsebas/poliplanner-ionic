@@ -32,6 +32,8 @@ export class InicioPage implements OnInit {
       if( this.data.toCalendar.length == 0 )
         this.navCtrl.navigateForward('armar-horario')
     }
+    console.log(this.data)
+
   }
 
   
