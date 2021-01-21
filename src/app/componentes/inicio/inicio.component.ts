@@ -59,8 +59,8 @@ export class InicioComponent implements OnInit{
     if (data) {
       //formatearDatos(); 
 
-      data.forEach(element => {
-        this.semana.forEach(dia => {
+      this.semana.forEach(dia => {
+        data.forEach(element => {
           let clase = element[dia.nombre];
 
           // console.log('hola');
@@ -75,7 +75,8 @@ export class InicioComponent implements OnInit{
       });
 
       // Ordeno por hora
-      this.semana.forEach(dia=> dia.clases.sort((a,b)=>a.horario>b.horario))
+      // this.semana.forEach(dia=> dia.clases.sort((a,b)=>a.horario>b.horario))
+      this.semana.forEach(dia=> dia.clases.sort((a,b)=>a.horario>b.horario?1:-1))
 
     } else {
       // console.log('hola2: toCalendar no tiene nada')
