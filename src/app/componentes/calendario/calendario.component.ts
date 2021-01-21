@@ -76,7 +76,15 @@ export class CalendarioComponent implements OnInit {
           
         }
       }
+      
     });
+    // console.log(this.eventosMes);
+    // console.log(JSON.stringify(this.eventosMes));
+    
+    this.eventosMes.forEach(mes=>{
+      mes.sort((a,b)=>a.fecha.split('/')[0].split(' ')[1]>b.fecha.split('/')[0].split(' ')[1]?1:-1)
+    })
+    // console.log(this.eventosMes);
     // console.log(this);
       
     

@@ -4,7 +4,7 @@
       [indeterminate]="sem.indeterminateState" (click)="checkCheckbox($event, i)">
     </ion-checkbox>
     <span slot="start">&#09;</span>
-    <ion-label class="ion-text-wrap"><strong>Semestre {{sem.semestre}}</strong></ion-label>
+    <ion-label class="ion-text-wrap no-ripple"><strong>Semestre {{sem.semestre}}</strong></ion-label>
     <ion-icon *ngIf="!estaActivo(i)" slot="end" name="chevron-down-outline"></ion-icon>
     <ion-icon *ngIf="estaActivo(i)" slot="end" name="chevron-up-outline"></ion-icon>
   </ion-item>

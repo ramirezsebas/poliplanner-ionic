@@ -87,7 +87,7 @@ export class PorCarreraComponent implements OnInit {
       
       // Ordenar
       this.semestersClasses = c.sort((x, y) => x.semestre - y.semestre);
-      this.semestersClasses.map(x => x.materias.sort((x, y) => x.sem > y.sem));
+      this.semestersClasses.map(x => x.materias.sort((x, y) => x.sem > y.sem?1:-1));
       // console.log('this.semestersClasses', this.semestersClasses)
       
 
