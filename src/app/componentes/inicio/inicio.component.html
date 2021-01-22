@@ -11,7 +11,7 @@
     <ion-slides #slides (ionSlideDidChange)="ionSlideDidChange($event,segment,slides)" (ionSlideDidChange)="onSlideChanged()" [options]="slideOpts">
       <ion-slide *ngFor="let dia of semana; let i = index" value="{{i}}" class="slide-{{i}}">
         <ion-infinite-scroll  class="ion-align-self-start">
-          <ion-list color="var(--ion-color-primary)">
+          <ion-list>
             <ion-item lines="full" *ngFor="let clase of dia.clases">
              <div class="circle">{{clase.nombre[0]}}</div>
               <ion-label class="ion-text-wrap ion-padding">

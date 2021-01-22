@@ -1,3 +1,10 @@
 ion-toolbar{
-    background-color: var(--ion-color-header);
+    --background: var(--ion-color-header);
+}
+
+ion-title{
+    --color: white;
+}
+ion-menu-button{
+    --color: white;
 }
