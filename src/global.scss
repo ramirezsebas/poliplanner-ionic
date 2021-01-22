@@ -94,3 +94,11 @@ ion-fab-button[data-desc]::after {
 .no-ripple{
   --ripple-color: transparent;   
 }
+
+ion-item{
+  --background: var( --ion-background-color);
+}
+
+ion-list{
+  background: transparent !important;
+}

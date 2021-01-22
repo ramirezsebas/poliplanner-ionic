@@ -1,15 +1,19 @@
  <ion-list *ngFor="let sem of semestersClasses; let i=index">
-  <ion-item button (click)="expandItem($event)" class="collapsible">
+  <ion-item button (click)="expandItem($event)" class="collapsible" detail="false">
     <ion-checkbox class="ion-no-padding ion-no-margin" slot="start" [(ngModel)]="sem.checkParent"
       [indeterminate]="sem.indeterminateState" (click)="checkCheckbox($event, i)">
     </ion-checkbox>
     <span slot="start">&#09;</span>
     <ion-label class="ion-text-wrap no-ripple"><strong>Semestre {{sem.semestre}}</strong></ion-label>
-    <ion-icon *ngIf="!estaActivo(i)" slot="end" name="chevron-down-outline"></ion-icon>
-    <ion-icon *ngIf="estaActivo(i)" slot="end" name="chevron-up-outline"></ion-icon>
+    <div *ngIf="!estaActivo(i);else otro">
+      <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+    </div>
+    <ng-template #otro>
+     <div><ion-icon *ngIf="estaActivo(i)" slot="end" name="chevron-up-outline"></ion-icon></div>
+    </ng-template>
   </ion-item>
   <div id={{i}} class="content">
-    <ion-item *ngFor="let materia of sem.materias" class="no-ripple">
+    <ion-item *ngFor="let materia of sem.materias" class="no-ripple" detail="false"> 
       <span slot="start">&#09;</span>
       <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked" (ionChange)="verifyEvent(i)">
       </ion-checkbox>
