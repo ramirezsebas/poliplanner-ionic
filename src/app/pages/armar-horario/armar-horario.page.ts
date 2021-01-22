@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { FilePickerComponent } from 'src/app/componentes/armar-horario/file-picker/file-picker.component';
 import { DataService } from '../../servicios/armar-horario/data.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { DataService } from '../../servicios/armar-horario/data.service';
 export class ArmarHorarioPage implements OnInit {
 
   data = new DataService;
+  @ViewChild('fp') filepicker; 
+
 
   constructor(public dataTrue: DataService, private navCtrl:NavController) { 
     
@@ -19,6 +22,18 @@ export class ArmarHorarioPage implements OnInit {
     
     if(this.data.seccionActual == 1){
       //this.data = this.dataTrue;
+    }else if(this.data.seccionActual == 2){
+      
+    }else if(this.data.seccionActual == 3){
+      console.log(this.data.dataFromExcel);
+      
+      if(!this.data.dataFromExcel){
+        this.data.seccionActual--;
+        this.filepicker.readFilePopup()
+      }else if(this.data.dataFromExcel[0].length==0){
+        this.data.seccionActual--;
+        this.filepicker.readFilePopup()
+      }
     }else if(this.data.seccionActual == 8){
       
       this.dataTrue.remplazarDatos(this.data)
@@ -27,7 +42,7 @@ export class ArmarHorarioPage implements OnInit {
       this.navCtrl.navigateRoot('inicio')
       window.location.replace('inicio')
     }
-    return this.data.validarSeccion();
+    return this.data.seccionActual;
   }
 
   onClick(){
@@ -44,11 +59,6 @@ export class ArmarHorarioPage implements OnInit {
     `Paso ${this.data.seccionActual}: Confirma el Calendario `,
   ]
 
-  ionViewWillEnter(){
-    console.log('hola');
-    
-  }
-
   ngOnInit() {
     this.data= new DataService()
 
@@ -57,4 +67,12 @@ export class ArmarHorarioPage implements OnInit {
   }
 
 
+  async presentToast(msg="") {
+    const toast = document.createElement('ion-toast');
+    toast.message = msg;
+    toast.duration = 2000;
+  
+    document.body.appendChild(toast);
+    return toast.present();
+  }
 }

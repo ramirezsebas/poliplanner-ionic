@@ -12,7 +12,6 @@
 <ion-content [ngSwitch]="validarSeccion()">
   <app-seleccionar-carrera *ngSwitchCase="1" [data]="data" ></app-seleccionar-carrera>
   <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [data]="data" ></app-seleccionar-materias-aprobadas>
-  <app-file-picker [data]="data" *ngIf="!data.dataFromExcel && this.data.seccionActual==2"></app-file-picker>
   <app-seleccionar-materia *ngSwitchCase="3" [data]="data" ></app-seleccionar-materia> 
   <app-seleccionar-secciones *ngSwitchCase="4" [data]="data"></app-seleccionar-secciones>
   <app-secciones *ngSwitchCase="5" [toCalendar]="data.toCalendar" ></app-secciones>
@@ -26,4 +25,5 @@
   </ng-container>
 </ion-content> -->
 
+<app-file-picker #fp [data]="data"></app-file-picker>
 <app-footer [data]="data"></app-footer>

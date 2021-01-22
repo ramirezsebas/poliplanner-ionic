@@ -18,7 +18,6 @@ export class FilePickerComponent implements OnInit {
   constructor(
     private alertController: AlertController,
   ) {
-    this.readFilePopup();
   }
 
   ngOnInit() {}
@@ -29,7 +28,7 @@ export class FilePickerComponent implements OnInit {
       cssClass: "my-custom-class",
       header: "Seleccionar Horario",
       message: "<p>Actualizado de la Facultad!</p>",
-      backdropDismiss: false,
+      // backdropDismiss: false,
       buttons: [
         {
           text: "Buscar",
@@ -123,6 +122,9 @@ export class FilePickerComponent implements OnInit {
           <any>XLSX.utils.sheet_to_json(ws, { header: 1, range: 10, raw:false }),
         );
       }
+      if(data[0].length==0) 
+        this.presentToast('Asegúrese de que sea el archivo correcto')
+      
       return data;
     }
 
@@ -153,5 +155,14 @@ export class FilePickerComponent implements OnInit {
     reader.readAsBinaryString(target.files[0]);
   }
 
+  
+  async presentToast(msg="") {
+    const toast = document.createElement('ion-toast');
+    toast.message = msg;
+    toast.duration = 2000;
+  
+    document.body.appendChild(toast);
+    return toast.present();
+  }
   
 }

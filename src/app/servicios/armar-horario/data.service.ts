@@ -13,42 +13,7 @@ export interface career {
   providedIn: 'root'
 })
 export class DataService {
-  validarSeccion() {
-    const formatearDatos=()=>{
-
-      
-    }
-    //console.log(this.seccionActual);
-    
-    if (this.seccionActual == 4){
-      formatearDatos();
-    }else if (this.seccionActual == 6){
-      formatearDatos();
-    }
-    return this.seccionActual;
-
-    //if(this.seccionActual==1)
-    //  return 1;
-    //else if (this.seccionActual - this.seleccionados.length < 2){
-    //  this.offset = this.seleccionados.length;
-    //  console.log(`seccion actual ${this.seccionActual}, retorno: ${2}`);
-    //  
-    //  return 2;
-    //} else if (this.seccionActual - (2*this.seleccionados.length) < 2){
-    //  this.offset = 2* this.seleccionados.length;
-    //  formatearDatos()
-//
-    //  console.log(`seccion actual ${this.seccionActual}, retorno: ${3}`);
-    //  return 3;
-    //}else if(this.offset+2 > this.seccionActual){
-    //  formatearDatos()
-    //}else{
-    //  console.log(`seccion actual ${this.seccionActual}, retorno: ${this.seccionActual - this.offset + 2}`);
-    //  
-    //  return this.seccionActual - this.offset + 2;
-//
-    //}
-  }
+  
 
   seleccionados: career[]=[];
   seccionActual: number=1;
