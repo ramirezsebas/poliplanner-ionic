@@ -20,7 +20,6 @@ export class ArmarHorarioPage implements OnInit {
     if(this.data.seccionActual == 1){
       //this.data = this.dataTrue;
     }else if(this.data.seccionActual == 8){
-      console.log('data', this.data);
       
       this.dataTrue.remplazarDatos(this.data)
       window.localStorage.clear()
@@ -32,6 +31,21 @@ export class ArmarHorarioPage implements OnInit {
   }
 
   onClick(){
+    
+  }
+
+  textForHeader=[
+    `Paso ${this.data.seccionActual}: Selecciona tu/s carrera/s`,
+    `Paso ${this.data.seccionActual}: Sel. mat. aprobadas`,
+    `Paso ${this.data.seccionActual}: Sel. mat. a cursar`,
+    `Paso ${this.data.seccionActual}: Sel. secciones `,
+    `Paso ${this.data.seccionActual}: Confirma las secciones `,
+    `Paso ${this.data.seccionActual}: Confirma el Horario `,
+    `Paso ${this.data.seccionActual}: Confirma el Calendario `,
+  ]
+
+  ionViewWillEnter(){
+    console.log('hola');
     
   }
 

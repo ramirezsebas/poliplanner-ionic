@@ -1,57 +1,13 @@
 <app-header></app-header>
 <app-menu></app-menu>
-<div [ngSwitch]="validarSeccion()">
-  <div *ngSwitchCase="1">
-    <ion-header slot="fixed">
-      <ion-toolbar>
-        <ion-title class="ion-text-wrap">Paso {{data.seccionActual}}: Selecciona tu/s carrera/s</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>  
-  <div *ngSwitchCase="2">
-    <ion-header slot="fixed">
-      <ion-toolbar>
-        <ion-title>Paso {{data.seccionActual}}: Sel. mat. aprobadas {{data.seleccionados[0].code}}</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>
-  <div *ngSwitchCase="3">
-    <ion-header slot="fixed">
-      <ion-toolbar>
-        <ion-title>Paso {{data.seccionActual}}: Sel. mat. a cursar {{data.seleccionados[0].code}}</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>
-  <div *ngSwitchCase="4">
-    <ion-header slot="fixed">
-      <ion-toolbar>
-        <ion-title>Paso {{data.seccionActual}}: Sel. secciones </ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>
-
-  <div *ngSwitchCase="5">
-    <ion-header slot="fixed">
-      <ion-toolbar>
-        <ion-title>Paso {{data.seccionActual}}: Confirma las secciones </ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>
-  <div *ngSwitchCase="6">
-    <ion-header slot="fixed">
-      <ion-toolbar>
-        <ion-title>Paso {{data.seccionActual}}: Confirma el Horario </ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>
-  <div *ngSwitchCase="7">
-    <ion-header slot="fixed">
-      <ion-toolbar>
-        <ion-title>Paso {{data.seccionActual}}: Confirma el Calendario </ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>
+<div>
+  <ion-header slot="fixed">
+    <ion-toolbar>
+      <ion-title class="ion-text-wrap">{{textForHeader[data.seccionActual]}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
 </div>
+  
 
 <ion-content [ngSwitch]="validarSeccion()">
   <app-seleccionar-carrera *ngSwitchCase="1" [data]="data" ></app-seleccionar-carrera>
