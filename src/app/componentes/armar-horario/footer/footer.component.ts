@@ -11,7 +11,8 @@ export class FooterComponent implements OnInit {
   @Input() ultimo: number = 3;
   @Input() data: DataService;
 
-  constructor() { console.log(this.data);
+  constructor() { 
+    console.log(this.data);
   }
 
   next(){
@@ -40,6 +41,7 @@ export class FooterComponent implements OnInit {
   async presentToast(msg="") {
     const toast = document.createElement('ion-toast');
     toast.message = msg;
+    toast.position = 'middle'
     toast.duration = 2000;
   
     document.body.appendChild(toast);

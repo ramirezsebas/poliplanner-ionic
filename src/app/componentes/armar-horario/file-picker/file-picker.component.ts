@@ -160,6 +160,7 @@ export class FilePickerComponent implements OnInit {
     const toast = document.createElement('ion-toast');
     toast.message = msg;
     toast.duration = 2000;
+    toast.position = 'middle';
   
     document.body.appendChild(toast);
     return toast.present();

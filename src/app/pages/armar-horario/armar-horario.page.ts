@@ -15,7 +15,6 @@ export class ArmarHorarioPage implements OnInit {
 
 
   constructor(public dataTrue: DataService, private navCtrl:NavController) { 
-    
   }
 
   validarSeccion(){
@@ -50,13 +49,14 @@ export class ArmarHorarioPage implements OnInit {
   }
 
   textForHeader=[
-    `Paso ${this.data.seccionActual}: Selecciona tu/s carrera/s`,
-    `Paso ${this.data.seccionActual}: Sel. mat. aprobadas`,
-    `Paso ${this.data.seccionActual}: Sel. mat. a cursar`,
-    `Paso ${this.data.seccionActual}: Sel. secciones `,
-    `Paso ${this.data.seccionActual}: Confirma las secciones `,
-    `Paso ${this.data.seccionActual}: Confirma el Horario `,
-    `Paso ${this.data.seccionActual}: Confirma el Calendario `,
+    '',
+    `Paso 1: Selecciona tu/s carrera/s`,
+    `Paso 2: Sel. mat. aprobadas`,
+    `Paso 3: Sel. mat. a cursar`,
+    `Paso 4: Sel. secciones `,
+    `Paso 5: Confirma las secciones `,
+    `Paso 6: Confirma el Horario `,
+    `Paso 7: Confirma el Calendario `,
   ]
 
   ngOnInit() {
@@ -70,7 +70,9 @@ export class ArmarHorarioPage implements OnInit {
   async presentToast(msg="") {
     const toast = document.createElement('ion-toast');
     toast.message = msg;
+    toast.position = 'middle'
     toast.duration = 2000;
+    // toast.style.setProperty('--width', '60%')
   
     document.body.appendChild(toast);
     return toast.present();
