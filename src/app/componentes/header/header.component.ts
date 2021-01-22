@@ -26,5 +26,12 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  darkMode: boolean = true;
+
+  cambio() {
+    // const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    document.body.classList.toggle( 'dark' );
+    
+  }
   ngOnInit() {}
 }
