@@ -119,11 +119,13 @@ export class SeleccionarSeccionesComponent implements OnInit {
 
       this.clasesElegidasPorSeccionesForView = this.clasesElegidasPorSeccionesForView.flat().sort((x,y)=>x.padre<y.padre);
 
-      // console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
-      // console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
       this.data.seccionesElegidasForView = this.clasesElegidasPorSeccionesForView;
       this.data.seccionesElegidas = this.clasesElegidasPorSecciones.flat();
     }
+    console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
+    console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
+    this.clasesElegidasPorSeccionesForView.sort((x, y) => x.padre> y.padre?1:-1);
+
   }
 
   onChange(){

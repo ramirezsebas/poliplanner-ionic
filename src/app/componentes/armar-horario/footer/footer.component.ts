@@ -18,11 +18,11 @@ export class FooterComponent implements OnInit {
   next(){
     // console.log(this.data);
     if(this.data.seccionActual==1 && this.data.seleccionados.length==0){
-      this.presentToast('Debes seleccionar alguna carrera')
+      this.presentToast('Debes seleccionar alguna Carrera')
     }else if(this.data.seccionActual==3 && (this.data.materiasSeleccionadas == undefined || this.data.materiasSeleccionadas.flat().length==0)){
-      this.presentToast('Debes seleccionar al menos una materia')
+      this.presentToast('Debes seleccionar al menos una Materia')
     }else if(this.data.seccionActual==4 && this.data.toCalendar.length==0){
-      this.presentToast('Debes seleccionar al menos una materia')
+      this.presentToast('Debes seleccionar al menos una Sección')
     }else{
       this.data.seccionActual++;
     }

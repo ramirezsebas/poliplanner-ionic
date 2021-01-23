@@ -11,5 +11,11 @@ export class SeccionesPage implements OnInit {
     
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    let datos = window.localStorage.data
+    if(datos){
+      this.data.remplazarDatos(JSON.parse(datos))
+      // console.log(this.data.toCalendar);
+    }
+  }
 }

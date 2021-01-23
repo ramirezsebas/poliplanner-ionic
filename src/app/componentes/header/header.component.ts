@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   direccionActual: string;
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    private navCtrl:NavController,
+    ) {
     this.setTitle();
   }
   
@@ -33,5 +36,12 @@ export class HeaderComponent implements OnInit {
     document.body.classList.toggle( 'dark' );
     
   }
+
+  inicio(){
+    window.location.replace('inicio')
+    
+    
+  }
+
   ngOnInit() {}
 }

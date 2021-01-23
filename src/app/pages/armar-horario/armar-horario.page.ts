@@ -24,7 +24,7 @@ export class ArmarHorarioPage implements OnInit {
     }else if(this.data.seccionActual == 2){
       
     }else if(this.data.seccionActual == 3){
-      console.log(this.data.dataFromExcel);
+      // console.log(this.data.dataFromExcel);
       
       if(!this.data.dataFromExcel){
         this.data.seccionActual--;

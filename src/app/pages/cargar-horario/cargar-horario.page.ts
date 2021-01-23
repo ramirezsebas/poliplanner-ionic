@@ -46,7 +46,7 @@ export class CargarHorarioPage implements OnInit {
   getData() {
     this.fpuna.getCarrerasAll().subscribe((r) => {
       this.careers = r;
-      console.log(r);
+      // console.log(r);
     });
   }
 
@@ -62,7 +62,7 @@ export class CargarHorarioPage implements OnInit {
       }
     });
     this.selectedCareer = toNextPage;
-    console.log("tonextpage", toNextPage);
+    // console.log("tonextpage", toNextPage);
   }
 
   /**
@@ -71,7 +71,7 @@ export class CargarHorarioPage implements OnInit {
 
   loadSection2() {
     let selectedCareer = this.selectedCareer[0].id;
-    console.log("this.selectedCareer", this.selectedCareer);
+    // console.log("this.selectedCareer", this.selectedCareer);
 
     this.fpuna.getClasesAll().subscribe((r) => {
       let c = [];
@@ -84,7 +84,7 @@ export class CargarHorarioPage implements OnInit {
         }
       });
       this.semestersClasses = c;
-      console.log('this.semestersClassse', c);
+      // console.log('this.semestersClassse', c);
       
     });
   }
@@ -150,7 +150,7 @@ export class CargarHorarioPage implements OnInit {
           role: "cancel",
           cssClass: "secondary",
           handler: (blah) => {
-            console.log("Confirm Cancel: blah");
+            // console.log("Confirm Cancel: blah");
           },
         },
         {
@@ -175,7 +175,7 @@ export class CargarHorarioPage implements OnInit {
       const bstr: string = e.target.result;
       let careerEnf = this.selectedCareer[0];
       this.dataFromExcel = read(bstr,careerEnf);
-      console.log('Class Name', this.seletedClassName);
+      // console.log('Class Name', this.seletedClassName);
       this.selectedCareer
       let r = selectCustomClass(
         this.dataFromExcel, 
@@ -184,7 +184,7 @@ export class CargarHorarioPage implements OnInit {
       );
       this.selectedClass = r.all
       this.selectedClassForView = r.forView
-      console.log('selectedClass',this.selectedClass);      
+      // console.log('selectedClass',this.selectedClass);      
     };
     this.FileName = target.files[0].name;
     reader.readAsBinaryString(target.files[0]);
@@ -195,7 +195,7 @@ export class CargarHorarioPage implements OnInit {
 
       /* grab first sheet */
       const wsname: string = selectedCareer.code;
-      console.log("sheet", wsname);
+      // console.log("sheet", wsname);
 
       const ws: XLSX.WorkSheet = wb.Sheets[wsname];
 
@@ -235,7 +235,7 @@ export class CargarHorarioPage implements OnInit {
           }
         });
       });
-      console.log(agrupador);
+      // console.log(agrupador);
       
       return {'all':resultado, 'forView':agrupador};
 
@@ -293,10 +293,10 @@ export class CargarHorarioPage implements OnInit {
   }
 
   endPage(){
-    console.log('selectedClass',this.selectedClass)
-    console.log('selectedClass',JSON.stringify(this.selectedClass));
-    console.log('selectedClassForView',this.selectedClassForView)
-    console.log('selectedClassForView',JSON.stringify(this.selectedClassForView));
+    // console.log('selectedClass',this.selectedClass)
+    // console.log('selectedClass',JSON.stringify(this.selectedClass));
+    // console.log('selectedClassForView',this.selectedClassForView)
+    // console.log('selectedClassForView',JSON.stringify(this.selectedClassForView));
 
     let toCalendar=[];
     this.selectedClassForView.forEach(element => {
@@ -310,7 +310,7 @@ export class CargarHorarioPage implements OnInit {
       });
     });
     toCalendar = columnNameFix(toCalendar)
-    console.log('toCalendar',toCalendar);
+    // console.log('toCalendar',toCalendar);
     window.localStorage.clear()
     window.localStorage['toInicio'] = JSON.stringify(toCalendar);
 

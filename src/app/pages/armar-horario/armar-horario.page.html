@@ -21,6 +21,7 @@
   <app-secciones *ngSwitchCase="5" [toCalendar]="data.toCalendar" ></app-secciones>
   <app-inicio  *ngSwitchCase="6" [semana]="data.semana" [toCalendar]="data.toCalendar" ></app-inicio>
   <app-calendario *ngSwitchCase="7" [toCalendar]="data.toCalendar"></app-calendario>  
+  <app-calendario *ngSwitchCase="8" [toCalendar]="data.toCalendar"></app-calendario>  
 </ion-content>
 
 <!-- <ion-content *ngIf="currentSection <= currentCareer.length+1 && currentSection!=1">
@@ -30,7 +31,4 @@
 </ion-content> -->
 
 <app-file-picker #fp [data]="data"></app-file-picker>
-<div>
-
-  <app-footer [data]="data"></app-footer>
-</div>
+<app-footer [data]="data"></app-footer>
