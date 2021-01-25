@@ -18,7 +18,7 @@ export class FooterComponent implements OnInit {
   next(){
     // console.log(this.data.seleccionados.length, this.data.contadorCarrera);
     
-    // console.log(this.data);
+    console.log(this.data);
     if(this.data.seccionActual==1){
       this.data.contadorCarrera = this.data.seleccionados.length;
       if(this.data.seleccionados.length==0){
@@ -47,7 +47,7 @@ export class FooterComponent implements OnInit {
     this.data.seccionActual++;
   }
   selectedMatOnAllCareer(){
-    console.log(this.data.materiasSeleccionadas);
+    // console.log(this.data.materiasSeleccionadas);
     for (const iterator of this.data.seleccionados) {
       if(!this.data.materiasSeleccionadas[iterator._id] || this.data.materiasSeleccionadas[iterator._id].length==0)
       return true 

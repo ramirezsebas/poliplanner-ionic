@@ -105,7 +105,7 @@ export class SeleccionarSeccionesComponent implements OnInit {
     // console.log('carrerasSeleccionadas', carrerasSeleccionadas);
     this.clasesElegidasPorSecciones = [];
     this.clasesElegidasPorSeccionesForView = [];
-    if(!this.clasesElegidasPorSeccionesForView[0])
+    if(!this.data.seccionesElegidasForView[0])
     {  
       for (let i = 0; i < carrerasSeleccionadas.length; i++) {
         const datosDe1Carrera = datos[i];
@@ -121,10 +121,14 @@ export class SeleccionarSeccionesComponent implements OnInit {
 
       this.data.seccionesElegidasForView = this.clasesElegidasPorSeccionesForView;
       this.data.seccionesElegidas = this.clasesElegidasPorSecciones.flat();
+      this.clasesElegidasPorSeccionesForView.sort((x, y) => x.padre> y.padre?1:-1);
+    }else{
+      this.clasesElegidasPorSeccionesForView = this.data.seccionesElegidasForView
     }
     console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
     console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
-    this.clasesElegidasPorSeccionesForView.sort((x, y) => x.padre> y.padre?1:-1);
+
+    
 
   }
 

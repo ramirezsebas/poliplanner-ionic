@@ -23,12 +23,15 @@ export class ArmarHorarioPage implements OnInit {
     if(this.data.seccionActual == 1){
       //this.data = this.dataTrue;
     }else if(this.data.seccionActual == 2){
+      
       if(!this.data.dataFromExcel){
         this.footer.previous();
         this.filepicker.readFilePopup()
       }else if(this.data.dataFromExcel[0].length==0){
         this.footer.previous();
         this.filepicker.readFilePopup()
+      }else{
+       this.filepicker.toData();
       }
     }else if(this.data.seccionActual == 3){
     }else if(this.data.seccionActual == 8){
@@ -45,7 +48,7 @@ export class ArmarHorarioPage implements OnInit {
   // Para cargar materias
   onChangeApro(selected, id) {
     this.data.materiasAprobadas[id] = selected;
-    console.log(this.data.materiasAprobadas);
+    // console.log(this.data.materiasAprobadas);
     
   }
 

@@ -19,6 +19,8 @@ export class PorCarreraComponent implements OnInit {
   constructor(private fpuna: FpunaService) {
   }
   ngOnInit() {
+    console.log(this.data.materiasAprobadas);
+    
     
     // console.log(this.data);
     
@@ -26,6 +28,7 @@ export class PorCarreraComponent implements OnInit {
       // console.log('esto aprov');
       
       this.getData();
+      
     }
     else
       this.descartarDatosPrerrequisito();
@@ -94,6 +97,14 @@ export class PorCarreraComponent implements OnInit {
       this.semestersClasses.map(x => x.materias.sort((x, y) => x.sem > y.sem?1:-1));
       console.log('this.semestersClasses', this.semestersClasses)
       
+      const marcados = this.data.materiasSeleccionadas[this.selectedCareerId]
+      if (marcados)
+        marcados.forEach(toCheck =>{
+          this.semestersClasses.forEach(sem=>sem.materias.forEach(materia=>{
+
+            if(toCheck == materia.nombre) materia.isItemChecked=true  
+          }))
+        })
 
       
     });
@@ -125,7 +136,18 @@ export class PorCarreraComponent implements OnInit {
       this.semestersClasses.map(x => x.materias.sort((x, y) => x.sem > y.sem));
 
       // console.log(JSON.stringify(this.semestersClasses));
-      
+      // console.log(this.semestersClasses);
+      // console.log('hola');
+
+      // Marcar los ya marcados anteriormente
+      const marcados = this.data.materiasAprobadas[this.selectedCareerId]
+      if (marcados)
+        marcados.forEach(toCheck =>{
+          this.semestersClasses.forEach(sem=>sem.materias.forEach(materia=>{
+
+            if(toCheck == materia.nombre) materia.isItemChecked=true  
+          }))
+        })
     });
   }
 
