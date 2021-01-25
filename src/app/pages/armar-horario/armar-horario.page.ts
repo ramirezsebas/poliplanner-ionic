@@ -12,6 +12,7 @@ export class ArmarHorarioPage implements OnInit {
 
   data = new DataService;
   @ViewChild('fp') filepicker; 
+  @ViewChild('footer') footer; 
 
 
   constructor(public dataTrue: DataService, private navCtrl:NavController) { 
@@ -22,17 +23,14 @@ export class ArmarHorarioPage implements OnInit {
     if(this.data.seccionActual == 1){
       //this.data = this.dataTrue;
     }else if(this.data.seccionActual == 2){
-      
-    }else if(this.data.seccionActual == 3){
-      // console.log(this.data.dataFromExcel);
-      
       if(!this.data.dataFromExcel){
-        this.data.seccionActual--;
+        this.footer.previous();
         this.filepicker.readFilePopup()
       }else if(this.data.dataFromExcel[0].length==0){
-        this.data.seccionActual--;
+        this.footer.previous();
         this.filepicker.readFilePopup()
       }
+    }else if(this.data.seccionActual == 3){
     }else if(this.data.seccionActual == 8){
       
       this.dataTrue.remplazarDatos(this.data)
@@ -44,21 +42,31 @@ export class ArmarHorarioPage implements OnInit {
     return this.data.seccionActual;
   }
 
+  // Para cargar materias
+  onChangeApro(selected, id) {
+    this.data.materiasAprobadas[id] = selected;
+    console.log(this.data.materiasAprobadas);
+    
+  }
+
+  onChangeSel(selected,id){
+    this.data.materiasSeleccionadas[id] = selected;    
+  }
+
   onClick(){
     
   }
 
   textForHeader=[
     '',
-    `Paso 1: Selecciona tu/s carrera/s`,
-    `Paso 2: Sel. mat. aprobadas`,
-    `Paso 3: Sel. mat. a cursar`,
-    `Paso 4: Sel. secciones `,
-    `Paso 5: Confirma las secciones `,
-    `Paso 6: Confirma el Horario `,
-    `Paso 7: Confirma el Calendario `,
+    `Selecciona tu/s carrera/s`,
+    `Sel. mat. aprobadas`,
+    `Sel. mat. a cursar`,
+    `Sel. secciones `,
+    `Confirma las secciones `,
+    `Confirma el Horario `,
+    `Confirma el Calendario `,
   ]
-
   ngOnInit() {
     this.data= new DataService()
 

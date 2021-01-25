@@ -34,14 +34,18 @@ export class PorCarreraComponent implements OnInit {
   descartarDatosPrerrequisito(){
     this.fpuna.getPrerrequisitosAll().subscribe(prerrequisitos=>{
       const idCarrera = this.selectedCareerId;
-      let aprobadas:any = this.data.materiasAprobadas.flat();
+      
+      let aprobadas:any = this.data.materiasAprobadas[this.selectedCareerId];
+      if(!this.data.materiasAprobadas[this.selectedCareerId])
+        aprobadas = []
+      
       const todas = this.data.clasesTodas.filter(x => x.career_id == idCarrera)
       // console.log('todas', todas);
       
       let ids_aprobadas = todas.filter(x => aprobadas.includes(x.name)).map(x=>x._id);
 
       aprobadas = todas.filter(x=>ids_aprobadas.includes(x._id));
-      // console.log('aprobadas', aprobadas);
+      console.log('aprobadas', aprobadas);
       
       let candidatos:any[] = todas;
       // console.log('antes de creditos', candidatos);
@@ -88,7 +92,7 @@ export class PorCarreraComponent implements OnInit {
       // Ordenar
       this.semestersClasses = c.sort((x, y) => x.semestre - y.semestre);
       this.semestersClasses.map(x => x.materias.sort((x, y) => x.sem > y.sem?1:-1));
-      // console.log('this.semestersClasses', this.semestersClasses)
+      console.log('this.semestersClasses', this.semestersClasses)
       
 
       

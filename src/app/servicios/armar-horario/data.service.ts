@@ -37,6 +37,7 @@ export class DataService {
   ];
   diasMarcados: DayConfig[] = [];
   eventosMes=[];
+  contadorCarrera: number;
 
 
   remplazarDatos(datos){
