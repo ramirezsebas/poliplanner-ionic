@@ -58,18 +58,30 @@ export class InicioComponent implements OnInit{
     
     if (data) {
       //formatearDatos(); 
+      const horLab = /[\d]*[\:][\d]* - [\d]*[\:][\d]*.?\(L\)/g
+      let horNormal = /([\d]*[\:][\d]* - [\d]*[\:][\d]*)+/g
 
       this.semana.forEach(dia => {
         data.forEach(element => {
           let clase = element[dia.nombre];
-
           // console.log('hola');
-          if (clase!=undefined && clase['Horario'] != undefined && clase['Horario'] != " "){
-            
+          if (clase && clase['Horario'] && clase['Horario'].match(horNormal).lenght!=0 ){
+            let horarioLab = clase['Horario'].match(horLab)
+            clase['Horario'] =clase['Horario'].replace(horLab,'')
+            let horarios = clase['Horario'].match(horNormal)
+
             dia.clases.push({
-              horario: clase['Horario'].replace("-", "a"),
+              horario: horarioLab[0].match(horNormal)[0].replace("-", "a"),
               nombre: element.Asignatura,
+              lab: true,
             });
+            if(horarios)
+              dia.clases.push({
+                horario: horarios[0].replace("-", "a"),
+                nombre: element.Asignatura,
+              });
+
+            
           }
         })
       });

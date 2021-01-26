@@ -13,7 +13,10 @@
         <ion-infinite-scroll  class="ion-align-self-start">
           <ion-list>
             <ion-item lines="full" *ngFor="let clase of dia.clases">
-             <div class="circle">{{clase.nombre[0]}}</div>
+              <div *ngIf="clase.lab;else otro"  style="font-size: 20px;" class="circle">Lab</div>
+              <ng-template #otro>
+                <div class="circle">{{clase.nombre[0]}}</div>
+              </ng-template>
               <ion-label class="ion-text-wrap ion-padding">
                 <ion-label color="primary" style="font-size:20px" #materia>{{clase.nombre}}</ion-label>
                 <p #hora>{{clase.horario}}</p>
