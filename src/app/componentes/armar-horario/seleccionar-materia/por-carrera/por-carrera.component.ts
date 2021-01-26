@@ -42,8 +42,10 @@ export class PorCarreraComponent implements OnInit {
       if(!this.data.materiasAprobadas[this.selectedCareerId])
         aprobadas = []
       
+        // console.log('todas', todas);
+      if(!this.data.clasesTodas)  
+        this.getData()
       const todas = this.data.clasesTodas.filter(x => x.career_id == idCarrera)
-      // console.log('todas', todas);
       
       let ids_aprobadas = todas.filter(x => aprobadas.includes(x.name)).map(x=>x._id);
 

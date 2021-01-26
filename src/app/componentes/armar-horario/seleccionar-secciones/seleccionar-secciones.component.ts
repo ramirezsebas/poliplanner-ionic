@@ -152,7 +152,7 @@ export class SeleccionarSeccionesComponent implements OnInit {
         }
       });
     });
-    console.log(this.data.toCalendar);
+    // console.log(this.data.toCalendar);
     
   }
 

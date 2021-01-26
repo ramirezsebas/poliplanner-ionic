@@ -8,6 +8,7 @@ import { CargarHorarioPageRoutingModule } from './cargar-horario-routing.module'
 
 import { CargarHorarioPage } from './cargar-horario.page';
 import { ComponentesModule } from 'src/app/componentes/componentes.module';
+import { ArmarHorarioModule } from 'src/app/componentes/armar-horario/armar-horario.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentesModule } from 'src/app/componentes/componentes.module';
     FormsModule,
     IonicModule,
     CargarHorarioPageRoutingModule,
-    ComponentesModule
+    ComponentesModule,
+    ArmarHorarioModule,
   ],
   declarations: [CargarHorarioPage]
 })

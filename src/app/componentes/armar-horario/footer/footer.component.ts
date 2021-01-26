@@ -10,6 +10,7 @@ export class FooterComponent implements OnInit {
 
   @Input() ultimo: number = 3;
   @Input() data: DataService;
+  @Input() armar: boolean = true;
 
   constructor() { 
     // console.log(this.data);
@@ -19,6 +20,33 @@ export class FooterComponent implements OnInit {
     // console.log(this.data.seleccionados.length, this.data.contadorCarrera);
     
     console.log(this.data);
+    if(this.armar)
+      this.nextArmar();
+    else
+      this.nextCargar();
+    this.data.seccionActual++;
+  }
+  nextCargar() {
+    if(this.data.seccionActual==1){
+      this.data.contadorCarrera = this.data.seleccionados.length;
+      if(this.data.seleccionados.length==0){
+        this.presentToast('Debes seleccionar al menos una Carrera')
+        this.data.seccionActual--;
+      }
+    }else if(this.data.seccionActual==2 ){
+      if(this.data.contadorCarrera>1){
+        this.data.seccionActual--;
+        this.data.contadorCarrera--;
+      }else if((!this.data.materiasSeleccionadas || this.selectedMatOnAllCareer())){
+        this.presentToast('Debes seleccionar al menos una Materia para cada Carrera')
+        this.data.seccionActual--;
+      }
+    }else if(this.data.seccionActual==3 && this.data.toCalendar.length==0){
+      this.presentToast('Debes seleccionar al menos una Sección')
+      this.data.seccionActual--;
+    }
+  }
+  nextArmar() {
     if(this.data.seccionActual==1){
       this.data.contadorCarrera = this.data.seleccionados.length;
       if(this.data.seleccionados.length==0){
@@ -42,9 +70,7 @@ export class FooterComponent implements OnInit {
     }else if(this.data.seccionActual==4 && this.data.toCalendar.length==0){
       this.presentToast('Debes seleccionar al menos una Sección')
       this.data.seccionActual--;
-    }else{
     }
-    this.data.seccionActual++;
   }
   selectedMatOnAllCareer(){
     // console.log(this.data.materiasSeleccionadas);
@@ -56,6 +82,25 @@ export class FooterComponent implements OnInit {
   }
   
   previous(){
+    if(this.armar)
+      this.previousArmar();
+    else
+      this.previousCargar();
+    this.data.seccionActual--;
+  }
+  previousCargar() {
+    
+    if(this.data.seccionActual==2 ){
+      if(this.data.contadorCarrera < this.data.seleccionados.length){
+        this.data.seccionActual++;
+        this.data.contadorCarrera++;
+      }else{
+        this.data.contadorCarrera=1
+      }
+    }
+  }
+  previousArmar() {
+    
     if(this.data.seccionActual==2 ){
       if(this.data.contadorCarrera < this.data.seleccionados.length){
         this.data.seccionActual++;
@@ -71,7 +116,6 @@ export class FooterComponent implements OnInit {
         this.data.contadorCarrera=1
       }
     }
-    this.data.seccionActual--;
   }
 
   validarSeccion(x: number) {
