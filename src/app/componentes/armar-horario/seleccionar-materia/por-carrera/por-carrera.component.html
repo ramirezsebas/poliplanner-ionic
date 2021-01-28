@@ -1,5 +1,5 @@
  <ion-list *ngFor="let sem of semestersClasses; let i=index">
-  <ion-item button (click)="expandItem($event)" class="collapsible" detail="false">
+  <ion-item button (click)="expandItem($event)" class="collapsible no-ripple" detail="false">
     <ion-checkbox class="ion-no-padding ion-no-margin" slot="start" [(ngModel)]="sem.checkParent"
       [indeterminate]="sem.indeterminateState" (click)="checkCheckbox($event, i)">
     </ion-checkbox>

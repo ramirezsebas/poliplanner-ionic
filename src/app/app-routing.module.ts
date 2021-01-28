@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'armar-horario',
     loadChildren: () => import('./pages/armar-horario/armar-horario.module').then( m => m.ArmarHorarioPageModule)
   },
+  {
+    path: 'preflight',
+    loadChildren: () => import('./pages/preflight/preflight.module').then( m => m.PreflightPageModule)
+  },
 ];
 
 @NgModule({
