@@ -1,6 +1,7 @@
 
 ionic build --prod --service-worker
 firebase deploy
+ionic build --prod --service-worker
 firebase hosting:channel:deploy armar_muchas_carreras
 
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_animate

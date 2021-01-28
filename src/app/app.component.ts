@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SwUpdate } from '@angular/service-worker';
@@ -15,9 +15,41 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public updates:SwUpdate
+    public updates:SwUpdate,
+    private navCtrl: NavController,
   ) {
     this.initializeApp();
+
+    // No tested
+    this.updateAppAuto(updates);
+
+    this.preflight();
+  }
+
+
+  preflight() {
+    const isMobile =()=> { return this.platform.is('mobile'); }
+    const isPWA =()=> { return this.platform.is ('pwa'); }
+    const isTablet =()=> { return this.platform.is ('tablet'); } 
+    if (!(!isMobile() || isPWA() || isTablet())) {
+      let nroVisitas = window.localStorage.visitas; 
+      console.log('hola');
+      if(nroVisitas=="undefined" || nroVisitas==10){
+        
+        window.localStorage.visitas=0;
+        this.navCtrl.navigateForward('preflight')
+      }
+      else
+        window.localStorage.visitas++;
+
+    }
+  }
+  updateAppAuto(updates: SwUpdate) {
+    const updateApp = ()=>{
+      document.location.reload();
+      console.log("The app is updating right now");
+    }
+
     updates.available.subscribe(event => {
       console.log('current version is', event.current);
       console.log('available version is', event.available);
@@ -28,15 +60,10 @@ export class AppComponent {
     });
 
     updates.available.subscribe(event => {
-      updates.activateUpdate().then(() => this.updateApp());
+      updates.activateUpdate().then(() => updateApp());
     });
   }
 
-  updateApp(){
-    document.location.reload();
-    console.log("The app is updating right now");
-
-  }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
