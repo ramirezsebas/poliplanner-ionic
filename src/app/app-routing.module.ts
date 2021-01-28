@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'preflight',
     loadChildren: () => import('./pages/preflight/preflight.module').then( m => m.PreflightPageModule)
   },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
 ];
 
 @NgModule({

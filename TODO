@@ -1,6 +1,5 @@
 
-ionic build --prod --service-worker
-firebase deploy
+ionic build --prod --service-worker && firebase deploy
 ionic build --prod --service-worker
 firebase hosting:channel:deploy armar_muchas_carreras
 
