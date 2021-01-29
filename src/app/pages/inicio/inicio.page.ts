@@ -21,6 +21,7 @@ export class InicioPage implements OnInit {
     // this.preflight()
     
   }
+
   preflight() {
     const isMobile =()=> { return this.platform.is('mobile'); }
     const isPWA =()=> { return this.platform.is ('pwa'); }
@@ -37,6 +38,7 @@ export class InicioPage implements OnInit {
         window.localStorage.visitas++;
     }
   }
+  
   ionViewDidEnter(){
     
   }

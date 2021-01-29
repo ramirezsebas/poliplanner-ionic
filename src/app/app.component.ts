@@ -4,6 +4,7 @@ import { NavController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SwUpdate } from '@angular/service-worker';
+import { AppUpdateService } from './servicios/app-update-service.service';
 
 @Component({
   selector: 'app-root',
@@ -17,12 +18,9 @@ export class AppComponent {
     private statusBar: StatusBar,
     public updates:SwUpdate,
     private navCtrl: NavController,
+    private prueba: AppUpdateService,
   ) {
     this.initializeApp();
-
-    // No tested
-    this.updateAppAuto(updates);
-
     this.preflight();
   }
 
@@ -44,26 +42,7 @@ export class AppComponent {
 
     }
   }
-  updateAppAuto(updates: SwUpdate) {
-    const updateApp = ()=>{
-      document.location.reload();
-      console.log("The app is updating right now");
-    }
-
-    updates.available.subscribe(event => {
-      console.log('current version is', event.current);
-      console.log('available version is', event.available);
-    });
-    updates.activated.subscribe(event => {
-      console.log('old version was', event.previous);
-      console.log('new version is', event.current);
-    });
-
-    updates.available.subscribe(event => {
-      updates.activateUpdate().then(() => updateApp());
-    });
-  }
-
+  
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();

@@ -15,6 +15,7 @@ import { File } from "@ionic-native/file/ngx";
 import { DataService } from './servicios/armar-horario/data.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AppUpdateService } from './servicios/app-update-service.service';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { environment } from '../environments/environment';
     SplashScreen,
     FpunaService,
     DataService,
+    AppUpdateService,
     File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
