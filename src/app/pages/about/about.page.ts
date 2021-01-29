@@ -17,7 +17,7 @@ export class AboutPage implements OnInit {
   }
 
   btnWhatsapp(){
-    window.open('https://wa.me/575984516464?text=Hola');
+    window.open('https://wa.me/595984516464?text=Hola');
   }
 
   btnEmail(){

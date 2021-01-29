@@ -26,7 +26,16 @@ export class MenuComponent implements OnInit {
   }
 
   actualizar(){
-    window.location.reload();
+    forceSWupdate();
+    function forceSWupdate() {
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.ready.then(registration => {
+              registration.update().then(() => {
+                window.location.reload();
+              });
+          });
+      }
+   }     
   }
 
   // onClick(dir: string) {

@@ -23,6 +23,7 @@ export class AppUpdateService {
 
   doAppUpdate() {
     this.updates.activateUpdate().then(() => document.location.reload());
+    document.location.reload();
   }
 
 
@@ -30,19 +31,20 @@ export class AppUpdateService {
     const toast = await this.toastController.create({
       header: header,
       message: message,
-      position: 'top',
+      position: 'bottom',
       buttons: [
         {
           side: 'start',
-          text: 'Ok',
-          handler: () => {
-            action
-          }
-        }, {
-          text: 'Cancelar',
+          text: 'Canc.',
           role: 'cancel',
           handler: () => {
             console.log('Cancel clicked');
+          }
+        }, {
+          text: 'Ok',
+          // side: 'end',
+          handler: () => {
+            this.doAppUpdate();
           }
         }
       ]

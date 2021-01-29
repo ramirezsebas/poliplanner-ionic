@@ -31,7 +31,6 @@ export class AppComponent {
     const isTablet =()=> { return this.platform.is ('tablet'); } 
     if (!(!isMobile() || isPWA() || isTablet())) {
       let nroVisitas = window.localStorage.visitas; 
-      console.log('hola');
       if(nroVisitas=="undefined" || nroVisitas==10){
         
         window.localStorage.visitas=0;

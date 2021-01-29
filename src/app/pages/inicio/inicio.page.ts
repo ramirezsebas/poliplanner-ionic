@@ -13,7 +13,7 @@ export class InicioPage implements OnInit {
     public modalController: ModalController, 
     public data: DataService,
     private navCtrl:NavController,
-    private platform: Platform
+    private platform: Platform,
   ) {}
 
   ngOnInit() {
@@ -29,8 +29,6 @@ export class InicioPage implements OnInit {
     if (!isMobile() || isPWA() || isTablet()) {
       let nroVisitas = window.localStorage.visitas;
       if(nroVisitas=="undefined" || nroVisitas==10){
-        console.log('hola');
-        
         window.localStorage.visitas=0;
         this.navCtrl.navigateForward('preflight')
       }
