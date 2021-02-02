@@ -64,9 +64,9 @@ export class InicioComponent implements OnInit{
       this.semana.forEach(dia => {
         data.forEach(element => {
           let clase = element[dia.nombre];
-          if (clase && clase['Horario'] && clase['Horario'].match(horNormal).lenght!=0 ){
+          if (clase && clase['Horario'] && clase['Horario'].match(horNormal) && clase['Horario'].match(horNormal).lenght!=0 ){
             let horarioLab = clase['Horario'].match(horLab)
-            clase['Horario'] =clase['Horario'].replace(horLab,'')
+            clase['Horario'] = clase['Horario'].replace(horLab,'')
             let horarios = clase['Horario'].match(horNormal)
 
             if(horarioLab)

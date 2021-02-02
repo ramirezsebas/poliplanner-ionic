@@ -10,27 +10,27 @@
       </P>
     </ion-slide>
     <ion-slide *ngIf="isIOS">
-      <img src="assets/images/preflight_slider/ios_1.png">
+      <img src="assets/images/ios_1.jpeg">
       <H1>Select sharing button</H1>
       <P>Press the sharing icon at the bottom of your web browser's window.</P>
     </ion-slide>
     <ion-slide *ngIf="isIOS">
-      <img src="assets/images/preflight_slider/ios_2.png">
+      <img src="assets/images/ios_2.jpeg">
       <H1>Add to Home Screen</H1>
       <P>Scroll the icons until you find the option <strong>Add to Home Screen</strong>.</P>
     </ion-slide>
     <ion-slide *ngIf="isIOS">
-      <img src="assets/images/preflight_slider/ios_3.png">
+      <img src="assets/images/ios_3.jpeg">
       <H1>Press Add</H1>
       <P>Press <strong>Add</strong> to save the application to your desktop.</P>
     </ion-slide>
     <ion-slide *ngIf="isIOS">
-      <img src="assets/images/preflight_slider/ios_4.png">
+      <img src="assets/images/ios_4.jpeg">
       <H1>Run from Home Screen</H1>
       <P>The application will now be available from your home screen.
         To run from your web browser, press Continue.
       </P>
-      <ion-button shape="round">Continue</ion-button>
+      <ion-button shape="round" routerDirection='root' routerLink="/inicio">Continuar</ion-button>
     </ion-slide>
     <ion-slide *ngIf="isAndroid">
       <img src="assets/images/android_1.jpeg">
