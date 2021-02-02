@@ -53,10 +53,11 @@ export class AppComponent {
 
 
   checkDarkTheme() {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    if ( prefersDark.matches ) {
-      document.body.classList.toggle( 'dark' );
+    if(window.localStorage.dark == "undefined"){
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      window.localStorage.dark = prefersDark.matches
     }
+    const dark = window.localStorage.dark == 'true'? true: false;
+    document.body.classList.toggle( 'dark', dark );
   }
 }
