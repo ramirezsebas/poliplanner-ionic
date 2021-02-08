@@ -11,7 +11,8 @@ export class PorCarreraComponent implements OnInit {
 
   @Input() data:DataService;
   @Input() selectedCareerId;
-  @Input() esAprobar;
+  @Input() esAprobar = false;
+  @Input() esCargarHorario;
   @Output() seleccionados = new EventEmitter();
   semestersClasses: any[];
   maxHeight=[];
@@ -43,8 +44,10 @@ export class PorCarreraComponent implements OnInit {
         aprobadas = []
       
         // console.log('todas', todas);
-      if(!this.data.clasesTodas)  
+      if(this.esCargarHorario) {
+        this.data.clasesTodas = undefined
         this.getData()
+      } 
       const todas = this.data.clasesTodas.filter(x => x.career_id == idCarrera)
       
       let ids_aprobadas = todas.filter(x => aprobadas.includes(x.name)).map(x=>x._id);

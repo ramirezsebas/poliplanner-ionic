@@ -25,7 +25,7 @@
   <!-- <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [data]="data" ></app-seleccionar-materias-aprobadas> -->
   <!-- <app-seleccionar-materia *ngSwitchCase="3" [data]="data" ></app-seleccionar-materia>  -->
   <div *ngSwitchCase="2" ><ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
-    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="false" (seleccionados)="onChangeSel($event,carrera._id)" [data]="data"></app-por-carrera>
+    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="false" [esCargarHorario]="true" (seleccionados)="onChangeSel($event,carrera._id)" [data]="data"></app-por-carrera>
   </ng-container></div>
   <app-seleccionar-secciones *ngSwitchCase="3" [data]="data"></app-seleccionar-secciones>
   
