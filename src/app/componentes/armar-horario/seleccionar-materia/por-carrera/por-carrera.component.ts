@@ -75,7 +75,7 @@ export class PorCarreraComponent implements OnInit {
 
       //Filtra prerrequisitos
       candidatos = candidatos.filter(materia=>{
-        let prePorMateria: any[] = prerrequisitos.filter(x => x.class2_id == materia._id).map(x => x.class1_id);
+        let prePorMateria: any[] = prerrequisitos.filter(x => x.next == materia._id).map(x => x.prev);
         let poseePres = prePorMateria.every(x=>ids_aprobadas.includes(x))
         return poseePres;
       })

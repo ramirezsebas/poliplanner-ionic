@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import Career from '../models/Career';
 import Subject from '../models/Subject';
+import SubjectRequirement from '../models/SubjectRequirement';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class FpunaService {
     return this.http.get<Subject[]>('./../assets/clases.json')
   }
 
-  getPrerrequisitosAll(): Observable<any>{
-    return this.http.get('./../assets/prerrequisitos.json')
+  getPrerrequisitosAll(): Observable<SubjectRequirement[]>{
+    return this.http.get<SubjectRequirement[]>('./../assets/prerrequisitos.json')
   }
 }
