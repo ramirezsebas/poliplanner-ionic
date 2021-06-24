@@ -125,7 +125,17 @@ export class SeleccionarSeccionesComponent implements OnInit {
     console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
     console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
     this.clasesElegidasPorSeccionesForView.sort((x, y) => x.padre> y.padre?1:-1);
-
+    this.data.toCalendar.forEach(mat => {
+      mat.Item
+      this.clasesElegidasPorSeccionesForView.forEach(padre => {
+        padre.hijos.forEach(seccion => {
+          if(mat.Item == seccion.id){
+            seccion.isItemChecked = true          
+          }
+        });
+      });
+    })
+   
   }
 
   onChange(){
@@ -142,6 +152,8 @@ export class SeleccionarSeccionesComponent implements OnInit {
         }
       });
     });
+    // console.log(this.data.toCalendar);
+    
   }
 
   ngOnDestroy(){

@@ -11,7 +11,6 @@ export class SeleccionarCarreraComponent implements OnInit {
   
   seleccionados: career[];
   @Input() data: DataService;
-  carreraElegida;
 
   
   careers: any[];
@@ -30,21 +29,20 @@ export class SeleccionarCarreraComponent implements OnInit {
   initData() {
     this.fpuna.getCarrerasAll().subscribe((r) => {
       this.careers = r.map(x=> ({...x, 'isChecked': false }));
+      // console.log(JSON.stringify(this.careers))
+      if(this.data.seleccionados.length!=0){
+        this.data.seleccionados.forEach(carrera=>{
+          this.careers.find(c=>c._id==carrera._id).isChecked = carrera.isChecked 
+        })
+      }
+      // console.log(this.careers);
     });
+    
   }
 
-  onChange(e) {
-    let id = e.detail.value;
-    
-    
-    // console.log(e.detail.value);
-    // console.log(this.careers);
+  onChange() {
+    this.data.seleccionados = this.careers.filter(x=>x.isChecked);
     // console.log(this.data.seleccionados);
     
-    
-    this.data.seleccionados = this.careers.filter(x=>x._id==id);
-    // console.log(this.data);
-    
   }
-
 }

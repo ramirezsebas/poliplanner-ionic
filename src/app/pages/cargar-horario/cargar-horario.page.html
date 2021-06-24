@@ -1,80 +1,41 @@
 <app-header></app-header>
 <app-menu></app-menu>
-
-<!-- SECCION 1 -->
-<ion-content *ngIf="currentSection.number == 1">
-  <ion-list *ngFor="let career of careers;">
-    <ion-item>
-      <ion-label>{{career.name}}</ion-label>
-      <ion-checkbox slot="start" [(ngModel)]="career.isChecked" (ionChange)="onChange()"></ion-checkbox>
-    </ion-item>
-  </ion-list>
-</ion-content>
-
-
-<!-- SECCION 2 -->
-<ion-content *ngIf="currentSection.number == 2">
-  <ion-list *ngFor="let sem of semestersClasses; let i=index">
-    <ion-grid>
-      <ion-row>
-        <ion-item class="ion-align-self-end">
-          <ion-checkbox class="ion-no-padding ion-no-margin" slot="start" [(ngModel)]="sem.checkParent"
-            [indeterminate]="sem.indeterminateState" (click)="checkCheckbox($event, i)"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-          <ion-label><strong>Semestre {{i+1}}</strong></ion-label>
-        </ion-item>
-      </ion-row>
-    </ion-grid>
-    <ion-item *ngFor="let materia of sem.materias">
-      <ion-icon slot="start" name="none"></ion-icon>
-      <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked" (ionChange)="verifyEvent(i)">
-      </ion-checkbox>
-      <ion-label>{{materia.nombre}}</ion-label>
-    </ion-item>
-  </ion-list>
-</ion-content>
-
-<!-- SECCION 3 -->
-<ion-content *ngIf="currentSection.number == 3">
-
-  <ion-list *ngFor="let mat of selectedClassForView; let i=index">
-    <ion-grid>
-      <ion-row>
-        <ion-item class="ion-align-self-end">
-        </ion-item>
-        <ion-item>
-          <ion-label><strong>{{mat.padre}} - {{mat.sigla}}{{(mat.enf=='-- --')?'':'-'+mat.enf}}</strong></ion-label>
-        </ion-item>
-      </ion-row>
-    </ion-grid>
-    <ion-item *ngFor="let materia of mat.hijos">
-      <ion-icon slot="start" name="none"></ion-icon>
-      <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked">
-      </ion-checkbox>
-      <ion-label>
-        <h2>{{materia.nombre}}</h2>
-        <h2>
-          {{materia.seccion}} - {{materia.profesor}}
-        </h2>
-      </ion-label>
-    </ion-item>
-  </ion-list>
-</ion-content>
-
-<!-- FOOTER -->
-<ion-footer>
-  <ion-toolbar>
-    <ion-item slot="end" button (click)="nextPage()" *ngIf="currentSection.nextPageVisibility">
-      <ion-label>SIGUIENTE</ion-label>
-      <ion-icon name="caret-forward" size="large"></ion-icon>
-    </ion-item>
-    <ion-item slot="start" button (click)="previousPage()"*ngIf="currentSection.nextPageVisibility">
-      <ion-icon name="caret-back" size="large"></ion-icon>
-      <ion-label>ATRAS</ion-label>
-    </ion-item>
-  </ion-toolbar>
-
-  <input id="file-input" type="file" (change)="onFileChange($event)" multiple="false" style="display: none;"/>
+<div>
+  <ion-header slot="fixed">
+    <ion-toolbar>
+      <ion-title class="ion-text-wrap">
+        <div *ngIf="data.seccionActual==1" class="ion-text-wrap">
+          Paso 1: {{textForHeader[data.seccionActual]}}
+        </div>
+        <div *ngIf="data.seccionActual==2" class="ion-text-wrap">
+          Paso {{data.seccionActual+(data?.seleccionados.length-data.contadorCarrera )}}: {{textForHeader[data.seccionActual]}} - {{this.data.seleccionados[this.data.contadorCarrera-1].code}}
+        </div>
+        <div *ngIf="!(data.seccionActual==1 || data.seccionActual==2)" class="ion-text-wrap">
+          Paso {{data.seccionActual+(data?.seleccionados.length-data.contadorCarrera )}}: {{textForHeader[data.seccionActual]}}
+        </div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+</div>
   
-</ion-footer>
+
+<ion-content [ngSwitch]="validarSeccion()">
+  <app-seleccionar-carrera *ngSwitchCase="1" [data]="data" ></app-seleccionar-carrera>
+
+  <!-- <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [data]="data" ></app-seleccionar-materias-aprobadas> -->
+  <!-- <app-seleccionar-materia *ngSwitchCase="3" [data]="data" ></app-seleccionar-materia>  -->
+  <div *ngSwitchCase="2" ><ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
+    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="false" [esCargarHorario]="true" (seleccionados)="onChangeSel($event,carrera._id)" [data]="data"></app-por-carrera>
+  </ng-container></div>
+  <app-seleccionar-secciones *ngSwitchCase="3" [data]="data"></app-seleccionar-secciones>
+  
+</ion-content>
+
+<!-- <ion-content *ngIf="currentSection <= currentCareer.length+1 && currentSection!=1">
+  <ng-container *ngFor="let career of currentCareer; let i=index;">
+    <app-seleccionar-materia *ngIf="currentSection==i+2" [selectedCareerId]="career._id"></app-seleccionar-materia>
+  </ng-container>
+</ion-content> -->
+
+<app-file-picker #fp [data]="data"></app-file-picker>
+<app-footer #footer [data]="data" [armar]=false></app-footer>

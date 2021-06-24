@@ -1,0 +1,9 @@
+ion-slide {
+    height: 95vh;
+    flex-direction: column;
+}
+.swiper-slide img {
+    max-width: 50vw;
+    max-height: 50vh;
+    overflow: hidden;
+}

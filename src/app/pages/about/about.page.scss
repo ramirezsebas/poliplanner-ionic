@@ -1,0 +1,21 @@
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 60%;
+}
+
+ion-label{
+    text-align: center;
+}
+
+.contactos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

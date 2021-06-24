@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonContent, IonSlides, ModalController, NavController } from '@ionic/angular';
+import { IonContent, IonSlides, ModalController, NavController, Platform } from '@ionic/angular';
 import { DataService } from 'src/app/servicios/armar-horario/data.service';
 
 @Component({
@@ -13,12 +13,30 @@ export class InicioPage implements OnInit {
     public modalController: ModalController, 
     public data: DataService,
     private navCtrl:NavController,
+    private platform: Platform,
   ) {}
 
   ngOnInit() {
     this.init()
+    // this.preflight()
     
   }
+
+  preflight() {
+    const isMobile =()=> { return this.platform.is('mobile'); }
+    const isPWA =()=> { return this.platform.is ('pwa'); }
+    const isTablet =()=> { return this.platform.is ('tablet'); } 
+    if (!isMobile() || isPWA() || isTablet()) {
+      let nroVisitas = window.localStorage.visitas;
+      if(nroVisitas=="undefined" || nroVisitas==10){
+        window.localStorage.visitas=0;
+        this.navCtrl.navigateForward('preflight')
+      }
+      else
+        window.localStorage.visitas++;
+    }
+  }
+  
   ionViewDidEnter(){
     
   }
@@ -29,8 +47,9 @@ export class InicioPage implements OnInit {
       this.data.remplazarDatos(JSON.parse(datos))
       // console.log(this.data.toCalendar);
     }else{
-      if( this.data.toCalendar.length == 0 )
-        this.navCtrl.navigateForward('armar-horario')
+      this.data = new DataService();
+      // if( this.data.toCalendar.length == 0 )
+      //   this.navCtrl.navigateForward('armar-horario')
     }
     // console.log(this.data)
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,34 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private menu: MenuController, private router: Router) { }
+  displayPage: boolean = true;  
+
+  constructor(private menu: MenuController, private platform: Platform, private router: Router) {
+    this.guiaDeInstalacion();
+  }
+  guiaDeInstalacion() {
+    
+    const isMobile =()=> { return this.platform.is('mobile'); }
+    const isPWA =()=> { return this.platform.is ('pwa'); }
+    const isTablet =()=> { return this.platform.is ('tablet'); } 
+    if (!isMobile() || isPWA() || isTablet()) {
+      this.displayPage = false;
+    }
+
+  }
+
+  actualizar(){
+    forceSWupdate();
+    function forceSWupdate() {
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.ready.then(registration => {
+              registration.update().then(() => {
+                window.location.reload();
+              });
+          });
+      }
+   }     
+  }
 
   // onClick(dir: string) {
   //   console.log('cerrado', this.menu.getOpen());

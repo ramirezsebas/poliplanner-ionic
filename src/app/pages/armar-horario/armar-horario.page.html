@@ -4,8 +4,14 @@
   <ion-header slot="fixed">
     <ion-toolbar>
       <ion-title class="ion-text-wrap">
-        <div class="ion-text-wrap">
-          {{textForHeader[data.seccionActual]}}
+        <div *ngIf="data.seccionActual==1" class="ion-text-wrap">
+          Paso 1: {{textForHeader[data.seccionActual]}}
+        </div>
+        <div *ngIf="data.seccionActual==2||data.seccionActual==3" class="ion-text-wrap">
+          Paso {{data.seccionActual+(data?.seleccionados.length-data.contadorCarrera )}}: {{textForHeader[data.seccionActual]}} - {{this.data.seleccionados[this.data.contadorCarrera-1].code}}
+        </div>
+        <div *ngIf="!(data.seccionActual==1 || data.seccionActual==2 || data.seccionActual==3)" class="ion-text-wrap">
+          Paso {{data.seccionActual+(data?.seleccionados.length-data.contadorCarrera )}}: {{textForHeader[data.seccionActual]}}
         </div>
       </ion-title>
     </ion-toolbar>
@@ -15,8 +21,15 @@
 
 <ion-content [ngSwitch]="validarSeccion()">
   <app-seleccionar-carrera *ngSwitchCase="1" [data]="data" ></app-seleccionar-carrera>
-  <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [data]="data" ></app-seleccionar-materias-aprobadas>
-  <app-seleccionar-materia *ngSwitchCase="3" [data]="data" ></app-seleccionar-materia> 
+
+  <!-- <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [data]="data" ></app-seleccionar-materias-aprobadas> -->
+  <!-- <app-seleccionar-materia *ngSwitchCase="3" [data]="data" ></app-seleccionar-materia>  -->
+  <div *ngSwitchCase="2" ><ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
+    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="true" (seleccionados)="onChangeApro($event,carrera._id)" [data]="data"></app-por-carrera>
+  </ng-container> </div>
+  <div *ngSwitchCase="3" ><ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
+    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="false" (seleccionados)="onChangeSel($event,carrera._id)" [data]="data"></app-por-carrera>
+  </ng-container> </div>
   <app-seleccionar-secciones *ngSwitchCase="4" [data]="data"></app-seleccionar-secciones>
   <app-secciones *ngSwitchCase="5" [toCalendar]="data.toCalendar" ></app-secciones>
   <app-inicio  *ngSwitchCase="6" [semana]="data.semana" [toCalendar]="data.toCalendar" ></app-inicio>
@@ -31,4 +44,4 @@
 </ion-content> -->
 
 <app-file-picker #fp [data]="data"></app-file-picker>
-<app-footer [data]="data"></app-footer>
+<app-footer #footer [data]="data"></app-footer>

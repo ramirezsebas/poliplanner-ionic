@@ -33,7 +33,8 @@ export class HeaderComponent implements OnInit {
 
   cambio() {
     // const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    document.body.classList.toggle( 'dark' );
+    const r = document.body.classList.toggle( 'dark');
+    window.localStorage.dark = r;
     
   }
 

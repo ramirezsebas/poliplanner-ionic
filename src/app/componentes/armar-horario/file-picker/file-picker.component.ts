@@ -13,6 +13,7 @@ export class FilePickerComponent implements OnInit {
   FileName: string;
   dataFromExcel: any[];
   @Input() data: DataService;
+  wb: XLSX.WorkBook
 
 
   constructor(
@@ -43,6 +44,47 @@ export class FilePickerComponent implements OnInit {
   }
 
   onFileChange(evt: any) {
+   
+
+    /* wire up file reader */
+    const target: DataTransfer = <DataTransfer>evt.target;
+   
+
+    if (target.files.length !== 1) throw new Error("Cannot use multiple files");
+    const reader: FileReader = new FileReader();
+    reader.onload = (e: any) => {
+      const bstr: string = e.target.result;
+      /* read workbook */
+      this.wb = XLSX.read(bstr, { type: "binary"});
+      this.toData();
+      
+      
+    };
+    this.FileName = target.files[0].name;
+    console.log(this.FileName);
+    
+    reader.readAsBinaryString(target.files[0]);
+  }
+
+  toData(){
+    const read = () => {
+
+      /* grab sheets names */
+      const codigosDeCarreras = this.data.seleccionados.flatMap(x=>x.code)
+
+      /* save data */
+      let data = [];
+      for (const codigo of codigosDeCarreras) {
+        const ws: XLSX.WorkSheet = this.wb.Sheets[codigo];
+        data.push(
+          <any>XLSX.utils.sheet_to_json(ws, { header: 1, range: 10, raw:false }),
+        );
+      }
+      if(data[0].length==0) 
+        this.presentToast('Asegúrese de que sea el archivo correcto')
+      
+      return data;
+    }
     const limpiarDatos = (datos_sin_limpiar)=>{
       let datosLimpios = [];
       for (let i = 0; i < datos_sin_limpiar.length; i++) {
@@ -105,56 +147,27 @@ export class FilePickerComponent implements OnInit {
       return datosLimpios;
     }
 
-    /* wire up file reader */
-    const target: DataTransfer = <DataTransfer>evt.target;
-    const read = (bstr: string) => {
-      /* read workbook */
-      const wb: XLSX.WorkBook = XLSX.read(bstr, { type: "binary"});
 
-      /* grab sheets names */
-      const codigosDeCarreras = this.data.seleccionados.flatMap(x=>x.code)
-
-      /* save data */
-      let data = [];
-      for (const codigo of codigosDeCarreras) {
-        const ws: XLSX.WorkSheet = wb.Sheets[codigo];
-        data.push(
-          <any>XLSX.utils.sheet_to_json(ws, { header: 1, range: 10, raw:false }),
-        );
-      }
-      if(data[0].length==0) 
-        this.presentToast('Asegúrese de que sea el archivo correcto')
-      
-      return data;
-    }
+    let datos_sin_limpiar = read();
+    //console.log(datos_sin_limpiar);
+    let datosLimpios = [];
+    datos_sin_limpiar.forEach(dato => {
+      datosLimpios.push(limpiarDatos(dato));
+    });
+    this.data.dataFromExcel = datosLimpios;
+    //console.log(JSON.stringify(this.data.dataFromExcel));
+    
+    // let r = selectCustomClass(
+    //   this.dataFromExcel,
+    //   this.seletedClassName,
+    //   careerEnf
+    // );
+    // this.selectedClass = r.all
+    // this.selectedClassForView = r.forView
+    // console.log('selectedClass', this.selectedClass);
 
 
-    if (target.files.length !== 1) throw new Error("Cannot use multiple files");
-    const reader: FileReader = new FileReader();
-    reader.onload = (e: any) => {
-      const bstr: string = e.target.result;
-      let datos_sin_limpiar = read(bstr);
-      //console.log(datos_sin_limpiar);
-      let datosLimpios = [];
-      datos_sin_limpiar.forEach(dato => {
-        datosLimpios.push(limpiarDatos(dato));
-      });
-      this.data.dataFromExcel = datosLimpios;
-      //console.log(JSON.stringify(this.data.dataFromExcel));
-      
-      // let r = selectCustomClass(
-      //   this.dataFromExcel,
-      //   this.seletedClassName,
-      //   careerEnf
-      // );
-      // this.selectedClass = r.all
-      // this.selectedClassForView = r.forView
-      // console.log('selectedClass', this.selectedClass);
-    };
-    this.FileName = target.files[0].name;
-    reader.readAsBinaryString(target.files[0]);
   }
-
   
   async presentToast(msg="") {
     const toast = document.createElement('ion-toast');
