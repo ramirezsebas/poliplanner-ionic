@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { FpunaService } from '../../../fpuna.service';
-import { DataService, career } from '../../../servicios/armar-horario/data.service';
+import { FpunaService } from 'src/app/servicios/fpuna.service';
+import { DataService, career } from '../../../servicios/data.service';
 
 @Component({
   selector: 'app-seleccionar-carrera',

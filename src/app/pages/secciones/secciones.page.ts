@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/servicios/armar-horario/data.service';
+import { DataService } from 'src/app/servicios/data.service';
 
 @Component({
   selector: "page-secciones",

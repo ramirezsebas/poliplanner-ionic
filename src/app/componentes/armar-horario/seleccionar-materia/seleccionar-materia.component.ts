@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FpunaService } from '../../../fpuna.service';
-import { DataService } from '../../../servicios/armar-horario/data.service';
+import { DataService } from '../../../servicios/data.service';
 
 @Component({
   selector: 'app-seleccionar-materia',
@@ -10,7 +9,7 @@ import { DataService } from '../../../servicios/armar-horario/data.service';
 export class SeleccionarMateriaComponent implements OnInit {
   seccionInicial: number;
   seleccionados;
-  materias: import("src/app/servicios/armar-horario/data.service").career[];
+  materias: import("src/app/servicios/data.service").career[];
   @Input() data: DataService;
 
   

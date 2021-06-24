@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FpunaService } from 'src/app/fpuna.service';
-import { DataService } from '../../../../servicios/armar-horario/data.service';
+import { FpunaService } from 'src/app/servicios/fpuna.service';
+import { DataService } from '../../../../servicios/data.service';
 
 @Component({
   selector: 'app-por-carrera',

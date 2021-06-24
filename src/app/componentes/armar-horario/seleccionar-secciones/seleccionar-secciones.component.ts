@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DataService } from '../../../servicios/armar-horario/data.service';
+import { DataService } from 'src/app/servicios/data.service';
 
 @Component({
   selector: 'app-seleccionar-secciones',
