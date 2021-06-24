@@ -1,4 +1,5 @@
 
+
 ionic build --prod --service-worker
 firebase deploy
 
