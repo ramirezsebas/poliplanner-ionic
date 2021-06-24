@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import Career from '../models/Career';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ export class FpunaService {
   constructor(private http: HttpClient) {
   }
 
-  getCarrerasAll(): Observable<any>{
-    return this.http.get('./../assets/carreras.json')
+  getCarrerasAll(): Observable<Career[]>{
+    return this.http.get<Career[]>('./../assets/carreras.json') 
   }
 
   getClasesAll(): Observable<any>{
