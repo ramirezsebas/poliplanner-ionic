@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import Career from 'src/app/models/Career';
 import { DataService } from '../../../services/data.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { DataService } from '../../../services/data.service';
 export class SeleccionarMateriaComponent implements OnInit {
   seccionInicial: number;
   seleccionados;
-  materias: import("src/app/services/data.service").career[];
+  materias: Career[];
   @Input() data: DataService;
 
   

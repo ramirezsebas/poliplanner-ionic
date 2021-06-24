@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import Career from 'src/app/models/Career';
 import { FpunaService } from 'src/app/services/fpuna.service';
-import { DataService, career } from '../../../services/data.service';
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'app-seleccionar-carrera',
@@ -9,7 +10,7 @@ import { DataService, career } from '../../../services/data.service';
 })
 export class SeleccionarCarreraComponent implements OnInit {
   
-  seleccionados: career[];
+  seleccionados: Career[];
   @Input() data: DataService;
 
   
@@ -32,7 +33,7 @@ export class SeleccionarCarreraComponent implements OnInit {
       // console.log(JSON.stringify(this.careers))
       if(this.data.seleccionados.length!=0){
         this.data.seleccionados.forEach(carrera=>{
-          this.careers.find(c=>c._id==carrera._id).isChecked = carrera.isChecked 
+          this.careers.find(c=>c._id==carrera.id).isChecked = carrera.isChecked 
         })
       }
       // console.log(this.careers);

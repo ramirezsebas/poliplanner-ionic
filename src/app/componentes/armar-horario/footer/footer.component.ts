@@ -75,7 +75,7 @@ export class FooterComponent implements OnInit {
   selectedMatOnAllCareer(){
     // console.log(this.data.materiasSeleccionadas);
     for (const iterator of this.data.seleccionados) {
-      if(!this.data.materiasSeleccionadas[iterator._id] || this.data.materiasSeleccionadas[iterator._id].length==0)
+      if(!this.data.materiasSeleccionadas[iterator.id] || this.data.materiasSeleccionadas[iterator.id].length==0)
       return true 
     }
     return false

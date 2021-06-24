@@ -1,13 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DayConfig } from 'ion2-calendar';
-
-export interface career {
-  _id: number,
-  code: string,
-  enf: string,
-  name: string,
-  isChecked?: boolean,
-}
+import Career from '../models/Career';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +8,7 @@ export interface career {
 export class DataService {
   
 
-  seleccionados: career[]=[];
+  seleccionados: Career[]=[];
   seccionActual: number=1;
   materiasSeleccionadas: string[][] = Array(24);
   materiasAprobadas: string[][] = Array(24);
