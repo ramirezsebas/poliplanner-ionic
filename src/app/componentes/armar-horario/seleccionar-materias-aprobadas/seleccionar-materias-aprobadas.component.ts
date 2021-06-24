@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { FormService } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-seleccionar-materias-aprobadas',
@@ -8,15 +9,15 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class SeleccionarMateriasAprobadasComponent implements OnInit {
 
-  constructor(private data: DataService) {}
+  constructor(private formData: FormService) {}
 
   ngOnInit() {
-    this.data.esAprobar=true;
-    // console.log(this.data.esAprobar);
+    this.formData.esAprobar=true;
+    // console.log(this.formData.esAprobar);
   }
 
   onChange(selected, id) {
-    this.data.materiasAprobadas[id] = selected;
+    this.formData.materiasAprobadas[id] = selected;
   }
 
 }

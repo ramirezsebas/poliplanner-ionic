@@ -1,29 +1,38 @@
-<ion-list *ngFor="let mat of clasesElegidasPorSeccionesForView; let i=index">
+<ion-list *ngFor="let mat of clasesElegidasPorSeccionesForView; let i = index">
   <ion-grid>
     <ion-row>
       <ion-item>
-        <ion-label class="ion-text-wrap"><strong>{{mat.padre}} - {{mat.sigla}}{{(mat.enf=='-- --')?'':'-'+mat.enf}}</strong></ion-label>
+        <ion-label class="ion-text-wrap"
+          ><strong
+            >{{ mat.padre }} - {{ mat.sigla
+            }}{{ mat.enf == "-- --" ? "" : "-" + mat.enf }}</strong
+          ></ion-label
+        >
       </ion-item>
     </ion-row>
   </ion-grid>
   <ion-item *ngFor="let materia of mat.hijos" class="no-ripple">
     <span slot="start">&#09;</span>
-    <ion-checkbox slot="start" [(ngModel)]="materia.isItemChecked" (ionChange)="onChange()">
+    <ion-checkbox
+      slot="start"
+      [(ngModel)]="materia.isItemChecked"
+      (ionChange)="onChange()"
+    >
     </ion-checkbox>
     <ion-label>
       <h2 class="ion-text-wrap">
-        {{materia.nombre}}
+        {{ materia.nombre }}
       </h2>
       <h2 class="ion-text-wrap">
-        Seccion {{materia.seccion}} {{materia.def}}
+        Seccion {{ materia.seccion }} {{ materia.def }}
       </h2>
       <div *ngFor="let profesor of materia.profesor">
         <h2 class="ion-text-wrap">
-          {{profesor}}
+          {{ profesor }}
         </h2>
       </div>
       <h2 class="ion-text-wrap">
-        {{materia.especial}}
+        {{ materia.especial }}
       </h2>
     </ion-label>
   </ion-item>

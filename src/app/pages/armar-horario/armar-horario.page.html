@@ -25,10 +25,10 @@
   <!-- <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [data]="data" ></app-seleccionar-materias-aprobadas> -->
   <!-- <app-seleccionar-materia *ngSwitchCase="3" [data]="data" ></app-seleccionar-materia>  -->
   <div *ngSwitchCase="2" ><ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
-    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="true" (seleccionados)="onChangeApro($event,carrera._id)" [data]="data"></app-por-carrera>
+    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera.id" [esAprobar]="true" (seleccionados)="onChangeApro($event,carrera.id)" [data]="data"></app-por-carrera>
   </ng-container> </div>
   <div *ngSwitchCase="3" ><ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
-    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="false" (seleccionados)="onChangeSel($event,carrera._id)" [data]="data"></app-por-carrera>
+    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera.id" [esAprobar]="false" (seleccionados)="onChangeSel($event,carrera.id)" [data]="data"></app-por-carrera>
   </ng-container> </div>
   <app-seleccionar-secciones *ngSwitchCase="4" [data]="data"></app-seleccionar-secciones>
   <app-secciones *ngSwitchCase="5" [toCalendar]="data.toCalendar" ></app-secciones>
@@ -39,7 +39,7 @@
 
 <!-- <ion-content *ngIf="currentSection <= currentCareer.length+1 && currentSection!=1">
   <ng-container *ngFor="let career of currentCareer; let i=index;">
-    <app-seleccionar-materia *ngIf="currentSection==i+2" [selectedCareerId]="career._id"></app-seleccionar-materia>
+    <app-seleccionar-materia *ngIf="currentSection==i+2" [selectedCareerId]="career.id"></app-seleccionar-materia>
   </ng-container>
 </ion-content> -->
 

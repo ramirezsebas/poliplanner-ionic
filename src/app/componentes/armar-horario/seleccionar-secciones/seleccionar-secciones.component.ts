@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { FormService } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-seleccionar-secciones',
@@ -13,7 +14,7 @@ export class SeleccionarSeccionesComponent implements OnInit {
   // clasesElegidasPorSecciones: any[];
   // clasesElegidasPorSeccionesForView: any;
 
-  constructor(private data: DataService) {}
+  constructor(private formData: FormService) {}
 
   ngOnInit() {
     this.init();
@@ -22,10 +23,10 @@ export class SeleccionarSeccionesComponent implements OnInit {
   init(){
     // console.log('hola');
     
-    this.clasesElegidasPorSeccionesForView = this.data.seccionesElegidasForView 
-    const materiasSeleccionadas = this.data.materiasSeleccionadas.filter(x=>x)
-    const carrerasSeleccionadas = this.data.seleccionados;
-    const datos = this.data.dataFromExcel;
+    this.clasesElegidasPorSeccionesForView = this.formData.seccionesElegidasForView 
+    const materiasSeleccionadas = this.formData.materiasSeleccionadas.filter(x=>x)
+    const carrerasSeleccionadas = this.formData.carreras;
+    const datos = this.formData.dataFromExcel;
     
 
     const condicionDeFiltro = (clase, nombre, enf) => {
@@ -118,13 +119,13 @@ export class SeleccionarSeccionesComponent implements OnInit {
 
       this.clasesElegidasPorSeccionesForView = this.clasesElegidasPorSeccionesForView.flat().sort((x,y)=>x.padre<y.padre);
 
-      this.data.seccionesElegidasForView = this.clasesElegidasPorSeccionesForView;
-      this.data.seccionesElegidas = this.clasesElegidasPorSecciones.flat();
+      this.formData.seccionesElegidasForView = this.clasesElegidasPorSeccionesForView;
+      this.formData.seccionesElegidas = this.clasesElegidasPorSecciones.flat();
     }
     console.log('Clases ele por secciones', this.clasesElegidasPorSecciones);
     console.log('Clases ele por secciones for view', this.clasesElegidasPorSeccionesForView);
     this.clasesElegidasPorSeccionesForView.sort((x, y) => x.padre> y.padre?1:-1);
-    this.data.toCalendar.forEach(mat => {
+    this.formData.toCalendar.forEach(mat => {
       mat.Item
       this.clasesElegidasPorSeccionesForView.forEach(padre => {
         padre.hijos.forEach(seccion => {
@@ -140,18 +141,18 @@ export class SeleccionarSeccionesComponent implements OnInit {
   onChange(){
     // console.log(this.clasesElegidasPorSeccionesForView);
     // console.log('chau');
-    this.data.toCalendar= [];
-    this.data.seccionesElegidasForView.forEach(element => {
+    this.formData.toCalendar= [];
+    this.formData.seccionesElegidasForView.forEach(element => {
       element.hijos.forEach(clase => {
         if (clase.isItemChecked) {
-          let itemselected = this.data.seccionesElegidas.find(x => {
+          let itemselected = this.formData.seccionesElegidas.find(x => {
             return clase.id === x['Item'];
           })
-          this.data.toCalendar.push(itemselected)
+          this.formData.toCalendar.push(itemselected)
         }
       });
     });
-    // console.log(this.data.toCalendar);
+    // console.log(this.formData.toCalendar);
     
   }
 

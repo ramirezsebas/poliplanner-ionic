@@ -4,38 +4,54 @@
   <ion-header slot="fixed">
     <ion-toolbar>
       <ion-title class="ion-text-wrap">
-        <div *ngIf="data.seccionActual==1" class="ion-text-wrap">
-          Paso 1: {{textForHeader[data.seccionActual]}}
+        <div *ngIf="formData.seccionActual==1" class="ion-text-wrap">
+          Paso 1: {{textForHeader[formData.seccionActual]}}
         </div>
-        <div *ngIf="data.seccionActual==2" class="ion-text-wrap">
-          Paso {{data.seccionActual+(data?.seleccionados.length-data.contadorCarrera )}}: {{textForHeader[data.seccionActual]}} - {{this.data.seleccionados[this.data.contadorCarrera-1].code}}
+        <div *ngIf="formData.seccionActual==2" class="ion-text-wrap">
+          Paso
+          {{formData.seccionActual+(formData?.carreras.length-formData.contadorCarrera
+          )}}: {{textForHeader[formData.seccionActual]}} -
+          {{this.formData.carreras[this.formData.contadorCarrera-1].code}}
         </div>
-        <div *ngIf="!(data.seccionActual==1 || data.seccionActual==2)" class="ion-text-wrap">
-          Paso {{data.seccionActual+(data?.seleccionados.length-data.contadorCarrera )}}: {{textForHeader[data.seccionActual]}}
+        <div
+          *ngIf="!(formData.seccionActual==1 || formData.seccionActual==2)"
+          class="ion-text-wrap"
+        >
+          Paso
+          {{formData.seccionActual+(formData.carreras?.length-formData.contadorCarrera
+          )}}: {{textForHeader[formData.seccionActual]}}
         </div>
       </ion-title>
     </ion-toolbar>
   </ion-header>
 </div>
-  
 
 <ion-content [ngSwitch]="validarSeccion()">
-  <app-seleccionar-carrera *ngSwitchCase="1" [data]="data" ></app-seleccionar-carrera>
+  <app-seleccionar-carrera
+    *ngSwitchCase="1"
+    [formData]="formData"
+  ></app-seleccionar-carrera>
 
-  <!-- <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [data]="data" ></app-seleccionar-materias-aprobadas> -->
-  <!-- <app-seleccionar-materia *ngSwitchCase="3" [data]="data" ></app-seleccionar-materia>  -->
-  <div *ngSwitchCase="2" ><ng-container *ngFor="let carrera of data.seleccionados; let i=index;">
-    <app-por-carrera *ngIf="data.contadorCarrera==i+1" [selectedCareerId]="carrera._id" [esAprobar]="false" [esCargarHorario]="true" (seleccionados)="onChangeSel($event,carrera._id)" [data]="data"></app-por-carrera>
-  </ng-container></div>
-  <app-seleccionar-secciones *ngSwitchCase="3" [data]="data"></app-seleccionar-secciones>
-  
+  <!-- <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [formData]="formData" ></app-seleccionar-materias-aprobadas> -->
+  <!-- <app-seleccionar-materia *ngSwitchCase="3" [formData]="formData" ></app-seleccionar-materia>  -->
+  <div *ngSwitchCase="2">
+    <ng-container *ngFor="let carrera of formData.carreras; let i=index;">
+      <app-por-carrera
+        *ngIf="formData.contadorCarrera==i+1"
+        [selectedCareerId]="carrera.id"
+        [esAprobar]="false"
+        [esCargarHorario]="true"
+        (seleccionados)="onChangeSel($event,carrera.id)"
+        [formData]="formData"
+      ></app-por-carrera>
+    </ng-container>
+  </div>
+  <app-seleccionar-secciones
+    *ngSwitchCase="3"
+    [formData]="formData"
+  ></app-seleccionar-secciones>
 </ion-content>
 
-<!-- <ion-content *ngIf="currentSection <= currentCareer.length+1 && currentSection!=1">
-  <ng-container *ngFor="let career of currentCareer; let i=index;">
-    <app-seleccionar-materia *ngIf="currentSection==i+2" [selectedCareerId]="career._id"></app-seleccionar-materia>
-  </ng-container>
-</ion-content> -->
 
-<app-file-picker #fp [data]="data"></app-file-picker>
-<app-footer #footer [data]="data" [armar]=false></app-footer>
+<app-file-picker #fp [formData]="formData"></app-file-picker>
+<app-footer #footer [formData]="formData" [armar]="false"></app-footer>

@@ -17,7 +17,6 @@ export class FilePickerComponent implements OnInit {
   constructor(
     private alertController: AlertController,
     private excel: ExcelService,
-    private data: DataService
   ) {
   }
 

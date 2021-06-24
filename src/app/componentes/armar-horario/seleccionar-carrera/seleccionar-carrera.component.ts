@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import Career from 'src/app/models/Career';
+import { FormService } from 'src/app/services/form.service';
 import { FpunaService } from 'src/app/services/fpuna.service';
 import { DataService } from '../../../services/data.service';
 
@@ -15,14 +16,14 @@ export class SeleccionarCarreraComponent implements OnInit {
   
   careers: any[];
   
-  constructor( private fpuna: FpunaService, private data: DataService) { 
+  constructor( private fpuna: FpunaService, private formData: FormService) { 
     
     this.initData();
   }
 
   ngOnInit() {
-    // console.log(this.data);
-    this.seleccionados = this.data.seleccionados;
+    // console.log(this.formData);
+    this.seleccionados = this.formData.carreras;
 
   }
 
@@ -30,19 +31,14 @@ export class SeleccionarCarreraComponent implements OnInit {
     this.fpuna.getCarrerasAll().subscribe((r) => {
       this.careers = r.map(x=> ({...x, 'isChecked': false }));
       // console.log(JSON.stringify(this.careers))
-      if(this.data.seleccionados.length!=0){
-        this.data.seleccionados.forEach(carrera=>{
-          this.careers.find(c=>c._id==carrera.id).isChecked = carrera.isChecked 
-        })
-      }
       // console.log(this.careers);
     });
     
   }
 
   onChange() {
-    this.data.seleccionados = this.careers.filter(x=>x.isChecked);
-    // console.log(this.data.seleccionados);
+    this.formData.carreras = this.careers.filter(x=>x.isChecked);
+    // console.log(this.formData.seleccionados);
     
   }
 }

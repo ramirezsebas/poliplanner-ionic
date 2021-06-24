@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import Career from 'src/app/models/Career';
+import { FormService } from 'src/app/services/form.service';
 import { DataService } from '../../../services/data.service';
 
 @Component({
@@ -13,20 +14,22 @@ export class SeleccionarMateriaComponent implements OnInit {
   materias: Career[];
   
   constructor(
-    private data: DataService
+    private formData: FormService
   ){
-    // console.log(this.data);
+    // console.log(this.formData);
     
   }
   
   ngOnInit(): void {
-    // console.log(this.data);
+    // console.log(this.formData);
 
-    this.materias=this.data.seleccionados;
-    this.seccionInicial = this.data.seccionActual;
+    this.materias=this.formData.carreras;
+    this.seccionInicial = this.formData.seccionActual;
   }
 
   onChange(selected,id){
-    this.data.materiasSeleccionadas[id] = selected;    
+    console.log('hola',selected,id);
+    
+    this.formData.materiasSeleccionadas[id] = selected;    
   }
 }

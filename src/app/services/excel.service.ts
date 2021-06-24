@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DataService } from './data.service';
 import * as XLSX from "xlsx";
+import { FormService } from './form.service';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class ExcelService {
   
 
   constructor(
-    private data: DataService
+    private formData: FormService
   ) { }
 
 
@@ -49,15 +50,15 @@ export class ExcelService {
       this.datosLimpios.push(this.limpiarDatos(dato));
     });
     // return this.datosLimpios;
-    this.data.dataFromExcel=this.datosLimpios;
+    this.formData.dataFromExcel=this.datosLimpios;
   }
 
 
   private read = () => {
 
     /* grab sheets names */
-    const codigosDeCarreras = this.data.seleccionados.flatMap(x=>x.code)
-    console.log(this.data.seleccionados);
+    const codigosDeCarreras = this.formData.carreras.flatMap(x=>x.code)
+    console.log(this.formData.carreras);
     
 
     /* save data */

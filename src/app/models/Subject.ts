@@ -1,6 +1,6 @@
 export default class Subject {
   constructor(
-    public _id: number,
+    public id: number,
     public career_id: number,
     public name: string,
     public credits: number,

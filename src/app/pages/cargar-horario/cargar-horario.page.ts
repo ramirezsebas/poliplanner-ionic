@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { FilePickerComponent } from 'src/app/componentes/armar-horario/file-picker/file-picker.component';
 import { DataService } from 'src/app/services/data.service';
+import { FormService } from 'src/app/services/form.service';
 
 @Component({
   selector: "app-cargar-horario",
@@ -15,45 +16,47 @@ export class CargarHorarioPage implements OnInit {
   oldData: DataService;
 
 
-  constructor(public data: DataService, private navCtrl:NavController) { 
+  constructor(public formData: FormService, private navCtrl:NavController) { 
   }
 
   validarSeccion(){
     
-    if(this.data.seccionActual == 1){
-      //this.data = this.dataTrue;
-    }else if(this.data.seccionActual == 2){
+    if(this.formData.seccionActual == 1){
+      //this.formData = this.formDataTrue;
+    }else if(this.formData.seccionActual == 2){
       
-      if(!this.data.dataFromExcel){
+      if(!this.formData.dataFromExcel){
         this.footer.previous();
         this.filepicker.readFilePopup()
-      }else if(this.data.dataFromExcel[0].length==0){
+      }else if(this.formData.dataFromExcel[0].length==0){
         this.footer.previous();
         this.filepicker.readFilePopup()
       }
-    }else if(this.data.seccionActual == 3){
-    }else if(this.data.seccionActual == 4){
+    }else if(this.formData.seccionActual == 3){
+    }else if(this.formData.seccionActual == 4){
       if(confirm('Desea guardar el horario')){
         window.localStorage.clear()
-        window.localStorage.data = JSON.stringify(this.data);
+        window.localStorage.data = JSON.stringify(this.formData);
         this.navCtrl.navigateRoot('inicio')
         window.location.replace('inicio')
       }else
         this.footer.previous();
       
     }
-    return this.data.seccionActual;
+    return this.formData.seccionActual;
   }
 
   // Para cargar materias
   onChangeApro(selected, id) {
-    this.data.materiasAprobadas[id] = selected;
-    // console.log(this.data.materiasAprobadas);
+    this.formData.materiasAprobadas[id] = selected;
+    // console.log(this.formData.materiasAprobadas);
     
   }
 
   onChangeSel(selected,id){
-    this.data.materiasSeleccionadas[id] = selected;    
+    console.log(this.formData.materiasSeleccionadas, selected);
+    
+    this.formData.materiasSeleccionadas[id] = selected;    
   }
 
   onClick(){
@@ -68,7 +71,6 @@ export class CargarHorarioPage implements OnInit {
     `Sel. secciones `,
   ]
   ngOnInit() {
-    this.data.initialize();
     
   }
 

@@ -1,3 +1,9 @@
-<ng-container *ngFor="let carrera of materias; let i=index;">
-  <app-por-carrera *ngIf="data.seccionActual-2-data.seleccionados.length==i" [data]="data" [esAprobar]="false" [selectedCareerId]="carrera._id" (seleccionados)="onChange($event,carrera._id)"></app-por-carrera>
+<ng-container *ngFor="let carrera of materias; let i = index">
+  <app-por-carrera
+    *ngIf="formData.seccionActual - 2 - formData.seleccionados.length == i"
+    [formData]="formData"
+    [esAprobar]="false"
+    [selectedCareerId]="carrera.id"
+    (seleccionados)="onChange($event, carrera.id)"
+  ></app-por-carrera>
 </ng-container>

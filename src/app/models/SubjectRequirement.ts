@@ -1,3 +1,3 @@
 export default class SubjectRequirement {
-  constructor(public prev: number, public next: number) {}
+  constructor(public class1_id: number, public class2_id: number) {}
 }
