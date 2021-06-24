@@ -8,9 +8,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class SeleccionarMateriasAprobadasComponent implements OnInit {
 
-  @Input() data: DataService;
-
-  constructor() {}
+  constructor(private data: DataService) {}
 
   ngOnInit() {
     this.data.esAprobar=true;

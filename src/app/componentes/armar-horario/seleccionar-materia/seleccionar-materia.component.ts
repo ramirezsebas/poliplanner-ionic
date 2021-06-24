@@ -11,10 +11,10 @@ export class SeleccionarMateriaComponent implements OnInit {
   seccionInicial: number;
   seleccionados;
   materias: Career[];
-  @Input() data: DataService;
-
   
-  constructor(){
+  constructor(
+    private data: DataService
+  ){
     // console.log(this.data);
     
   }

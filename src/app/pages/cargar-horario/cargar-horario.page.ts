@@ -10,12 +10,12 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CargarHorarioPage implements OnInit {
 
-  data = new DataService;
   @ViewChild('fp') filepicker; 
-  @ViewChild('footer') footer; 
+  @ViewChild('footer') footer;
+  oldData: DataService;
 
 
-  constructor(public dataTrue: DataService, private navCtrl:NavController) { 
+  constructor(public data: DataService, private navCtrl:NavController) { 
   }
 
   validarSeccion(){
@@ -30,13 +30,10 @@ export class CargarHorarioPage implements OnInit {
       }else if(this.data.dataFromExcel[0].length==0){
         this.footer.previous();
         this.filepicker.readFilePopup()
-      }else{
-       this.filepicker.toData();
       }
     }else if(this.data.seccionActual == 3){
     }else if(this.data.seccionActual == 4){
       if(confirm('Desea guardar el horario')){
-        this.dataTrue.remplazarDatos(this.data)
         window.localStorage.clear()
         window.localStorage.data = JSON.stringify(this.data);
         this.navCtrl.navigateRoot('inicio')
@@ -71,9 +68,7 @@ export class CargarHorarioPage implements OnInit {
     `Sel. secciones `,
   ]
   ngOnInit() {
-    this.data= new DataService()
-
-    //console.log('data:' ,this.data.seleccionados);
+    this.data.initialize();
     
   }
 

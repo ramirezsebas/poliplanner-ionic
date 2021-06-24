@@ -9,10 +9,11 @@ import { DataService } from 'src/app/services/data.service';
 export class FooterComponent implements OnInit {
 
   @Input() ultimo: number = 3;
-  @Input() data: DataService;
   @Input() armar: boolean = true;
 
-  constructor() { 
+  constructor(
+    private data: DataService
+  ) { 
     // console.log(this.data);
   }
 

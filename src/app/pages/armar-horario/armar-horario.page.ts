@@ -9,12 +9,11 @@ import { DataService } from '../../services/data.service';
 })
 export class ArmarHorarioPage implements OnInit {
 
-  data = new DataService;
   @ViewChild('fp') filepicker; 
   @ViewChild('footer') footer; 
 
 
-  constructor(public dataTrue: DataService, private navCtrl:NavController) { 
+  constructor(public data: DataService, private navCtrl:NavController) { 
   }
 
   validarSeccion(){
@@ -35,7 +34,7 @@ export class ArmarHorarioPage implements OnInit {
     }else if(this.data.seccionActual == 3){
     }else if(this.data.seccionActual == 8){
       
-      this.dataTrue.remplazarDatos(this.data)
+      // this.dataTrue.remplazarDatos(this.data)
       window.localStorage.clear()
       window.localStorage.data = JSON.stringify(this.data);
       this.navCtrl.navigateRoot('inicio')
@@ -70,7 +69,6 @@ export class ArmarHorarioPage implements OnInit {
     `Confirma el Calendario `,
   ]
   ngOnInit() {
-    this.data= new DataService()
 
     //console.log('data:' ,this.data.seleccionados);
     

@@ -9,12 +9,11 @@ import { DataService } from 'src/app/services/data.service';
 export class SeleccionarSeccionesComponent implements OnInit {
   clasesElegidasPorSecciones: any=[];
   clasesElegidasPorSeccionesForView: any=[];
-  @Input() data: DataService;
 
   // clasesElegidasPorSecciones: any[];
   // clasesElegidasPorSeccionesForView: any;
 
-  constructor() {}
+  constructor(private data: DataService) {}
 
   ngOnInit() {
     this.init();

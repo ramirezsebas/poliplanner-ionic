@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DayConfig } from 'ion2-calendar';
 import Career from '../models/Career';
+import { ExcelService } from './excel.service';
 
 @Injectable({
   providedIn: 'root'
@@ -53,7 +54,13 @@ export class DataService {
 
 
   }
+
+  initialize() {
+    const nuevo = new DataService() ;
+    this.remplazarDatos(nuevo)
+  }
   
-  constructor() { }
+  constructor(
+  ) { }
 
 }

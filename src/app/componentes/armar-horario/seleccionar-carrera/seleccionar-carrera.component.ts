@@ -11,12 +11,11 @@ import { DataService } from '../../../services/data.service';
 export class SeleccionarCarreraComponent implements OnInit {
   
   seleccionados: Career[];
-  @Input() data: DataService;
 
   
   careers: any[];
   
-  constructor( private fpuna: FpunaService) { 
+  constructor( private fpuna: FpunaService, private data: DataService) { 
     
     this.initData();
   }
