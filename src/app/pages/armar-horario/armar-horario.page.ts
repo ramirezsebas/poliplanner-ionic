@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { DataService } from '../../servicios/data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-armar-horario',

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DataService } from 'src/app/servicios/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-seleccionar-secciones',

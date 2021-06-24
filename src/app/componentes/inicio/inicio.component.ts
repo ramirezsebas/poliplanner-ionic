@@ -1,6 +1,6 @@
 import { AfterViewChecked, AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ModalController, IonContent, IonSegment } from '@ionic/angular';
-import { DataService } from 'src/app/servicios/data.service';
+import { DataService } from 'src/app/services/data.service';
 import { IonSlides } from '@ionic/angular';
 
 @Component({

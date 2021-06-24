@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { FilePickerComponent } from 'src/app/componentes/armar-horario/file-picker/file-picker.component';
-import { DataService } from 'src/app/servicios/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: "app-cargar-horario",

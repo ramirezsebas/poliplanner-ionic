@@ -4,7 +4,7 @@ import { NavController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SwUpdate } from '@angular/service-worker';
-import { AppUpdateService } from './servicios/app-update-service.service';
+import { AppUpdateService } from './services/app-update-service.service';
 
 @Component({
   selector: 'app-root',

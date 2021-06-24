@@ -3,7 +3,7 @@ import { CalendarComponentOptions, DayConfig, CalendarComponent } from 'ion2-cal
 import * as moment from "moment";
 import { ModalController, PopoverController } from '@ionic/angular';
 import { ModalComponent } from '../../componentes/calendario/modal/modal.component';
-import { DataService } from 'src/app/servicios/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: "app-page",

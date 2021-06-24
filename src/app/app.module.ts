@@ -11,11 +11,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 // import { CalendarModule } from "ion2-calendar";
 import { File } from "@ionic-native/file/ngx";
-import { DataService } from './servicios/data.service';
+import { DataService } from './services/data.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { AppUpdateService } from './servicios/app-update-service.service';
-import { FpunaService } from './servicios/fpuna.service';
+import { AppUpdateService } from './services/app-update-service.service';
+import { FpunaService } from './services/fpuna.service';
 
 
 @NgModule({

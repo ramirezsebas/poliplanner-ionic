@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MenuController} from '@ionic/angular';
 import * as XLSX from "xlsx";
 import { File as File1 } from '@ionic-native/file/ngx';
-import { DataService } from 'src/app/servicios/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 
 @Component({

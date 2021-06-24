@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PopoverController, AlertController } from '@ionic/angular';
-import { DataService } from 'src/app/servicios/data.service';
+import { DataService } from 'src/app/services/data.service';
 import * as XLSX from "xlsx";
 
 

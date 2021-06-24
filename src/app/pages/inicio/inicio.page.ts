@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, IonSlides, ModalController, NavController, Platform } from '@ionic/angular';
-import { DataService } from 'src/app/servicios/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: "page-inicio",
