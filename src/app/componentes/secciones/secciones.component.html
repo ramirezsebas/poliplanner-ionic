@@ -2,12 +2,12 @@
   <ion-list>
     <ion-item lines="full" *ngFor="let clase of toCalendar; let i = index">
 
-     <div class="circle">{{clase.Asignatura[0]}}</div>
-      <ion-label class="ion-text-wrap ion-padding">
-        <ion-label  class="ion-text-wrap" color="primary" style="font-size:20px" #materia>{{clase.Asignatura}}</ion-label>
-        <p #hora>{{clase['Tít']+' '+clase['Nombre']+' '+clase['Apellido']}}</p>
+     <div class="circle">{{clase.asignatura.name[0]}}</div>
+      <ion-label class="ion-text-wrap ion-padding-horizontal">
+        <ion-label  class="ion-text-nowrap" color="primary" style="font-size:20px" #materia>{{clase.asignatura.name}}</ion-label>
+        <p *ngFor="let nombre of clase.docente.formateado"  class="ion-text-nowrap" >{{nombre}}</p>
       </ion-label>
-      <h3 style="color:var(--ion-color-primary)">{{clase['Sección']}}</h3>
+      <h4 style="color:var(--ion-color-primary)">{{clase.seccion}}</h4>
 
     </ion-item>
   </ion-list>

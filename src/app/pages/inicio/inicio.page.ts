@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, IonSlides, ModalController, NavController, Platform } from '@ionic/angular';
 import { DataService } from 'src/app/services/data.service';
+import { FormService } from 'src/app/services/form.service';
 
 @Component({
   selector: "page-inicio",
@@ -12,12 +13,12 @@ export class InicioPage implements OnInit {
   constructor(
     public modalController: ModalController, 
     public data: DataService,
+    private formData: FormService,
     private navCtrl:NavController,
     private platform: Platform,
   ) {}
 
-  ngOnInit() {
-    this.init()
+  ngOnInit() { 
     // this.preflight()
     
   }
@@ -41,19 +42,7 @@ export class InicioPage implements OnInit {
     
   }
 
-  init(){
-    let datos = window.localStorage.data
-    if(datos){
-      this.data.remplazarDatos(JSON.parse(datos))
-      // console.log(this.data.toCalendar);
-    }else{
-      this.data = new DataService();
-      // if( this.data.toCalendar.length == 0 )
-      //   this.navCtrl.navigateForward('armar-horario')
-    }
-    // console.log(this.data)
-
-  }
+  
 
   
 

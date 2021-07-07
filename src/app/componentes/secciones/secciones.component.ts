@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Schedule from 'src/app/models/Schedule';
 
 @Component({
   selector: 'app-secciones',
@@ -7,12 +8,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SeccionesComponent implements OnInit {
 
-  @Input() toCalendar;
+  @Input() toCalendar: Schedule[];
+  secciones: Schedule[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() { 
+    this.secciones = this.toCalendar
+    console.log(this.secciones);
+    
     
   }
+  
+  ngOnInit() {
+    console.log(this.secciones);
+  }
 
+    
 }

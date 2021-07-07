@@ -19,7 +19,6 @@ export class PruebaPage {
     let datos = window.localStorage.data
     if(datos){
       this.data.remplazarDatos(JSON.parse(datos))
-      this.data.seccionActual = 3
     }else{
     }
     // console.log(this.data)

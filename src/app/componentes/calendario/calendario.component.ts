@@ -4,6 +4,7 @@ import * as moment from "moment";
 import { ModalController, PopoverController } from '@ionic/angular';
 import { ModalComponent } from '../../componentes/calendario/modal/modal.component';
 import { DataService } from 'src/app/services/data.service';
+import Schedule from 'src/app/models/Schedule';
 
 @Component({
   selector: "app-calendario",
@@ -24,7 +25,7 @@ export class CalendarioComponent implements OnInit {
   currentMes: number;
   currentYear: number;
   mostrarCalendario: boolean;
-  @Input() toCalendar;
+  @Input() toCalendar: Schedule[];
 
   constructor(
     private popoverController: PopoverController,
@@ -58,27 +59,53 @@ export class CalendarioComponent implements OnInit {
         "Primer Final",
         "Segundo Final",
       ];
-      let keys = ["1p", "2p","1f","2f"]
-      for (const key in keys) {
-        // console.log(element);
-        let index;
-        try {
-          index = parseInt(element[keys[key]]['Día'].split("/")[1]);
-          this.eventosMes[index].push({
-            tipo: tipos[key],
-            materia: element["Asignatura"],
-            fecha: element[keys[key]]['Día'],
-            hora: element[keys[key]]['Hora'],
-            aula: element[keys[key]]['Aula'],
-          });
-          marcarDia(this.diasMarcados, element[keys[key]]['Día']);
-        } catch (error) {
-          
-        }
+      if(element.primerFinal){
+        const mes = parseInt(element.primerFinal.dia.split('/')[1])
+        this.eventosMes[mes].push({
+          tipo:"Primer Final",
+          fecha: element.primerFinal.dia,
+          materia: element.asignatura.name,
+          hora: element.primerFinal.hora,
+          aula: ""
+        });
+        marcarDia(this.diasMarcados, element.primerFinal.dia);
+      }
+      if(element.segundoFinal){
+        const mes = parseInt(element.segundoFinal.dia.split('/')[1])
+        this.eventosMes[mes].push({
+          tipo:"Segundo Final",
+          fecha: element.segundoFinal.dia,
+          materia: element.asignatura.name,
+          hora: element.segundoFinal.hora,
+          aula: ""
+        });
+        marcarDia(this.diasMarcados, element.segundoFinal.dia);
+      }
+      if(element.primerParcial){
+        const mes = parseInt(element.primerParcial.dia.split('/')[1])
+        this.eventosMes[mes].push({
+          tipo:"Primer Parcial",
+          fecha: element.primerParcial.dia,
+          materia: element.asignatura.name,
+          hora: element.primerParcial.hora,
+          aula: ""
+        });
+        marcarDia(this.diasMarcados, element.primerParcial.dia);
+      }
+      if(element.segundoParcial){
+        const mes = parseInt(element.segundoParcial.dia.split('/')[1])
+        this.eventosMes[mes].push({
+          tipo:"Segundo Parcial",
+          fecha: element.segundoParcial.dia,
+          materia: element.asignatura.name,
+          hora: element.segundoParcial.hora,
+          aula: ""
+        });
+        marcarDia(this.diasMarcados, element.segundoParcial.dia);
       }
       
     });
-    // console.log(this.eventosMes);
+    console.log(this.eventosMes);
     // console.log(JSON.stringify(this.eventosMes));
     
     this.eventosMes.forEach(mes=>{

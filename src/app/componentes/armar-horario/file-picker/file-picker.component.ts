@@ -47,6 +47,7 @@ export class FilePickerComponent implements OnInit {
 
     /* wire up file reader */
     const target: DataTransfer = <DataTransfer>evt.target;
+    
     this.excel.toData(target);
 
   }

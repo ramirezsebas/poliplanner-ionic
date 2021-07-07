@@ -1,20 +1,22 @@
 import { Injectable } from "@angular/core";
 import Career from "../models/Career";
+import Schedule from "../models/Schedule";
 import Subject from "../models/Subject";
+import MatForView from "../models/Views.model";
 
 @Injectable({
   providedIn: "root",
 })
 export class FormService {
-  contadorCarrera: any;
+  contadorCarrera: number;
   carreras: Career[];
-  toCalendar: any=[];
+  toCalendar: Schedule[]=[];
   esAprobar: boolean;
-  seccionesElegidas: any;
-  seccionesElegidasForView: any = [];
+  seccionesElegidas: Schedule[];
+  seccionesElegidasForView: MatForView[] = [];
 
   public seccionActual: number = 1;
-  public dataFromExcel: any;
+  public dataFromExcel: Schedule[][];
   public materiasSeleccionadas: string[][] = Array(24);
   public materiasAprobadas: string[][] = Array(24);
   clasesTodas: Subject[];

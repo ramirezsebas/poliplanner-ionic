@@ -1,26 +1,18 @@
 import { Injectable } from '@angular/core';
 import { DayConfig } from 'ion2-calendar';
 import Career from '../models/Career';
+import Schedule from '../models/Schedule';
 import { ExcelService } from './excel.service';
+import { FormService } from './form.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   
-
-  seleccionados: Career[]=[];
-  seccionActual: number=1;
-  materiasSeleccionadas: string[][] = Array(24);
-  materiasAprobadas: string[][] = Array(24);
-  offset: number;
-  secciones: string[]=[];
   dataFromExcel: any[];
-  esAprobar: boolean =true;
   clasesTodas: any;
-  seccionesElegidas: any;
-  seccionesElegidasForView: any= [];
-  toCalendar:any=[];
+  toCalendar:Schedule[]=[];
   semana = [
     {nombre:"Lunes", clases:[],},
     {nombre:"Martes", clases:[],},
@@ -31,36 +23,43 @@ export class DataService {
   ];
   diasMarcados: DayConfig[] = [];
   eventosMes=[];
-  contadorCarrera: number;
 
 
-  remplazarDatos(datos){
-    this.seleccionados = datos.seleccionados;
-    this.seccionActual = datos.seccionActual;
-    this.materiasSeleccionadas = datos.materiasSeleccionadas;
-    this.materiasAprobadas = datos.materiasAprobadas;
-    this.offset = datos.offset;
-    this.secciones = datos.secciones;
+  remplazarDatos(datos: DataService){
     this.dataFromExcel = datos.dataFromExcel;
-    this.esAprobar = datos.esAprobar;
     this.clasesTodas = datos.clasesTodas;
-    this.seccionesElegidas = datos.seccionesElegidas;
-    this.seccionesElegidasForView = datos.seccionesElegidasForView;
     this.toCalendar = datos.toCalendar;
     this.semana = datos.semana;
-    this.eventosMes = datos.eventoMes;
+    this.eventosMes = datos.eventosMes;
     this.diasMarcados = datos.diasMarcados;
 
 
 
   }
 
-  initialize() {
-    const nuevo = new DataService() ;
-    this.remplazarDatos(nuevo)
-  }
+  // initialize() {
+  //   const nuevo = new DataService() ;
+  //   this.remplazarDatos(nuevo)
+  // }
   
   constructor(
-  ) { }
+    private formData: FormService
+  ) { 
+    this.init();
+  }
+
+  init(){
+    let datos = window.localStorage.data
+    if(datos){
+      this.remplazarDatos(JSON.parse(datos) as DataService)
+      // console.log(this.toCalendar); 
+    }else{
+      this.toCalendar = this.formData.toCalendar
+      // if( this.data.toCalendar.length == 0 )
+      //   this.navCtrl.navigateForward('armar-horario')
+    }
+    // console.log(this.data)
+
+  }
 
 }

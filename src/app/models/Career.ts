@@ -3,7 +3,8 @@ export default class Career {
     public id: number,
     public code: string,
     public enf: string,
+    public plan: number,
     public name: string,
-    public isChecked: boolean
+    public isChecked: boolean,
   ) {}
 }
