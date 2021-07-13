@@ -15,6 +15,7 @@ import Schedule from "src/app/models/Schedule";
 class Item {
   constructor(
     public nombre: string,
+    public especial: string,
     public horario: string,
     public lab: boolean
   ) {}
@@ -90,6 +91,7 @@ export class InicioComponent implements OnInit {
               dia.clases.push(
                 new Item(
                   element.asignatura.name,
+                  element.asignatura.especial,
                   horarioLab[0].match(horNormal)[0].replace("-", "a"),
                   true
                 )
@@ -98,6 +100,7 @@ export class InicioComponent implements OnInit {
               dia.clases.push(
                 new Item(
                   element.asignatura.name,
+                  element.asignatura.especial,
                   horarios[0].replace("-", "a"),
                   false
                 )

@@ -2,7 +2,19 @@
   <ion-list>
     <ion-item lines="full" *ngFor="let clase of toCalendar; let i = index">
 
-     <div class="circle">{{clase.asignatura.name[0]}}</div>
+     <!-- <div class="circle">{{clase.asignatura.name[0]}}</div> -->
+      <div
+        *ngIf="clase.asignatura.lab || clase.asignatura.especial; else otro"
+        style="font-size: 20px"
+        class="circle"
+      >
+      {{ clase.asignatura.lab ? "Lab" : "" + clase.asignatura.especial[0]+clase.asignatura.especial[1]+clase.asignatura.especial[2] }} 
+      </div>
+      <ng-template #otro>
+        <div class="circle">
+          {{ clase.asignatura.name[0] }}
+        </div>
+      </ng-template>
       <ion-label class="ion-text-wrap ion-padding-horizontal">
         <ion-label  class="ion-text-nowrap" color="primary" style="font-size:20px" #materia>{{clase.asignatura.name}}</ion-label>
         <p *ngFor="let nombre of clase.docente.formateado"  class="ion-text-nowrap" >{{nombre}}</p>

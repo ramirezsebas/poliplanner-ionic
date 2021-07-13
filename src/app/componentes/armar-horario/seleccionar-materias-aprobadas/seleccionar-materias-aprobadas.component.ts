@@ -9,7 +9,7 @@ import { FormService } from 'src/app/services/form.service';
 })
 export class SeleccionarMateriasAprobadasComponent implements OnInit {
 
-  constructor(private formData: FormService) {}
+  constructor(public formData: FormService) {}
 
   ngOnInit() {
     this.formData.esAprobar=true;

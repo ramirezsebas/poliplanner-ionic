@@ -14,6 +14,7 @@ export class FormService {
   esAprobar: boolean;
   seccionesElegidas: Schedule[];
   seccionesElegidasForView: MatForView[] = [];
+  seleccionados=[]
 
   public seccionActual: number = 1;
   public dataFromExcel: Schedule[][];
@@ -22,4 +23,10 @@ export class FormService {
   clasesTodas: Subject[];
 
   constructor() {}
+
+  saveData() {
+    
+    delete window.localStorage.data
+    window.localStorage.data = JSON.stringify(this);
+  }
 }

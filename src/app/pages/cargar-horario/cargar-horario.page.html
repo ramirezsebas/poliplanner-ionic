@@ -29,7 +29,6 @@
 <ion-content [ngSwitch]="validarSeccion()">
   <app-seleccionar-carrera
     *ngSwitchCase="1"
-    [formData]="formData"
   ></app-seleccionar-carrera>
 
   <!-- <app-seleccionar-materias-aprobadas *ngSwitchCase="2" [formData]="formData" ></app-seleccionar-materias-aprobadas> -->
@@ -48,10 +47,10 @@
   </div>
   <app-seleccionar-secciones
     *ngSwitchCase="3"
-    [formData]="formData"
+    
   ></app-seleccionar-secciones>
 </ion-content>
 
 
-<app-file-picker #fp [formData]="formData"></app-file-picker>
-<app-footer #footer [formData]="formData" [armar]="false"></app-footer>
+<app-file-picker #fp ></app-file-picker>
+<app-footer #footer [armar]="false"></app-footer>

@@ -35,10 +35,10 @@ const routes: Routes = [
     path: 'cargar-horario',
     loadChildren: () => import('./pages/cargar-horario/cargar-horario.module').then( m => m.CargarHorarioPageModule)
   },
-  {
-    path: 'armar-horario',
-    loadChildren: () => import('./pages/armar-horario/armar-horario.module').then( m => m.ArmarHorarioPageModule)
-  },
+  // {
+  //   path: 'armar-horario',
+  //   loadChildren: () => import('./pages/armar-horario/armar-horario.module').then( m => m.ArmarHorarioPageModule)
+  // },
   {
     path: 'preflight',
     loadChildren: () => import('./pages/preflight/preflight.module').then( m => m.PreflightPageModule)

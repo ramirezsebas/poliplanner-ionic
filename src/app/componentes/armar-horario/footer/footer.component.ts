@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
   @Input() ultimo: number = 3;
   @Input() armar: boolean = true;
 
-  constructor(private formData: FormService) {
+  constructor(public formData: FormService) {
     // console.log(this.formData);
   }
 

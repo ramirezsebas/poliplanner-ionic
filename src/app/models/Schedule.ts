@@ -14,8 +14,8 @@ class Docente {
 
   toShow(): string[] {
     let prof = [];
-    let tit = this.tit.split("\n");
-    for (let i = 0; i < tit.length; i++) {
+    let tit = this.tit?.split("\n");
+    for (let i = 0; i < tit?.length; i++) {
       prof.push(
         `${this.tit.split("\n")[i]} ${this.nombre.split("\n")[i]} ${
           this.apellido.split("\n")[i]
@@ -71,9 +71,9 @@ export default class Schedule {
     public primerParcial: Fecha,
     public segundoParcial: Fecha,
     public primerFinal: Fecha,
-    public revPrimerFinal: Fecha,
+    // public revPrimerFinal: Fecha,
     public segundoFinal: Fecha,
-    public revSegundoFinal: Fecha,
+    // public revSegundoFinal: Fecha,
     public mesa: Mesa,
     public dias: Dias
   ) {}
@@ -99,18 +99,18 @@ export default class Schedule {
       new Fecha(dato[15], dato[16]),
       new Fecha(dato[17], dato[18]),
       new Fecha(dato[19], dato[20]),
+      // new Fecha(dato[21], dato[22]),
       new Fecha(dato[21], dato[22]),
-      new Fecha(dato[23], dato[24]),
-      new Fecha(dato[25], dato[26]),
-      new Mesa(dato[27], dato[28], dato[29]),
+      // new Fecha(dato[25], dato[26]),
+      new Mesa(dato[23], dato[24], dato[25]),
       new Dias(
+        dato[26],
+        dato[27],
+        dato[28],
+        dato[29],
         dato[30],
         dato[31],
-        dato[32],
-        dato[33],
-        dato[34],
-        dato[35],
-        dato[36]
+        dato[32]
       )
     );
 

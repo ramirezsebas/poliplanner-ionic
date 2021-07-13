@@ -14,7 +14,7 @@ export class SeleccionarMateriaComponent implements OnInit {
   materias: Career[];
   
   constructor(
-    private formData: FormService
+    public formData: FormService
   ){
     // console.log(this.formData);
     

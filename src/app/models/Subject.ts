@@ -11,8 +11,12 @@ export default class Subject {
     public credits: number,
     public credits_percentage_required: number
   ) {
-    this.name = name?.split("(*)")[0].split("-")[0];
-    this.especial = name?.split("(*)")[0].split("-")[1];
+    const especial = name?.split("(*)")[0].split("-")[1];
+    this.especial = especial;
     this.def = name?.includes('(*)') ? '(*)': '';
+
+    if (especial){
+      this.especial = name?.split("(*)")[0].split("-")[0];
+    }
   }
 }

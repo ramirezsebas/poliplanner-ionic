@@ -12,8 +12,8 @@
     </ion-row>
   </ion-grid>
   <ion-item *ngFor="let materia of mat.hijos" class="no-ripple">
-    <span slot="start">&#09;</span>
     <ion-checkbox
+      class="ion-margin"
       slot="start"
       [(ngModel)]="materia.isItemChecked"
       (ionChange)="onChange()"
@@ -21,19 +21,16 @@
     </ion-checkbox>
     <ion-label>
       <h2 class="ion-text-wrap">
-        {{ materia.nombre }}
+        {{ materia.especial ? materia.materia : undefined }}
       </h2>
       <h2 class="ion-text-wrap">
         Seccion {{ materia.seccion }} {{ materia.def }}
       </h2>
-      <div *ngFor="let profesor of materia.profesor">
-        <h2 class="ion-text-wrap">
+      <ion-label *ngFor="let profesor of materia.profesor">
+        <h2 class="ion-text-nowrap">
           {{ profesor }}
         </h2>
-      </div>
-      <h2 class="ion-text-wrap">
-        {{ materia.especial }}
-      </h2>
+      </ion-label>
     </ion-label>
   </ion-item>
 </ion-list>

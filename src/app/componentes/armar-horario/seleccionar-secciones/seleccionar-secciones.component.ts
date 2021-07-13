@@ -17,7 +17,7 @@ export class SeleccionarSeccionesComponent implements OnInit {
   // clasesElegidasPorSecciones: any[];
   // clasesElegidasPorSeccionesForView: any;
 
-  constructor(private formData: FormService) {}
+  constructor(public formData: FormService) {}
 
   ngOnInit() {
     this.init();
@@ -51,8 +51,9 @@ export class SeleccionarSeccionesComponent implements OnInit {
         clase.career.enf.includes(enf);
 
       let finCoincide = esLaPalabra || nombreCompleto;
+      let inicioCoincide =  principioCoinc
 
-      return principioCoinc && finCoincide && enfasisCorrecto;
+      return inicioCoincide && finCoincide && enfasisCorrecto;
     };
 
     // filtro materias desde del excel de acuerdo mat previamentes seleccionadas

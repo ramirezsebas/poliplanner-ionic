@@ -35,8 +35,7 @@ export class CargarHorarioPage implements OnInit {
     }else if(this.formData.seccionActual == 3){
     }else if(this.formData.seccionActual == 4){
       if(confirm('Desea guardar el horario')){
-        window.localStorage.clear()
-        window.localStorage.data = JSON.stringify(this.formData);
+        this.formData.saveData();
         this.navCtrl.navigateRoot('inicio')
         window.location.replace('inicio')
       }else

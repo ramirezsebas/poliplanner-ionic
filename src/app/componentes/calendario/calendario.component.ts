@@ -42,15 +42,14 @@ export class CalendarioComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log('hola');
       
     let datos_a_filtrar = this.toCalendar;
 
     let x=0;while(x++<13)this.eventosMes.push([])
     // console.log(this);
-    // console.log(datos_a_filtrar);
+    console.log(datos_a_filtrar);
     
-
+    
     datos_a_filtrar.forEach(element => {
       
       let tipos = [
@@ -60,8 +59,9 @@ export class CalendarioComponent implements OnInit {
         "Segundo Final",
       ];
       if(element.primerFinal){
-        const mes = parseInt(element.primerFinal.dia.split('/')[1])
-        this.eventosMes[mes].push({
+        
+        const mes = element.primerFinal.dia ? parseInt(element.primerFinal.dia.split('/')[1]):NaN
+        this.eventosMes[mes]?.push({
           tipo:"Primer Final",
           fecha: element.primerFinal.dia,
           materia: element.asignatura.name,
@@ -71,8 +71,8 @@ export class CalendarioComponent implements OnInit {
         marcarDia(this.diasMarcados, element.primerFinal.dia);
       }
       if(element.segundoFinal){
-        const mes = parseInt(element.segundoFinal.dia.split('/')[1])
-        this.eventosMes[mes].push({
+        const mes = element.segundoFinal.dia ? parseInt(element.segundoFinal.dia.split('/')[1]):NaN
+        this.eventosMes[mes]?.push({
           tipo:"Segundo Final",
           fecha: element.segundoFinal.dia,
           materia: element.asignatura.name,
@@ -82,26 +82,28 @@ export class CalendarioComponent implements OnInit {
         marcarDia(this.diasMarcados, element.segundoFinal.dia);
       }
       if(element.primerParcial){
-        const mes = parseInt(element.primerParcial.dia.split('/')[1])
-        this.eventosMes[mes].push({
+        const mes = element.primerParcial.dia ? parseInt(element.primerParcial.dia.split('/')[1]):NaN
+        
+        this.eventosMes[mes]?.push({
           tipo:"Primer Parcial",
           fecha: element.primerParcial.dia,
           materia: element.asignatura.name,
           hora: element.primerParcial.hora,
           aula: ""
         });
+        
         marcarDia(this.diasMarcados, element.primerParcial.dia);
       }
       if(element.segundoParcial){
-        const mes = parseInt(element.segundoParcial.dia.split('/')[1])
-        this.eventosMes[mes].push({
+        const mes = element.segundoParcial.dia ? parseInt(element.segundoParcial.dia.split('/')[1]):NaN
+        this.eventosMes[mes]?.push({
           tipo:"Segundo Parcial",
-          fecha: element.segundoParcial.dia,
+          fecha: element.segundoParcial?.dia,
           materia: element.asignatura.name,
           hora: element.segundoParcial.hora,
           aula: ""
         });
-        marcarDia(this.diasMarcados, element.segundoParcial.dia);
+        marcarDia(this.diasMarcados, element.segundoParcial?.dia);
       }
       
     });
@@ -123,15 +125,16 @@ export class CalendarioComponent implements OnInit {
     // Marcar dias
     function marcarDia(array,fecha: string) {
       // console.log('fecha',fecha);
-      
-      let dia = parseInt(fecha[4] + fecha[5])
-      let mes = parseInt(fecha[7] + fecha[8])
-      let anho = parseInt("20"+fecha[10] + fecha[11])
-      array.push({
-        date: new Date(anho, mes - 1, dia),
-        marked: true,
-        cssClass: "markedDay",
-      });
+      if(fecha){
+        let dia = parseInt(fecha[4] + fecha[5])
+        let mes = parseInt(fecha[7] + fecha[8])
+        let anho = parseInt("20"+fecha[10] + fecha[11])
+        array.push({
+          date: new Date(anho, mes - 1, dia),
+          marked: true,
+          cssClass: "markedDay",
+        });
+      }
       
     }
 
@@ -146,6 +149,8 @@ export class CalendarioComponent implements OnInit {
   }
 
   onChange($event) {
+    console.log($event);
+    
     let fecha: Date = $event._d
     let day =  fecha.getDate()<10 ? "0"+fecha.getDate() : fecha.getDate().toString();
     let month = (fecha.getMonth()+1) < 10 ? "0" + (fecha.getMonth()+1) :( fecha.getMonth()+1).toString();
