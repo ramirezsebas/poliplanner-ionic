@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PopoverController, AlertController } from '@ionic/angular';
+import { PopoverController, AlertController, ToastController } from '@ionic/angular';
 import { DataService } from 'src/app/services/data.service';
 import { ExcelService } from 'src/app/services/excel.service';
 
@@ -17,6 +17,7 @@ export class FilePickerComponent implements OnInit {
   constructor(
     private alertController: AlertController,
     private excel: ExcelService,
+    public toastController: ToastController
   ) {
   }
 
@@ -42,24 +43,40 @@ export class FilePickerComponent implements OnInit {
     await alert.present();
   }
 
-  onFileChange(evt: any) {
+  async onFileChange(evt: any) {
    
 
     /* wire up file reader */
     const target: DataTransfer = <DataTransfer>evt.target;
     
-    this.excel.toData(target);
+    try {
+      this.excel.toData(target);
+      // this.presentToast('Datos cargados correctamente');
+    } catch (error) {
+      console.log('hola');
+
+      this.presentToast('Error' + error);
+    }
 
   }
-  
-  async presentToast(msg="") {
-    const toast = document.createElement('ion-toast');
-    toast.message = msg;
-    toast.duration = 2000;
-    toast.position = 'middle';
-  
-    document.body.appendChild(toast);
-    return toast.present();
+
+
+  async presentToast(msg) {
+    const toast = await this.toastController.create({
+      message: msg,
+      duration: 2000
+    });
+    toast.present();
   }
+  
+  // async presentToast(msg="") {
+  //   const toast = document.createElement('ion-toast');
+  //   toast.message = msg;
+  //   toast.duration = 2000;
+  //   toast.position = 'middle';
+  
+  //   document.body.appendChild(toast);
+  //   return toast.present();
+  // }
   
 }

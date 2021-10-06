@@ -34,6 +34,7 @@ export class ExcelService {
       
       
     };
+    reader.onerror = ()=>{ throw Error('hora')}
     this.FileName = target.files[0].name;
     console.log(this.FileName);
     
