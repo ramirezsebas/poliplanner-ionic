@@ -41,6 +41,12 @@ PoliPlanner is a utility to organize a student's calendar, it works on all devic
 
 ## Getting Started
 
+Install the ionic:
+
+```sh
+# npm install -g @ionic/cli
+```
+
 Install the dependencies:
 
 ```sh
@@ -50,7 +56,7 @@ $ npm install
 Run in dev mode:
 
 ```sh
-$ npm run start
+$ ionic serve
 ```
 
 ### Built With
