@@ -13,7 +13,7 @@ export class AboutPage implements OnInit {
   }
 
   btnInstagram(){
-    window.open('https://www.instagram.com/fer_rios.0207/')
+    window.open('https://www.instagram.com/ferrios__/')
   }
 
   btnWhatsapp(){
