@@ -30,7 +30,8 @@ export class SeleccionarSeccionesComponent implements OnInit {
     
 
     const condicionDeFiltro = (clase, nombre, enf) => {
-      let principioCoinc = clase['Asignatura'].match(RegExp('' + nombre));
+      //let principioCoinc = clase['Asignatura'].match(RegExp('' + nombre));
+      let principioCoinc = clase['Asignatura'].includes(nombre);
       let esLaPalabra = clase['Asignatura'] === nombre;
       let nombreCompleto = clase['Asignatura'][nombre.length] == " ";
 
